@@ -1,0 +1,24 @@
+mixin slide(title)
+  .hot-offers-slide
+    .hot-offers-slide__container
+      .hot-offers-slide__image-container
+        img(alt="").hot-offers-slide__image&attributes(attributes)
+      .hot-offers-slide__content
+        .hot-offers-slide__title-container
+          span.hot-offers-slide__title=title
+        .hot-offers-slide__links-container
+          .hot-offers-slide__links-content
+            a(href="#").button.hot-offers-slide__button Claim
+            a(href="#" data-tooltip-content="#tooltip-block_1").button.hot-offers-slide__link.tooltip.tooltip_offers T&Cs Apply
+.hot-offers
+  .hot-offers__container
+    .hot-offers__title-section
+      span.hot-offers__title Hot Offers
+      a(href="#").hot-offers__link-more View All
+    .hot-offers-slider
+      +slide('MoPlay Free Bets - Bet £10 Get £30')(src="img/offers/offer1.jpg")
+      +slide('MoPlay Free Bets - Bet £10 Get £30')(src="img/offers/offer2.jpg")
+      +slide('Betfred - Get £30 Free Bet + 30 Spins!')(src="img/offers/offer3.jpg")
+      +slide('Betfair Casino Free Bet No Deposit - 20 Free Chips + £50 Free Bets')(src="img/offers/offer4.jpg")
+      +slide('Betfair Casino Free Bet No Deposit - 20 Free Chips + £50 Free Bets')(src="img/offers/offer3.jpg")
+      +slide('MoPlay Free Bets - Bet £10 Get £30')(src="img/offers/offer2.jpg")

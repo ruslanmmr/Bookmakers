@@ -1,0 +1,79 @@
+.home {
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(../img/backgrounds//bg-home.jpg) no-repeat center center;
+  background-size: cover;
+  color: #fff;
+  &__container {
+    padding: 150px 0 26px 0;
+    height: 550px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  &__content {
+    text-align: center;
+  }
+  &__title {
+    font-family: 'RobotoCondensed';
+    font-weight: bold;
+    font-size: 42px;
+    margin: 0;
+  }
+  &__sub-title {
+    font-family: 'RobotoCondensed';
+    font-weight: bold;
+    font-size: 22px;
+    margin: 0;
+    letter-spacing: 0.1em;
+    padding-bottom: 39px;
+  }
+  .hot-offers {
+    padding: 0 35px;
+    &__container {
+      display: flex;
+      align-items: center;
+    }
+    &__title-section {
+      flex-shrink: 0;
+      padding-right: 34px;
+    }
+    &__title {
+      font-family: 'RobotoCondensed';
+      font-weight: bold;
+      font-size: 24px;
+      display: block;
+    }
+    &__link-more {
+      color: #fff;
+      font-style: italic;
+      &:hover {
+        color: #c9c9c9;
+      }
+    }
+  }
+  .hot-offers-slider {
+    background: rgba(33, 33, 33, 0.5);
+    flex: 1 1 100%;
+  }
+  .hot-offers-slide {
+    &:before {
+      background: rgba(0, 0, 0, 0.3);
+    }
+    &__title {
+      color: #fff;
+    }
+    &__button {
+      background: #fff;
+      color: #000;
+      &:hover {
+        background: #c9c9c9;
+      }
+    }
+    &__link {
+      color: #fff;
+      &:hover {
+        color: #c9c9c9;
+        border-color: #c9c9c9;
+      }
+    }
+  }
+}

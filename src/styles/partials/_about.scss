@@ -1,0 +1,21 @@
+.about {
+  &__container {
+    padding: 30px 0 30px 0;
+    display: flex;
+  }
+  &__text {
+    line-height: 1.5em;
+    margin: 0 0 1.5em 0;
+    &:last-child {
+      margin: 0;
+    }
+  }
+  &__section {
+    flex: 1 1 100%;
+  }
+  .banner {
+    width: 370px;
+    box-sizing: content-box;
+    padding-left: 30px;
+  }
+}

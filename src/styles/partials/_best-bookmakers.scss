@@ -1,0 +1,186 @@
+.best-bookmakers {
+  &__head {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 17px;
+    flex-wrap: wrap;
+  }
+  &__head-link {
+    display: flex;
+    align-items: center;
+    .icon {
+      height: 17px;
+      width: 17px;
+      margin-right: 10px;
+    }
+  }
+  &__label-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    &:first-child {
+      padding-right: 20px;
+    }
+  }
+  &__label-item {
+    position: relative;
+    color: #494949;
+    display: flex;
+    align-items: center;
+    white-space: nowrap;
+    &:not(:last-child) {
+      margin-right: 35px;
+    }
+    .icon {
+      height: 17px;
+      margin-right: 6px;
+    }
+    .inline-link {
+      margin-left: 0.3em;
+      text-decoration: none;
+      position: relative;
+      &:after {
+        content: '';
+        display: block;
+        border-bottom: 1px dashed;
+        position: absolute;
+        display: block;
+        width: 100%;
+        left: 0;
+        bottom: 0;
+      }
+    }
+    &_1 {
+      .icon {
+        width: 17px;
+      }
+    }
+    &_2 {
+      .icon {
+        width: 13px;
+      }
+    }
+    &_3 {
+      .icon {
+        width: 20px;
+      }
+    }
+    &_4 {
+      .icon {
+        width: 17px;
+      }
+      .inline-link {
+        color: #494949;
+        &:hover {
+          color: #7e7e7e;
+        }
+      }
+    }
+  }
+}
+
+.best-bookmakers {
+  .table {
+    &__col {
+      &:nth-child(1) {
+        flex: 1 1 7%;
+        min-width: 70px;
+      }
+      &:nth-child(2) {
+        flex: 1 1 35%;
+      }
+      &:nth-child(3) {
+        flex: 1 1 26%;
+      }
+      &:nth-child(4) {
+        flex: 1 1 11%;
+        min-width: 130px;
+      }
+      &:nth-child(5) {
+        flex: 1 1 21%;
+        min-width: 150px;
+      }
+    }
+  }
+}
+
+@media screen and(max-width: 1200px) {
+  .best-bookmakers {
+    .table__col:nth-child(5) {
+      flex: 1 1 15%;
+    }
+  }
+}
+@media screen and(max-width: 768px) {
+  .best-bookmakers {
+    .table__col:nth-child(3) {
+      display: none;
+    }
+    .table__col:nth-child(4) {
+      min-width: 120px;
+    }
+    .table__col:nth-child(5) {
+      min-width: 140px;
+    }
+  }
+  .best-bookmakers__label-item {
+    font-size: 12px;
+    &:not(:last-child) {
+      margin-right: 15px;
+    }
+  }
+}
+@media screen and(max-width: 576px) {
+  .best-bookmakers__label-list {
+    &:first-child {
+      order: 2;
+      width: 100%;
+      margin-top: 7px;
+      padding: 0;
+    }
+  }
+  .best-bookmakers__label-item:not(:last-child) {
+    margin-right: 10px;
+  }
+  .best-bookmakers__label-item_4 .inline-link {
+    margin: 0;
+  }
+  .best-bookmakers {
+    .col-claim-bonus__content {
+      align-items: flex-start;
+    }
+    .col-claim-bonus__section {
+      flex-direction: row;
+    }
+    .col-claim-bonus__link {
+      margin-left: 10px;
+    }
+    .table {
+      border-radius: 5px;
+      overflow: hidden;
+      &__row_head {
+        display: none;
+      }
+      &__row {
+        flex-wrap: wrap;
+        padding: 15px 0;
+      }
+      &__col {
+        padding: 5px 20px;
+        &:nth-child(1) {
+          justify-content: flex-start;
+        }
+        &:nth-child(2),
+        &:nth-child(4),
+        &:nth-child(5) {
+          flex: 1 1 100%;
+        }
+        &:nth-child(4),
+        &:nth-child(5) {
+          justify-content: flex-start;
+        }
+      }
+    }
+  }
+}
