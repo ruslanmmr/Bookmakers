@@ -69,19 +69,30 @@ function headerSearch() {
 function signIn() {
   var buttonSignIn = $('.sign-in__button'),
     blockSignIn = $('.sign-in'),
-    containerSignIn = $('.sign-in__container');
+    containerSignIn = $('.sign-in__container'),
+    flag;
 
-  buttonSignIn.on('click, mouseenter', function () {
-    if (blockSignIn.hasClass('sign-in_active')) {} else {
-      blockSignIn.addClass('sign-in_active');
-      state();
+  buttonSignIn.on('click mouseenter', function (event) {
+    if (!flag) {
+      flag = true;
+      setTimeout(function(){ flag = false; }, 300);
+      if (event.type == 'click') {
+        blockSignIn.toggleClass('sign-in_active');
+        state();
+      } else if (event.type == 'mouseenter') {
+        blockSignIn.addClass('sign-in_active');
+        state();
+      }
     }
+    return false;
   })
+
   blockSignIn.on('mouseleave', function () {
     blockSignIn.removeClass('sign-in_active');
     state();
   })
-  $(document).on('touchstart', function (e) {
+  
+  $(document).bind('touchstart touchend', function (e) {
     if (blockSignIn.hasClass('sign-in_active') && !blockSignIn.is(e.target) &&
     blockSignIn.has(e.target).length === 0) {
       blockSignIn.removeClass('sign-in_active');
@@ -159,19 +170,34 @@ function nav() {
 //nav-dropdowns
 function navDropdowns() {
   var dropdownButton = $('.nav__link_dropdown'),
-      desktopDropdown = $('.header .nav__dropdown');
+      desktopDropdown = $('.header .nav__dropdown'),
+      container = $('.header .nav__item'),
+      flag;
 
-  dropdownButton.on('click', function(){
-    $(this).toggleClass('nav__link_active');
-    $(this).siblings('.nav__dropdown').toggleClass('nav__dropdown_active');
-    if($(this).hasClass('nav__link_mobile')) {
-      $(this).siblings('.nav__dropdown').slideToggle(300);
-    } else {
-      $(this).siblings('.nav__dropdown').fadeToggle(300);
+  dropdownButton.on('click mouseenter', function(event){
+    if (!flag) {
+      flag = true;
+      setTimeout(function(){ flag = false; }, 300);
+      if (event.type == 'click') {
+        console.log('1');
+        $(this).toggleClass('nav__link_active');
+        $(this).siblings('.nav__dropdown').toggleClass('nav__dropdown_active');
+        if($(this).hasClass('nav__link_mobile')) {
+          $(this).siblings('.nav__dropdown').slideToggle(300);
+        } else {
+          $(this).siblings('.nav__dropdown').fadeToggle(300);
+        }
+      } else if (event.type == 'mouseenter') {
+        console.log('2');
+        $(this).addClass('nav__link_active');
+        $(this).siblings('.nav__dropdown').addClass('nav__dropdown_active');
+        $(this).siblings('.nav__dropdown').fadeIn(300);
+      }
     }
+    return false
   })
 
-  desktopDropdown.on('mouseleave', function(){
+  container.on('mouseleave', function(){
     dropdownButton.removeClass('nav__link_active');
     desktopDropdown.fadeOut(300).removeClass('nav__dropdown_active');
   })

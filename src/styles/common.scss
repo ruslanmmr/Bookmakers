@@ -184,6 +184,10 @@ p {
     position: relative;
     display: flex;
     align-items: center;
+    &_dropdown {
+      position: relative;
+      z-index: 2;
+    }
   }
   &__link {
     position: relative;
