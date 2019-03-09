@@ -16,52 +16,23 @@ $hover2: #636363;
     display: flex;
     align-items: center;
   }
-}
-.nav {
-  color: #fff;
-  padding-right: 30px;
-  &__list {
-    margin: 0;
-    padding: 0;
-    list-style: none;
-    display: flex;
-  }
-  &__item {
-    &:not(:last-child) {
-      padding-right: 28px;
-    }
-    &:nth-child(1) {
-      padding-right: 23px;
-    }
-    &:nth-child(2) {
-      padding-right: 27px;
-    }
-    &:nth-child(3) {
-      padding-right: 28px;
-    }
-    &:nth-child(4) {
-      padding-right: 31px;
-    }
-  }
-  &__link {
-    color: #fff;
-    text-decoration: none;
-    font-weight: 600;
-    font-size: 14px;
-    letter-spacing: 0.05em;
-    white-space: nowrap;
-    transition: 0.3s;
-    &-icon {
-      width: 9px;
-      height: 5px;
-      box-sizing: content-box;
-      padding: 0 0 0.1em 0.1em;
-      stroke: #fff;
-    }
-    &:hover {
-      color: $hover1;
-      .icon {
-        stroke: $hover1;
+  .nav {
+    padding-right: 30px;
+    &__item {
+      &:not(:last-child) {
+        padding-right: 28px;
+      }
+      &:nth-child(1) {
+        padding-right: 23px;
+      }
+      &:nth-child(2) {
+        padding-right: 27px;
+      }
+      &:nth-child(3) {
+        padding-right: 28px;
+      }
+      &:nth-child(4) {
+        padding-right: 31px;
       }
     }
   }
@@ -381,10 +352,10 @@ $hover2: #636363;
   }
 }
 @media screen and(max-width: 420px) {
-  .logo {
-    height: 35px;
-  }
   .header {
+    .logo {
+      height: 35px;
+    }
     .sign-in__button {
       font-size: 0;
       .icon {

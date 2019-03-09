@@ -1,113 +1,147 @@
 .footer {
-  background-color: #004b26;
+  background-color: #00247D;
   color: #fff;
   font-size: 12px;
-  a {
-    color: #fff;
-    text-decoration: none;
-    white-space: nowrap;
-  }
   &__container {
-    padding: 25px 0;
+    padding: 30px 0;
+  }
+  .container {
     display: flex;
-    position: relative;
+    align-items: center;
+    justify-content: space-between;
+  }
+  &__content {
+    &:nth-child(1) {
+      padding-bottom: 20px;
+      border-bottom: 1px solid #3f5da5;
+    }
+    &:nth-child(2) {
+      padding: 20px 0;
+    }
   }
   &__section {
-    flex-shrink: 0;
-    &:nth-child(2) {
-      width: 100%;
-      flex-shrink: 1;
-      padding-left: 80px;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      align-items: flex-end;
+    display: flex;
+    align-items: center;
+  }
+  .nav {
+    &__list {
+      flex-wrap: wrap;
+      justify-content: center;
     }
   }
-  .copy {
-    font-size: 16px;
-    text-align: right;
-    position: absolute;
-    right: 0;
-    bottom: 25px;
+}
+.socials {
+  padding-left: 35px;
+  &__label {
+    font-size: 14px;
   }
-  &__block {
+  &__content {
+    display: flex;
+    align-items: center;
+    padding: 10px 15px 10px 20px;
+    border: 1px dashed rgba(255, 255, 255, 0.5);
+    border-radius: 5px;
+  }
+  &__list {
+    padding: 0 0 0 10px;
+    margin: 0;
+    list-style: none;
+    display: flex;
+  }
+  &__item {
     &:not(:last-child) {
-      padding-bottom: 15px;
+      padding-right: 8px;
     }
-    span {
-      display: block;
+  }
+  &__link {
+    display: block;
+    width: 32px;
+    height: 32px;
+    transition: 0.3s;
+    .icon {
+      width: 100%;
+      height: 100%;
+    }
+    &:hover {
+      opacity: 0.8;
     }
   }
   .nav {
-    &__link {
-      font-size: 16px;
+    font-size: 14px;
+  }
+}
+.footer-label {
+  &__list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+  }
+  &__item {
+    width: 32px;
+    height: 32px;
+    background-repeat: no-repeat;
+    display: block;
+    background-image: url('../img/footer-sprite.png');
+    box-sizing: border-box;
+    background-size: 106px auto;
+    &:not(:last-child) {
+      margin-right: 10px;
+    }
+    &:nth-child(1) {
+      background-position: -1px -1px;
+    }
+    &:nth-child(2) {
+      background-position: -35px -2px;
+    }
+    &:nth-child(3) {
+      background-position: -71px -2px;
+    }
+    &:nth-child(4) {
+      background-position: -1px -38px;
     }
   }
+}
+.copy {
+  text-align: center;
 }
 
-@media screen and(max-width: 1200px) {
-  .footer {
-    .nav {
-      &__list {
-        flex-wrap: wrap;
-        justify-content: flex-end;
-      }
-      &__item {
-        padding: 0 0 10px 35px !important;
-      }
-    }
-  }
-  .footer__section:nth-child(2) {
-    padding-left: 20px;
-  }
-}
-@media screen and(max-width: 768px) {
-  .footer {
-    &__container {
-      flex-wrap: wrap;
-    }
-    &__section {
-      width: 50%;
-      &:nth-child(1) {
-        padding-right: 20px;
-      }
-      &:nth-child(2) {
-        width: 50%;
-        padding: 0;
-      }
-    }
-    .copy {
-      position: relative;
-      left: auto;
-      bottom: auto;
-      display: block;
-      width: 100%;
-      text-align: center;
-      padding-top: 15px;
-      br {
-        display: none;
-      }
-    }
-  }
-}
-@media screen and(max-width: 460px) {
-  .footer {
-    .nav__list {
-      justify-content: center;
-    }
-    .nav__item {
-      padding: 0 10px 10px 10px !important;
-    }
-    .socials__list {
-      justify-content: center;
+@media screen and(max-width: 992px) {
+  .footer__content:nth-child(1) {
+    .container {
+      flex-direction: column;
+      align-items: center;
     }
   }
   .footer__section {
-    width: 100% !important;
-    text-align: center;
-    &:first-child {
-      padding-bottom: 20px;
+    width: 100%;
+    justify-content: space-between;
+    padding-bottom: 20px;
+  }
+}
+@media screen and(max-width: 576px) {
+  .footer__content:nth-child(3) {
+    .container {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+  .copy {
+    order: 2;
+    padding-top: 20px;
+  }
+  .footer {
+    .nav__item {
+      padding: 7px 10px;
+    }
+    &__section {
+      &:nth-child(1) {
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+    .socials {
+      padding: 20px 0 0 0;
     }
   }
 }
