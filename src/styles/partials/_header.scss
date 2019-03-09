@@ -226,6 +226,7 @@ $hover2: #636363;
     left: 0;
     width: 100%;
     display: none;
+    min-width: 113px;
   }
   &__content {
     padding: 46px 10px 16px 10px;
@@ -263,6 +264,133 @@ $hover2: #636363;
       color: #BCBCBC;
       .icon {
         fill: #BCBCBC;
+      }
+    }
+  }
+}
+.mobile-button {
+  transition: .3s;
+  width: 37px;
+  height: 26px;
+  z-index: 15;
+  display: none;
+  position: relative;
+  flex-shrink: 0;
+  margin: 0 15px;
+  span {
+    display: block;
+    position: absolute;
+    height: 4px;
+    width: 37px;
+    left: 0;
+    position: absolute;
+    top: 50%;
+    margin-top: -2px;
+    border-radius: 4px;
+    background-color: #fff;
+    transition: .3s;
+    &:before,
+    &:after {
+      display: block;
+      content: "";
+      height: 4px;
+      border-radius: 2px;
+      width: 100%;
+      background-color: #fff;
+      position: absolute;
+      transition: .3s;
+      left: 0;
+    }
+    &:before {
+      top: -10px;
+    }
+    &:after {
+      bottom: -10px;
+    }
+  }
+  &_active {
+    span {
+      background-color: transparent !important;
+      &:before {
+        transform: rotate(45deg);
+        top: 0px;
+      }
+      &:after {
+        transform: rotate(-45deg);
+        bottom: 0px;
+      }
+    }
+  }
+}
+
+@media screen and(max-width: 1200px) {
+  .header {
+    .search-block {
+      margin-right: 0;
+      padding: 0 15px;
+    }
+    .nav__item:not(:last-child) {
+      padding-right: 20px;
+    }
+    .nav {
+      padding-right: 20px;
+    }
+  }
+}
+@media screen and(max-width: 992px) {
+  .header {
+    .nav {
+      display: none;
+    }
+    .mobile-button {
+      display: block;
+    }
+    .search-block {
+      order: 3;
+      padding: 0 0 0 15px;
+      &:after {
+        display: none;
+      }
+      &__container {
+        right: 0;
+        width: calc(100vw - 30px);
+        max-width: 410px;
+      }
+    }
+    .search-block:before {
+      height: 40px;
+    }
+    .sign-in:after {
+      content: '';
+      right: 0;
+      display: block;
+      height: 40px;
+      width: 1px;
+      background-color: rgba(255,255,255,.1);
+      top: 50%;
+      transform: translateY(-50%);
+      position: absolute;
+    }
+  }
+}
+@media screen and(max-width: 768px) {
+  .header {
+    &__container {
+      height: 80px;
+    }
+  }
+}
+@media screen and(max-width: 420px) {
+  .logo {
+    height: 35px;
+  }
+  .header {
+    .sign-in__button {
+      font-size: 0;
+      .icon {
+        height: 30px;
+        width: 30px;
+        padding: 0;
       }
     }
   }

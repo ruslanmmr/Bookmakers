@@ -19,3 +19,21 @@
     padding-left: 30px;
   }
 }
+@media screen and(max-width: 992px) {
+  .about {
+    .banner {
+      width: 280px;
+    }
+  }
+}
+@media screen and(max-width: 768px) {
+  .about {
+    &__container {
+      display: block;
+    }
+    .banner {
+      width: 100%;
+      padding: 20px 0 0 0;
+    }
+  }
+}

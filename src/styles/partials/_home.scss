@@ -3,14 +3,21 @@
   background-size: cover;
   color: #fff;
   &__container {
-    padding: 150px 0 26px 0;
-    height: 550px;
+    padding: 100px 0 26px 0;
+    height: 100vh;
+    min-height: 550px;
+    max-height: 650px;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
   }
   &__content {
     text-align: center;
+    height: 100%;
+    padding: 25px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
   }
   &__title {
     font-family: 'RobotoCondensed';
@@ -28,6 +35,7 @@
   }
   .hot-offers {
     padding: 0 35px;
+    flex-shrink: 0;
     &__container {
       display: flex;
       align-items: center;
@@ -74,6 +82,58 @@
         color: #c9c9c9;
         border-color: #c9c9c9;
       }
+    }
+  }
+}
+@media screen and(max-width: 768px) {
+  .home {
+    &__container {
+      padding-top: 80px;
+    }
+    .hot-offers__container {
+      text-align: center;
+      display: block;
+    }
+    .hot-offers__title-section {
+      padding: 0 0 10px 0;
+      display: flex;
+      justify-content: center;
+    }
+    .hot-offers__title {
+      display: inline-block;
+    }
+    .hot-offers__link-more {
+      position: absolute;
+      right: -10px;
+      bottom: 5px;
+      transform: translateX(100%);
+    }
+  }
+}
+@media screen and(max-width: 576px) {
+  .home {
+    &__container {
+      min-height: 500px;
+      max-height: 600px;
+    }
+    &__title {
+      font-size: 32px;
+    }
+    &__sub-title {
+      font-size: 18px;
+      padding-bottom: 30px;
+    }
+    .hot-offers__link-more {
+      position: relative;
+      right: 0;
+      bottom: 0;
+      transform: translateX(0);
+    }
+    .hot-offers__title {
+      display: block;
+    }
+    .hot-offers {
+      padding: 0;
     }
   }
 }

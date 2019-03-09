@@ -84,44 +84,27 @@
   .table {
     &__col {
       &:nth-child(1) {
-        flex: 1 1 7%;
-        min-width: 70px;
+        width: 7%;
       }
       &:nth-child(2) {
-        flex: 1 1 35%;
       }
       &:nth-child(3) {
-        flex: 1 1 26%;
+        width: 26%;
       }
       &:nth-child(4) {
-        flex: 1 1 11%;
-        min-width: 130px;
+        width: 11%;
       }
       &:nth-child(5) {
-        flex: 1 1 21%;
-        min-width: 150px;
+        width: 21%;
       }
     }
   }
 }
 
-@media screen and(max-width: 1200px) {
-  .best-bookmakers {
-    .table__col:nth-child(5) {
-      flex: 1 1 15%;
-    }
-  }
-}
 @media screen and(max-width: 768px) {
   .best-bookmakers {
     .table__col:nth-child(3) {
       display: none;
-    }
-    .table__col:nth-child(4) {
-      min-width: 120px;
-    }
-    .table__col:nth-child(5) {
-      min-width: 140px;
     }
   }
   .best-bookmakers__label-item {
@@ -147,14 +130,24 @@
     margin: 0;
   }
   .best-bookmakers {
+    .table {
+      &__row {
+        display: flex;
+      }
+    }
+    .col-sign-up-bonus__link {
+      padding: 2px 0;
+    }
     .col-claim-bonus__content {
-      align-items: flex-start;
+      margin: 0;
     }
     .col-claim-bonus__section {
-      flex-direction: row;
-    }
-    .col-claim-bonus__link {
-      margin-left: 10px;
+      padding: 0;
+      width: 100%;
+      .button {
+        width: 100%;
+        padding: 10px;
+      }
     }
     .table {
       border-radius: 5px;
@@ -164,21 +157,26 @@
       }
       &__row {
         flex-wrap: wrap;
-        padding: 15px 0;
       }
       &__col {
-        padding: 5px 20px;
         &:nth-child(1) {
           justify-content: flex-start;
-        }
-        &:nth-child(2),
-        &:nth-child(4),
-        &:nth-child(5) {
+          padding: 20px;
           flex: 1 1 100%;
         }
-        &:nth-child(4),
+        &:nth-child(2) {
+          flex: 1 1 100%;
+          padding: 20px;
+        }
+        &:nth-child(4) {
+          flex: 1 1 50%;
+          padding: 20px;
+          align-items: flex-start;
+        }
         &:nth-child(5) {
           justify-content: flex-start;
+          padding: 20px;
+          flex: 1 1 50%;
         }
       }
     }

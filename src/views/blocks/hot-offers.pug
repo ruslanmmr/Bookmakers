@@ -13,8 +13,9 @@ mixin slide(title)
 .hot-offers
   .hot-offers__container
     .hot-offers__title-section
-      span.hot-offers__title Hot Offers
-      a(href="#").hot-offers__link-more View All
+      .hot-offers__title-section-content
+        span.hot-offers__title Hot Offers
+        a(href="#").hot-offers__link-more View All
     .hot-offers-slider
       +slide('MoPlay Free Bets - Bet £10 Get £30')(src="img/offers/offer1.jpg")
       +slide('MoPlay Free Bets - Bet £10 Get £30')(src="img/offers/offer2.jpg")

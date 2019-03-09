@@ -3,6 +3,9 @@
   &__title {
     text-transform: uppercase;
   }
+  &__title-section-content {
+    position: relative;
+  }
   &__link-more {
     transition: 0.3s;
   }
@@ -43,6 +46,7 @@
   }
   &__content {
     position: relative;
+    width: 100%;
   }
   &__title {
     text-decoration: underline;

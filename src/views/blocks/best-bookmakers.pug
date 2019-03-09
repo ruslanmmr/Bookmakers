@@ -40,20 +40,21 @@ mixin rating()
           li.best-bookmakers__label-item.best-bookmakers__label-item_4
             svg.icon <use xlink:href="img/icons/icon-sprite.svg#exclamation"></use>
             a(href="#" data-tooltip-content="#tooltip-block_advertiser").tooltip.inline-link Advertiser Disclosure
-      .table
-        .table__row.table__row_head
-          .table__col.table__col_title RANK
-          .table__col.table__col_title BOOKIES RATING
-          .table__col.table__col_title KEY FEATURES
-          .table__col.table__col_title SIGN-UP BONUS
-          .table__col.table__col_title CLAIM BONUS
-        .table__row
-          .table__col.col-rank
-            span.col-rank__order 1
-            .col-rank__value
-              svg.icon <use xlink:href="img/icons/icon-sprite.svg#ico21"></use>
-              span 0
-          .table__col.col-rating
+      table.table
+        tr.table__row.table__row_head
+          td.table__col.table__col_title RANK
+          td.table__col.table__col_title BOOKIES RATING
+          td.table__col.table__col_title KEY FEATURES
+          td.table__col.table__col_title SIGN-UP BONUS
+          td.table__col.table__col_title CLAIM BONUS
+        tr.table__row
+          td.table__col.col-rank
+            .col-rank__container
+              span.col-rank__order 1
+              .col-rank__value
+                svg.icon <use xlink:href="img/icons/icon-sprite.svg#ico21"></use>
+                span 0
+          td.table__col.col-rating
             .col-rating__container
               .col-rating__section
                 .col-rating__link
@@ -66,7 +67,7 @@ mixin rating()
                   +rating()
               .col-rating__text
                 p Pinnacle is well-known for offering the best value odds. It's a must-have for bettors who like to wager big amounts of cash.
-          .table__col.col-features
+          td.table__col.col-features
             ul.col-features__list
               li.col-features__item
                 svg.icon <use xlink:href="img/icons/icon-sprite.svg#ico54"></use>
@@ -77,9 +78,10 @@ mixin rating()
               li.col-features__item
                 svg.icon <use xlink:href="img/icons/icon-sprite.svg#ico54"></use>
                 | Best value odds – smallest margins
-          .table__col.col-sign-up-bonus
-            a(href="#" rel="nofollow" target="_blank").col-sign-up-bonus__link Cashback
-          .table__col.col-claim-bonus
+          td.table__col.col-sign-up-bonus
+            .col-sign-up-bonus__container
+              a(href="#" rel="nofollow" target="_blank").col-sign-up-bonus__link Cashback
+          td.table__col.col-claim-bonus
             .col-claim-bonus__container
               .col-claim-bonus__content
                 .col-claim-bonus__section
@@ -87,6 +89,478 @@ mixin rating()
                 .col-claim-bonus__section
                   a(href="#" rel="nofollow" target="_blank").button.button_style1 Bet Now
                   a(href="#" data-tooltip-content="#tooltip-block_advertiser").tooltip.col-claim-bonus__link T&Cs Apply
+        tr.table__row
+          td.table__col.col-rank
+            .col-rank__container
+              span.col-rank__order 2
+              .col-rank__value.col-rank__value_down
+                svg.icon <use xlink:href="img/icons/icon-sprite.svg#ico22"></use>
+                span 1
+          td.table__col.col-rating
+            .col-rating__container
+              .col-rating__section
+                .col-rating__link
+                  a(href="#" rel="nofollow" target="_blank")
+                    img(src="img/Bookies/image2.png", alt="")
+                .col-rating__content
+                  span.col-rating__value 
+                    span 9.1 
+                    | /10
+                  +rating()
+              .col-rating__text
+                p The best live in play online betting bookie across all sports. A must-have for live online betting.
+          td.table__col.col-features
+            ul.col-features__list
+              li.col-features__item
+                svg.icon <use xlink:href="img/icons/icon-sprite.svg#ico54"></use>
+                | Great value odds in all sports
+              li.col-features__item
+                svg.icon <use xlink:href="img/icons/icon-sprite.svg#ico54"></use>
+                | Excellent layout for easy use
+              li.col-features__item
+                svg.icon <use xlink:href="img/icons/icon-sprite.svg#ico54"></use>
+                | Great minimum deposits
+          td.table__col.col-sign-up-bonus
+            .col-sign-up-bonus__container
+              span.col-sign-up-bonus__label Get Up to
+              a(href="#" rel="nofollow" target="_blank").col-sign-up-bonus__link £100
+              span.col-sign-up-bonus__label in Bet Credits
+          td.table__col.col-claim-bonus
+            .col-claim-bonus__container
+              .col-claim-bonus__content
+                .col-claim-bonus__section
+                  a(href="#").inline-link Review
+                .col-claim-bonus__section
+                  a(href="#" rel="nofollow" target="_blank").button.button_style1 Bet Now
+                  a(href="#" data-tooltip-content="#tooltip-block_advertiser").tooltip.col-claim-bonus__link T&Cs Apply
+        tr.table__row
+          td.table__col.col-rank
+            .col-rank__container
+              span.col-rank__order 3
+              .col-rank__value.col-rank__value_up
+                svg.icon <use xlink:href="img/icons/icon-sprite.svg#ico20"></use>
+                span 12
+          td.table__col.col-rating
+            .col-rating__container
+              .col-rating__section
+                .col-rating__link
+                  a(href="#" rel="nofollow" target="_blank")
+                    img(src="img/Bookies/image3.png", alt="")
+                .col-rating__content
+                  span.col-rating__value 
+                    span 8.1 
+                    | /10
+                  +rating()
+              .col-rating__text
+                p The best online betting exchange bookmaker. A must have for people who trade in bets.
+          td.table__col.col-features
+            ul.col-features__list
+              li.col-features__item
+                svg.icon <use xlink:href="img/icons/icon-sprite.svg#ico54"></use>
+                | Allows you to sit back and lay bets
+              li.col-features__item
+                svg.icon <use xlink:href="img/icons/icon-sprite.svg#ico54"></use>
+                | You can trade your bets
+              li.col-features__item
+                svg.icon <use xlink:href="img/icons/icon-sprite.svg#ico54"></use>
+                | Excellent variety of products
+          td.table__col.col-sign-up-bonus
+            .col-sign-up-bonus__container
+              span.col-sign-up-bonus__nooffer No Offer
+          td.table__col.col-claim-bonus
+            .col-claim-bonus__container
+              .col-claim-bonus__content
+                .col-claim-bonus__section
+                  a(href="#").inline-link Review
+                .col-claim-bonus__section
+                  a(href="#" rel="nofollow" target="_blank").button.button_style1 Bet Now
+                  a(href="#" data-tooltip-content="#tooltip-block_advertiser").tooltip.col-claim-bonus__link T&Cs Apply
+        tr.table__row
+          td.table__col.col-rank
+            .col-rank__container
+              span.col-rank__order 4
+              .col-rank__value
+                svg.icon <use xlink:href="img/icons/icon-sprite.svg#ico21"></use>
+                span 0
+          td.table__col.col-rating
+            .col-rating__container
+              .col-rating__section
+                .col-rating__link
+                  a(href="#" rel="nofollow" target="_blank")
+                    img(src="img/Bookies/image1.png", alt="")
+                .col-rating__content
+                  span.col-rating__value 
+                    span 9.8 
+                    | /10
+                  +rating()
+              .col-rating__text
+                p Pinnacle is well-known for offering the best value odds. It's a must-have for bettors who like to wager big amounts of cash.
+          td.table__col.col-features
+            ul.col-features__list
+              li.col-features__item
+                svg.icon <use xlink:href="img/icons/icon-sprite.svg#ico54"></use>
+                | No limit for maximum winnings per bet
+              li.col-features__item
+                svg.icon <use xlink:href="img/icons/icon-sprite.svg#ico54"></use>
+                | No stake limits
+              li.col-features__item
+                svg.icon <use xlink:href="img/icons/icon-sprite.svg#ico54"></use>
+                | Best value odds – smallest margins
+          td.table__col.col-sign-up-bonus
+            .col-sign-up-bonus__container
+              a(href="#" rel="nofollow" target="_blank").col-sign-up-bonus__link Cashback
+          td.table__col.col-claim-bonus
+            .col-claim-bonus__container
+              .col-claim-bonus__content
+                .col-claim-bonus__section
+                  a(href="#").inline-link Review
+                .col-claim-bonus__section
+                  a(href="#" rel="nofollow" target="_blank").button.button_style1 Bet Now
+                  a(href="#" data-tooltip-content="#tooltip-block_advertiser").tooltip.col-claim-bonus__link T&Cs Apply
+        tr.table__row
+          td.table__col.col-rank
+            .col-rank__container
+              span.col-rank__order 5
+              .col-rank__value.col-rank__value_down
+                svg.icon <use xlink:href="img/icons/icon-sprite.svg#ico22"></use>
+                span 1
+          td.table__col.col-rating
+            .col-rating__container
+              .col-rating__section
+                .col-rating__link
+                  a(href="#" rel="nofollow" target="_blank")
+                    img(src="img/Bookies/image2.png", alt="")
+                .col-rating__content
+                  span.col-rating__value 
+                    span 9.1 
+                    | /10
+                  +rating()
+              .col-rating__text
+                p The best live in play online betting bookie across all sports. A must-have for live online betting.
+          td.table__col.col-features
+            ul.col-features__list
+              li.col-features__item
+                svg.icon <use xlink:href="img/icons/icon-sprite.svg#ico54"></use>
+                | Great value odds in all sports
+              li.col-features__item
+                svg.icon <use xlink:href="img/icons/icon-sprite.svg#ico54"></use>
+                | Excellent layout for easy use
+              li.col-features__item
+                svg.icon <use xlink:href="img/icons/icon-sprite.svg#ico54"></use>
+                | Great minimum deposits
+          td.table__col.col-sign-up-bonus
+            .col-sign-up-bonus__container
+              span.col-sign-up-bonus__label Get Up to
+              a(href="#" rel="nofollow" target="_blank").col-sign-up-bonus__link £100
+              span.col-sign-up-bonus__label in Bet Credits
+          td.table__col.col-claim-bonus
+            .col-claim-bonus__container
+              .col-claim-bonus__content
+                .col-claim-bonus__section
+                  a(href="#").inline-link Review
+                .col-claim-bonus__section
+                  a(href="#" rel="nofollow" target="_blank").button.button_style1 Bet Now
+                  a(href="#" data-tooltip-content="#tooltip-block_advertiser").tooltip.col-claim-bonus__link T&Cs Apply
+        tr.table__row
+          td.table__col.col-rank
+            .col-rank__container
+              span.col-rank__order 6
+              .col-rank__value.col-rank__value_up
+                svg.icon <use xlink:href="img/icons/icon-sprite.svg#ico20"></use>
+                span 12
+          td.table__col.col-rating
+            .col-rating__container
+              .col-rating__section
+                .col-rating__link
+                  a(href="#" rel="nofollow" target="_blank")
+                    img(src="img/Bookies/image3.png", alt="")
+                .col-rating__content
+                  span.col-rating__value 
+                    span 8.1 
+                    | /10
+                  +rating()
+              .col-rating__text
+                p The best online betting exchange bookmaker. A must have for people who trade in bets.
+          td.table__col.col-features
+            ul.col-features__list
+              li.col-features__item
+                svg.icon <use xlink:href="img/icons/icon-sprite.svg#ico54"></use>
+                | Allows you to sit back and lay bets
+              li.col-features__item
+                svg.icon <use xlink:href="img/icons/icon-sprite.svg#ico54"></use>
+                | You can trade your bets
+              li.col-features__item
+                svg.icon <use xlink:href="img/icons/icon-sprite.svg#ico54"></use>
+                | Excellent variety of products
+          td.table__col.col-sign-up-bonus
+            .col-sign-up-bonus__container
+              span.col-sign-up-bonus__nooffer No Offer
+          td.table__col.col-claim-bonus
+            .col-claim-bonus__container
+              .col-claim-bonus__content
+                .col-claim-bonus__section
+                  a(href="#").inline-link Review
+                .col-claim-bonus__section
+                  a(href="#" rel="nofollow" target="_blank").button.button_style1 Bet Now
+                  a(href="#" data-tooltip-content="#tooltip-block_advertiser").tooltip.col-claim-bonus__link T&Cs Apply
+        tr.table__row
+          td.table__col.col-rank
+            .col-rank__container
+              span.col-rank__order 7
+              .col-rank__value
+                svg.icon <use xlink:href="img/icons/icon-sprite.svg#ico21"></use>
+                span 0
+          td.table__col.col-rating
+            .col-rating__container
+              .col-rating__section
+                .col-rating__link
+                  a(href="#" rel="nofollow" target="_blank")
+                    img(src="img/Bookies/image1.png", alt="")
+                .col-rating__content
+                  span.col-rating__value 
+                    span 9.8 
+                    | /10
+                  +rating()
+              .col-rating__text
+                p Pinnacle is well-known for offering the best value odds. It's a must-have for bettors who like to wager big amounts of cash.
+          td.table__col.col-features
+            ul.col-features__list
+              li.col-features__item
+                svg.icon <use xlink:href="img/icons/icon-sprite.svg#ico54"></use>
+                | No limit for maximum winnings per bet
+              li.col-features__item
+                svg.icon <use xlink:href="img/icons/icon-sprite.svg#ico54"></use>
+                | No stake limits
+              li.col-features__item
+                svg.icon <use xlink:href="img/icons/icon-sprite.svg#ico54"></use>
+                | Best value odds – smallest margins
+          td.table__col.col-sign-up-bonus
+            .col-sign-up-bonus__container
+              a(href="#" rel="nofollow" target="_blank").col-sign-up-bonus__link Cashback
+          td.table__col.col-claim-bonus
+            .col-claim-bonus__container
+              .col-claim-bonus__content
+                .col-claim-bonus__section
+                  a(href="#").inline-link Review
+                .col-claim-bonus__section
+                  a(href="#" rel="nofollow" target="_blank").button.button_style1 Bet Now
+                  a(href="#" data-tooltip-content="#tooltip-block_advertiser").tooltip.col-claim-bonus__link T&Cs Apply
+        tr.table__row
+          td.table__col.col-rank
+            .col-rank__container
+              span.col-rank__order 8
+              .col-rank__value.col-rank__value_down
+                svg.icon <use xlink:href="img/icons/icon-sprite.svg#ico22"></use>
+                span 1
+          td.table__col.col-rating
+            .col-rating__container
+              .col-rating__section
+                .col-rating__link
+                  a(href="#" rel="nofollow" target="_blank")
+                    img(src="img/Bookies/image2.png", alt="")
+                .col-rating__content
+                  span.col-rating__value 
+                    span 9.1 
+                    | /10
+                  +rating()
+              .col-rating__text
+                p The best live in play online betting bookie across all sports. A must-have for live online betting.
+          td.table__col.col-features
+            ul.col-features__list
+              li.col-features__item
+                svg.icon <use xlink:href="img/icons/icon-sprite.svg#ico54"></use>
+                | Great value odds in all sports
+              li.col-features__item
+                svg.icon <use xlink:href="img/icons/icon-sprite.svg#ico54"></use>
+                | Excellent layout for easy use
+              li.col-features__item
+                svg.icon <use xlink:href="img/icons/icon-sprite.svg#ico54"></use>
+                | Great minimum deposits
+          td.table__col.col-sign-up-bonus
+            .col-sign-up-bonus__container
+              span.col-sign-up-bonus__label Get Up to
+              a(href="#" rel="nofollow" target="_blank").col-sign-up-bonus__link £100
+              span.col-sign-up-bonus__label in Bet Credits
+          td.table__col.col-claim-bonus
+            .col-claim-bonus__container
+              .col-claim-bonus__content
+                .col-claim-bonus__section
+                  a(href="#").inline-link Review
+                .col-claim-bonus__section
+                  a(href="#" rel="nofollow" target="_blank").button.button_style1 Bet Now
+                  a(href="#" data-tooltip-content="#tooltip-block_advertiser").tooltip.col-claim-bonus__link T&Cs Apply
+        tr.table__row
+          td.table__col.col-rank
+            .col-rank__container
+              span.col-rank__order 9
+              .col-rank__value.col-rank__value_up
+                svg.icon <use xlink:href="img/icons/icon-sprite.svg#ico20"></use>
+                span 12
+          td.table__col.col-rating
+            .col-rating__container
+              .col-rating__section
+                .col-rating__link
+                  a(href="#" rel="nofollow" target="_blank")
+                    img(src="img/Bookies/image3.png", alt="")
+                .col-rating__content
+                  span.col-rating__value 
+                    span 8.1 
+                    | /10
+                  +rating()
+              .col-rating__text
+                p The best online betting exchange bookmaker. A must have for people who trade in bets.
+          td.table__col.col-features
+            ul.col-features__list
+              li.col-features__item
+                svg.icon <use xlink:href="img/icons/icon-sprite.svg#ico54"></use>
+                | Allows you to sit back and lay bets
+              li.col-features__item
+                svg.icon <use xlink:href="img/icons/icon-sprite.svg#ico54"></use>
+                | You can trade your bets
+              li.col-features__item
+                svg.icon <use xlink:href="img/icons/icon-sprite.svg#ico54"></use>
+                | Excellent variety of products
+          td.table__col.col-sign-up-bonus
+            .col-sign-up-bonus__container
+              span.col-sign-up-bonus__nooffer No Offer
+          td.table__col.col-claim-bonus
+            .col-claim-bonus__container
+              .col-claim-bonus__content
+                .col-claim-bonus__section
+                  a(href="#").inline-link Review
+                .col-claim-bonus__section
+                  a(href="#" rel="nofollow" target="_blank").button.button_style1 Bet Now
+                  a(href="#" data-tooltip-content="#tooltip-block_advertiser").tooltip.col-claim-bonus__link T&Cs Apply
+        tr.table__row
+          td.table__col.col-rank
+            .col-rank__container
+              span.col-rank__order 10
+              .col-rank__value
+                svg.icon <use xlink:href="img/icons/icon-sprite.svg#ico21"></use>
+                span 0
+          td.table__col.col-rating
+            .col-rating__container
+              .col-rating__section
+                .col-rating__link
+                  a(href="#" rel="nofollow" target="_blank")
+                    img(src="img/Bookies/image1.png", alt="")
+                .col-rating__content
+                  span.col-rating__value 
+                    span 9.8 
+                    | /10
+                  +rating()
+              .col-rating__text
+                p Pinnacle is well-known for offering the best value odds. It's a must-have for bettors who like to wager big amounts of cash.
+          td.table__col.col-features
+            ul.col-features__list
+              li.col-features__item
+                svg.icon <use xlink:href="img/icons/icon-sprite.svg#ico54"></use>
+                | No limit for maximum winnings per bet
+              li.col-features__item
+                svg.icon <use xlink:href="img/icons/icon-sprite.svg#ico54"></use>
+                | No stake limits
+              li.col-features__item
+                svg.icon <use xlink:href="img/icons/icon-sprite.svg#ico54"></use>
+                | Best value odds – smallest margins
+          td.table__col.col-sign-up-bonus
+            .col-sign-up-bonus__container
+              a(href="#" rel="nofollow" target="_blank").col-sign-up-bonus__link Cashback
+          td.table__col.col-claim-bonus
+            .col-claim-bonus__container
+              .col-claim-bonus__content
+                .col-claim-bonus__section
+                  a(href="#").inline-link Review
+                .col-claim-bonus__section
+                  a(href="#" rel="nofollow" target="_blank").button.button_style1 Bet Now
+                  a(href="#" data-tooltip-content="#tooltip-block_advertiser").tooltip.col-claim-bonus__link T&Cs Apply
+        tr.table__row
+          td.table__col.col-rank
+            .col-rank__container
+              span.col-rank__order 11
+              .col-rank__value.col-rank__value_down
+                svg.icon <use xlink:href="img/icons/icon-sprite.svg#ico22"></use>
+                span 1
+          td.table__col.col-rating
+            .col-rating__container
+              .col-rating__section
+                .col-rating__link
+                  a(href="#" rel="nofollow" target="_blank")
+                    img(src="img/Bookies/image2.png", alt="")
+                .col-rating__content
+                  span.col-rating__value 
+                    span 9.1 
+                    | /10
+                  +rating()
+              .col-rating__text
+                p The best live in play online betting bookie across all sports. A must-have for live online betting.
+          td.table__col.col-features
+            ul.col-features__list
+              li.col-features__item
+                svg.icon <use xlink:href="img/icons/icon-sprite.svg#ico54"></use>
+                | Great value odds in all sports
+              li.col-features__item
+                svg.icon <use xlink:href="img/icons/icon-sprite.svg#ico54"></use>
+                | Excellent layout for easy use
+              li.col-features__item
+                svg.icon <use xlink:href="img/icons/icon-sprite.svg#ico54"></use>
+                | Great minimum deposits
+          td.table__col.col-sign-up-bonus
+            .col-sign-up-bonus__container
+              span.col-sign-up-bonus__label Get Up to
+              a(href="#" rel="nofollow" target="_blank").col-sign-up-bonus__link £100
+              span.col-sign-up-bonus__label in Bet Credits
+          td.table__col.col-claim-bonus
+            .col-claim-bonus__container
+              .col-claim-bonus__content
+                .col-claim-bonus__section
+                  a(href="#").inline-link Review
+                .col-claim-bonus__section
+                  a(href="#" rel="nofollow" target="_blank").button.button_style1 Bet Now
+                  a(href="#" data-tooltip-content="#tooltip-block_advertiser").tooltip.col-claim-bonus__link T&Cs Apply
+        tr.table__row
+          td.table__col.col-rank
+            .col-rank__container
+              span.col-rank__order 12
+              .col-rank__value.col-rank__value_up
+                svg.icon <use xlink:href="img/icons/icon-sprite.svg#ico20"></use>
+                span 12
+          td.table__col.col-rating
+            .col-rating__container
+              .col-rating__section
+                .col-rating__link
+                  a(href="#" rel="nofollow" target="_blank")
+                    img(src="img/Bookies/image3.png", alt="")
+                .col-rating__content
+                  span.col-rating__value 
+                    span 8.1 
+                    | /10
+                  +rating()
+              .col-rating__text
+                p The best online betting exchange bookmaker. A must have for people who trade in bets.
+          td.table__col.col-features
+            ul.col-features__list
+              li.col-features__item
+                svg.icon <use xlink:href="img/icons/icon-sprite.svg#ico54"></use>
+                | Allows you to sit back and lay bets
+              li.col-features__item
+                svg.icon <use xlink:href="img/icons/icon-sprite.svg#ico54"></use>
+                | You can trade your bets
+              li.col-features__item
+                svg.icon <use xlink:href="img/icons/icon-sprite.svg#ico54"></use>
+                | Excellent variety of products
+          td.table__col.col-sign-up-bonus
+            .col-sign-up-bonus__container
+              span.col-sign-up-bonus__nooffer No Offer
+          td.table__col.col-claim-bonus
+            .col-claim-bonus__container
+              .col-claim-bonus__content
+                .col-claim-bonus__section
+                  a(href="#").inline-link Review
+                .col-claim-bonus__section
+                  a(href="#" rel="nofollow" target="_blank").button.button_style1 Bet Now
+                  a(href="#" data-tooltip-content="#tooltip-block_advertiser").tooltip.col-claim-bonus__link T&Cs Apply
+        
+        
 
                   
 
