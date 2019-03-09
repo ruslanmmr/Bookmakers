@@ -19,20 +19,45 @@ $hover2: #636363;
   .nav {
     padding-right: 30px;
     &__item {
-      &:not(:last-child) {
-        padding-right: 28px;
+      height: 40px;
+    }
+    &__dropdown {
+      position: absolute;
+      right: 0;
+      top: 0;
+      min-width: 100%;
+      z-index: 1;
+      padding-top: 40px;
+      background-color: #fff;
+      border-radius: 5px;
+      box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.25);
+      display: none;
+      &-list {
+        padding: 5px 0 10px 0;
       }
-      &:nth-child(1) {
-        padding-right: 23px;
+      &-link {
+        text-decoration: none;
+        color: #2a2a2a;
+        text-transform: uppercase;
+        font-size: 14px;
+        font-weight: bold;
+        display: block;
+        padding: 8px 20px;
+        white-space: nowrap;
+        transition: 0.3s;
+        text-align: right;
+        &:hover {
+          background-color: #f3f3f3;
+        }
       }
-      &:nth-child(2) {
-        padding-right: 27px;
-      }
-      &:nth-child(3) {
-        padding-right: 28px;
-      }
-      &:nth-child(4) {
-        padding-right: 31px;
+    }
+    &__link {
+      &_active {
+        color: #bcbcbc;
+        .icon {
+          stroke: #bcbcbc;
+          transform: translateY(-50%) rotate(180deg);
+        }
       }
     }
   }
@@ -300,8 +325,8 @@ $hover2: #636363;
       margin-right: 0;
       padding: 0 15px;
     }
-    .nav__item:not(:last-child) {
-      padding-right: 20px;
+    .nav__item {
+      padding: 10px;
     }
     .nav {
       padding-right: 20px;

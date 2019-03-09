@@ -2,7 +2,7 @@
   background-color: #fff;
   position: fixed;
   height: 100vh;
-  width: 230px;
+  width: 280px;
   z-index: 2000;
   top: 0;
   transform: translateX(-100%);
@@ -13,26 +13,67 @@
     overflow: auto;
     height: 100%;
   }
-  &__list {
-    margin: 0;
-    padding: 0;
-    list-style: none;
-  }
-  &__item {
-    display: block;
-  }
-  &__link {
-    font-size: 20px;
-    text-transform: uppercase;
-    color: #2a2a2a;
-    font-family: 'Roboto Condensed';
-    font-weight: bold;
-    text-decoration: none;
-    display: block;
-    padding: 10px 20px;
-    transition: 0.3s;
-    &:hover {
+  .nav {
+    &__dropdown {
       background-color: #f3f3f3;
+      display: none;
+      &-list {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        display: block;
+      }
+      &-link {
+        font-size: 20px;
+        text-transform: uppercase;
+        color: #2a2a2a;
+        font-family: 'Roboto Condensed';
+        font-weight: bold;
+        text-decoration: none;
+        display: flex;
+        align-items: center;
+        padding: 10px 20px 10px 30px;
+        transition: 0.3s;
+      }
+    }
+    &__list {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      display: block;
+    }
+    &__item {
+      display: block;
+      padding: 0;
+    }
+    &__link {
+      font-size: 20px;
+      text-transform: uppercase;
+      color: #2a2a2a;
+      font-family: 'Roboto Condensed';
+      font-weight: bold;
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      padding: 10px 20px;
+      transition: 0.3s;
+      &_dropdown {
+        span {
+          padding-right: 7px;
+        }
+        .icon {
+          stroke: #2a2a2a;
+          width: 10px;
+          height: 10px;
+          transition: 0.3s;
+        }
+      }
+      &_active {
+        background-color: #f3f3f3;
+        .icon {
+          transform: translateY(-3px) rotate(180deg);
+        }
+      }
     }
   }
   &__close-container {

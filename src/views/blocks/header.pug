@@ -5,7 +5,7 @@ header.header
         a(href="#").logo__link
           img(src="img/logos/logo.svg", alt="").logo__image
       .header__section
-        nav.nav
+        nav.nav.header__nav
           ul.nav__list
             li.nav__item
               a(href="#").nav__link ONLINE BOOKMAKERS
@@ -16,8 +16,18 @@ header.header
             li.nav__item
               a(href="#").nav__link FREE BETS
             li.nav__item
-              a(href="#").nav__link GUIDES
-                svg.icon.nav__link-icon <use xlink:href="img/icons/icon-sprite.svg#ico-arrow_bottom"></use>
+              span.nav__link.nav__link_dropdown GUIDES
+                svg.icon <use xlink:href="img/icons/icon-sprite.svg#ico-arrow_bottom"></use>
+              .nav__dropdown
+                ul.nav__dropdown-list
+                  li.nav__dropdown-item
+                    a(href="#").nav__dropdown-link nav link 1
+                  li.nav__dropdown-item
+                    a(href="#").nav__dropdown-link nav link 2
+                  li.nav__dropdown-item
+                    a(href="#").nav__dropdown-link nav link 3
+                  li.nav__dropdown-item
+                    a(href="#").nav__dropdown-link nav long link 4
         .search-block
           button.search-block__button
             svg.icon <use xlink:href="img/icons/icon-sprite.svg#ico-search"></use>

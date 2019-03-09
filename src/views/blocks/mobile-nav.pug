@@ -3,15 +3,32 @@
     a(href="#").mobile-nav__close
       span
   .mobile-nav__container.sl--scrollable
-    ul.mobile-nav__list
-      li.mobile-nav__item
-        a(href="#").mobile-nav__link ONLINE BOOKMAKERS
-      li.mobile-nav__item
-        a(href="#").mobile-nav__link BETTING SITES
-      li.mobile-nav__item
-        a(href="#").mobile-nav__link BETTING APPS
-      li.mobile-nav__item
-        a(href="#").mobile-nav__link FREE BETS
-      li.mobile-nav__item
-        a(href="#").mobile-nav__link GUIDES
+    nav.nav.mobile__nav
+      ul.nav__list
+        li.nav__item
+          a(href="#").nav__link
+            span ONLINE BOOKMAKERS
+        li.nav__item
+          a(href="#").nav__link
+            span BETTING SITES
+        li.nav__item
+          a(href="#").nav__link
+            span BETTING APPS
+        li.nav__item
+          a(href="#").nav__link
+            span FREE BETS
+        li.nav__item
+          span.nav__link.nav__link_dropdown.nav__link_mobile
+            span GUIDES
+            svg.icon <use xlink:href="img/icons/icon-sprite.svg#ico-arrow_bottom"></use>
+          .nav__dropdown
+            ul.nav__dropdown-list
+              li.nav__dropdown-item
+                a(href="#").nav__dropdown-link nav link 1
+              li.nav__dropdown-item
+                a(href="#").nav__dropdown-link nav link 2
+              li.nav__dropdown-item
+                a(href="#").nav__dropdown-link nav link 3
+              li.nav__dropdown-item
+                a(href="#").nav__dropdown-link nav long link 4
 .overlay

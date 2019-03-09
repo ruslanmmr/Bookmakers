@@ -19,14 +19,23 @@
           <div class="header__container">
             <div class="logo"><a class="logo__link" href="#"><img class="logo__image" src="img/logos/logo.svg" alt=""></a></div>
             <div class="header__section">
-              <nav class="nav">
+              <nav class="nav header__nav">
                 <ul class="nav__list">
                   <li class="nav__item"><a class="nav__link" href="#">ONLINE BOOKMAKERS</a></li>
                   <li class="nav__item"><a class="nav__link" href="#">BETTING SITES</a></li>
                   <li class="nav__item"><a class="nav__link" href="#">BETTING APPS</a></li>
                   <li class="nav__item"><a class="nav__link" href="#">FREE BETS</a></li>
-                  <li class="nav__item"><a class="nav__link" href="#">GUIDES
-                      <svg class="icon nav__link-icon"><use xlink:href="img/icons/icon-sprite.svg#ico-arrow_bottom"></use></svg></a></li>
+                  <li class="nav__item"><span class="nav__link nav__link_dropdown">GUIDES
+                      <svg class="icon"><use xlink:href="img/icons/icon-sprite.svg#ico-arrow_bottom"></use></svg></span>
+                    <div class="nav__dropdown">
+                      <ul class="nav__dropdown-list">
+                        <li class="nav__dropdown-item"><a class="nav__dropdown-link" href="#">nav link 1</a></li>
+                        <li class="nav__dropdown-item"><a class="nav__dropdown-link" href="#">nav link 2</a></li>
+                        <li class="nav__dropdown-item"><a class="nav__dropdown-link" href="#">nav link 3</a></li>
+                        <li class="nav__dropdown-item"><a class="nav__dropdown-link" href="#">nav long link 4</a></li>
+                      </ul>
+                    </div>
+                  </li>
                 </ul>
               </nav>
               <div class="search-block">
@@ -71,13 +80,25 @@
       <div class="mobile-nav">
         <div class="mobile-nav__close-container"><a class="mobile-nav__close" href="#"><span></span></a></div>
         <div class="mobile-nav__container sl--scrollable">
-          <ul class="mobile-nav__list">
-            <li class="mobile-nav__item"><a class="mobile-nav__link" href="#">ONLINE BOOKMAKERS</a></li>
-            <li class="mobile-nav__item"><a class="mobile-nav__link" href="#">BETTING SITES</a></li>
-            <li class="mobile-nav__item"><a class="mobile-nav__link" href="#">BETTING APPS</a></li>
-            <li class="mobile-nav__item"><a class="mobile-nav__link" href="#">FREE BETS</a></li>
-            <li class="mobile-nav__item"><a class="mobile-nav__link" href="#">GUIDES</a></li>
-          </ul>
+          <nav class="nav mobile__nav">
+            <ul class="nav__list">
+              <li class="nav__item"><a class="nav__link" href="#"><span>ONLINE BOOKMAKERS</span></a></li>
+              <li class="nav__item"><a class="nav__link" href="#"><span>BETTING SITES</span></a></li>
+              <li class="nav__item"><a class="nav__link" href="#"><span>BETTING APPS</span></a></li>
+              <li class="nav__item"><a class="nav__link" href="#"><span>FREE BETS</span></a></li>
+              <li class="nav__item"><span class="nav__link nav__link_dropdown nav__link_mobile"><span>GUIDES</span>
+                  <svg class="icon"><use xlink:href="img/icons/icon-sprite.svg#ico-arrow_bottom"></use></svg></span>
+                <div class="nav__dropdown">
+                  <ul class="nav__dropdown-list">
+                    <li class="nav__dropdown-item"><a class="nav__dropdown-link" href="#">nav link 1</a></li>
+                    <li class="nav__dropdown-item"><a class="nav__dropdown-link" href="#">nav link 2</a></li>
+                    <li class="nav__dropdown-item"><a class="nav__dropdown-link" href="#">nav link 3</a></li>
+                    <li class="nav__dropdown-item"><a class="nav__dropdown-link" href="#">nav long link 4</a></li>
+                  </ul>
+                </div>
+              </li>
+            </ul>
+          </nav>
         </div>
       </div>
       <div class="overlay"></div>
