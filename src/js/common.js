@@ -56,7 +56,7 @@ function headerSearch() {
     searchBlock = $('.search-block__container'),
     formBlock = $('.search-block__form');
 
-  $(document).on('click', function (e) {
+  $(document).on('click touchstart touchend', function (e) {
     if (buttonSearchOpen.is(e.target)) {
       searchBlock.addClass('search-block__container_visible').fadeIn(300);
     } else if (searchBlock.hasClass('search-block__container_visible') && !formBlock.is(e.target) &&
@@ -91,7 +91,7 @@ function signIn() {
     blockSignIn.removeClass('sign-in_active');
     state();
   })
-  
+
   $(document).bind('touchstart touchend', function (e) {
     if (blockSignIn.hasClass('sign-in_active') && !blockSignIn.is(e.target) &&
     blockSignIn.has(e.target).length === 0) {
@@ -179,7 +179,6 @@ function navDropdowns() {
       flag = true;
       setTimeout(function(){ flag = false; }, 300);
       if (event.type == 'click') {
-        console.log('1');
         $(this).toggleClass('nav__link_active');
         $(this).siblings('.nav__dropdown').toggleClass('nav__dropdown_active');
         if($(this).hasClass('nav__link_mobile')) {
