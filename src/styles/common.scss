@@ -1,15 +1,23 @@
 @import "./partials/normalize";
-@import "./partials/fonts";
+//@import "./partials/fonts";
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,600,700');
+@import url('https://fonts.googleapis.com/css?family=Roboto+Condensed:400,700');
 
 body {
-  text-rendering: optimizeSpeed;
-  font: 14px 'OpenSans', sans-serif;
+  font: 14px 'Open Sans', sans-serif;
   min-width: 320px;
   color: #2A2A2A;
   position: relative;
   overflow-x: hidden;
   background-color: #E5E5E5;
   transition: transform .3s;
+}
+p {
+  line-height: 1.5em;
+  margin: 0 0 1em 0;
+  &:last-child {
+    margin-bottom: 0;
+  }
 }
 .body_hidden {
   overflow: hidden;
@@ -27,6 +35,29 @@ body {
   padding: 0 15px;
   margin: 0 auto;
   position: relative;
+}
+.main {
+  &_width-aside {
+    .container {
+      display: flex;
+    }
+  }
+  &__container {
+    flex: 1 1 100%;
+    padding-right: 30px;
+  }
+}
+.aside {
+  width: 270px;
+  flex-shrink: 0;
+}
+.text-block {
+  padding: 30px 20px;
+  background-color: #fff;
+  border-radius: 5px;
+  p {
+    padding-right: 50px;
+  }
 }
 .logo {
   height: 43px;
@@ -55,6 +86,7 @@ body {
   transition: 0.3s;
   text-align: center;
   white-space: nowrap;
+  cursor: pointer;
   &_style1 {
     background: #CF142B;
     border-radius: 5px;
@@ -63,6 +95,18 @@ body {
     padding: 10px 51px;
     &:hover {
       background-color: #FF1B37;
+    }
+  }
+  &_style2 {
+    border: 1px solid #587DD8;
+    border-radius: 5px;
+    padding: 10px;
+    font-weight: bold;
+    color: #587DD8;
+    &:hover {
+      color: #3f61b8;
+      border-color: #3f61b8;
+      background-color: #fff;
     }
   }
 }
@@ -158,32 +202,78 @@ body {
 }
 
 .title {
-  font-family: 'RobotoCondensed';
   font-weight: bold;
   &_style1 {
+    font-family: 'Roboto Condensed';
     font-size: 26px;
+    margin: 0 0 0.5em 0;
+  }
+  &_style2 {
+    font-family: 'Open Sans';
+    font-size: 14px;
     margin: 0 0 0.5em 0;
   }
 }
 .inline-link {
-  color: #587dd8;
-  transition: 0.3s;
-  border-color: #587dd8;
-  &:hover {
-    color: #304d94;
+  transition: 0.1s;
+  text-decoration: none;
+  position: relative;
+  &:after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 1px;
+    display: none;
+    left: 0;
+  }
+  &_style1 {
+    color: #587dd8;
     &:after {
-      border-color: #304d94;
+      border-color: #587dd8;
     }
+    &:hover {
+      color: #304d94;
+    }
+  }
+  &_style2 {
+    color: #fff;
+    &:after {
+      border-color: #fff;
+    }
+    &:hover {
+      color: #c9c9c9;
+    }
+  }
+  &_style3 {
+    color: #494949;
+    &:after {
+      border-color: #494949;
+    }
+    &:hover {
+      color: #000;
+    }
+  }
+  &:hover {
+    &:after {
+      display: none;
+    }
+  }
+}
+.solid {
+  &:after {
+    border-bottom: 1px solid;
+    display: block;
+  }
+}
+.dashed {
+  &:after {
+    border-bottom: 1px dashed;
+    display: block;
   }
 }
 .banner {
   flex-shrink: 0;
-  &__link {
-    display: block;
-    padding: 22px;
-    text-decoration: none;
-    transition: 0.3s;
-  }
   &_style1 {
     .banner {
         &__container {
@@ -191,6 +281,10 @@ body {
           z-index: 2;
         }
         &__link {
+          display: block;
+          padding: 22px;
+          text-decoration: none;
+          transition: 0.3s;
           border-radius: 5px;
           overflow: hidden;
           background:#00247D;
@@ -216,7 +310,7 @@ body {
         &__title {
           display: block;
           text-align: center;
-          font-family: 'RobotoCondensed';
+          font-family: 'Roboto Condensed';
           font-weight: bold;
           font-size: 24px;
         }
@@ -258,6 +352,52 @@ body {
         }
       }
   }
+  &_style2 {
+    background:#00247D;
+    padding: 36px 47px;
+    position: relative;
+    color: #fff;
+    &:before {
+      content: '';
+      display: block;
+      background: url('../img/backgrounds/bg-banner1.jpg') no-repeat center center;
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      background-size: cover;
+      opacity: 0.6;
+    }
+    .banner {
+      &__container {
+        position: relative;
+        z-index: 2;
+        display: flex;
+        justify-content: space-between;
+      }
+      &__title {
+        line-height: 46px;
+        font-size: 42px;
+        font-weight: bold;
+        display: block;
+        padding-bottom: 5px;
+      }
+      &__sub-title {
+        font-size: 12px;
+        a {
+          margin-left: 1px;
+        }
+      }
+      &__image {
+        height: 60px;
+        width: auto;
+      }
+      .button {
+        padding: 10px 34px;
+      }
+    }
+  }
 }
 
 .table {
@@ -292,7 +432,7 @@ body {
     &_title {
       color: #fff;
       text-transform: uppercase;
-      font-family: 'RobotoCondensed';
+      font-family: 'Roboto Condensed';
       font-weight: bold;
       padding: 15px 20px;
       text-align: center;
@@ -306,7 +446,7 @@ body {
     justify-content: flex-start;
   }
   &__order {
-    font-family: 'RobotoCondensed';
+    font-family: 'Roboto Condensed';
     font-weight: bold;
     font-size: 26px;
     padding-right: 8px;
@@ -343,13 +483,11 @@ body {
     display: flex;
     align-items: center;
     padding: 5px 0;
-    flex-wrap: wrap;
   }
   &__section {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    flex-wrap: wrap;
   }
   &__text {
     padding: 5px 0;
@@ -378,11 +516,12 @@ body {
     margin-right: 4px;
     color: #9c9c9c;
     font-size: 12px;
+    white-space: nowrap;
     span {
       color: #2A2A2A;
       font-size: 18px;
       font-weight: bold;
-      font-family: 'RobotoCondensed';
+      font-family: 'Roboto Condensed';
       display: inline-block;
       margin-right: -0.01em;
     }
@@ -444,7 +583,7 @@ body {
   &__nooffer {
     padding: 4px;
     font-size: 20px;
-    font-family: 'RobotoCondensed';
+    font-family: 'Roboto Condensed';
     font-weight: bold;
     text-decoration: none;
     transition: 0.3s;
@@ -486,14 +625,6 @@ body {
   }
   &__link {
     font-size: 10px;
-    color: #2A2A2A;
-    text-decoration: none;
-    border-bottom: 1px dashed #2A2A2A;
-    transition: 0.3s;
-    &:hover {
-      color: #000;
-      border-color: #000;
-    }
   }
 }
 

@@ -1,4 +1,7 @@
 .best-bookmakers {
+  &__container {
+    padding: 0 0 30px 0;
+  }
   &__head {
     display: flex;
     justify-content: space-between;
@@ -38,18 +41,6 @@
     }
     .inline-link {
       margin-left: 0.3em;
-      text-decoration: none;
-      position: relative;
-      &:after {
-        content: '';
-        display: block;
-        border-bottom: 1px dashed;
-        position: absolute;
-        display: block;
-        width: 100%;
-        left: 0;
-        bottom: 0;
-      }
     }
     &_1 {
       .icon {
@@ -69,12 +60,6 @@
     &_4 {
       .icon {
         width: 17px;
-      }
-      .inline-link {
-        color: #494949;
-        &:hover {
-          color: #7e7e7e;
-        }
       }
     }
   }
@@ -99,8 +84,21 @@
       }
     }
   }
+  &__more {
+    display: block;
+    width: 100%;
+    margin-top: 30px;
+  }
 }
 
+@media screen and(max-width: 992px) {
+  .best-bookmakers {
+    .col-rating__section,
+    .col-rating__content {
+      flex-wrap: wrap;
+    }
+  }
+}
 @media screen and(max-width: 768px) {
   .best-bookmakers {
     .table__col:nth-child(3) {
