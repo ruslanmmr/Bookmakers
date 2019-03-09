@@ -9,12 +9,18 @@ body {
   position: relative;
   overflow-x: hidden;
   background-color: #E5E5E5;
+  transition: transform .3s;
+}
+.body_hidden {
+  overflow: hidden;
+}
+.body_active {
+  transform: translateX(230px);
 }
 .wrapper {
   margin: 0 auto;
   overflow: hidden;
   position: relative;
-  min-height: 100vh;
 }
 .container {
   max-width: 1200px;
@@ -532,6 +538,7 @@ body {
 
 @import "./partials/normalize";
 @import "./partials/header";
+@import "./partials/mobile-nav";
 @import "./partials/hot-offers";
 @import "./partials/best-bookmakers";
 @import "./partials/footer";
