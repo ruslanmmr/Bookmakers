@@ -1,8 +1,8 @@
 doctype html
 html(lang="ru")
   head
-    link(rel="stylesheet" href="styles/main.min.css")
     include blocks/head
+    link(rel="stylesheet" href="styles/main.min.css")
   body.body
     .wrapper
       include blocks/header
@@ -15,6 +15,11 @@ html(lang="ru")
           .container
             .main__container
               include blocks/about-rating
+              .title.title_style1 New Online Bookmakers
+              include blocks/bookmakers
+              .title.title_style1 Other Reliable Online Bookmakers
+              include blocks/bookmakers 
+              include blocks/guide
             aside.aside
       include blocks/footer
       //tooltips

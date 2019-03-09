@@ -1,2 +1,35 @@
 @import "./partials/home";
 @import "./partials/about";
+@import "./partials/best-bookmakers";
+@import "./partials/bookmakers";
+
+@media screen and(max-width: 768px) {
+  .banner_style2 {
+    padding: 20px;
+    .banner {
+      &__title {
+        font-size: 34px;
+      }
+      &__image {
+        margin-bottom: 15px;
+      }
+    }
+  }
+}
+@media screen and(max-width: 576px) {
+  .banner_style2 {
+    .banner {
+      &__container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+      }
+      &__title {
+        font-size: 26px;
+      }
+      &__image {
+        margin: 20px auto;
+      }
+    }
+  }
+}

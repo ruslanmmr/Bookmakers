@@ -52,9 +52,12 @@ p {
   flex-shrink: 0;
 }
 .text-block {
-  padding: 30px 20px;
-  background-color: #fff;
-  border-radius: 5px;
+  padding: 0 0 30px 0;
+  &__container {
+    padding: 30px 20px;
+    background-color: #fff;
+    border-radius: 5px;
+  }
   p {
     padding-right: 50px;
   }
@@ -354,9 +357,10 @@ p {
   }
   &_style2 {
     background:#00247D;
-    padding: 36px 47px;
+    padding: 28px 47px 36px 47px;
     position: relative;
     color: #fff;
+    margin: 30px 0 20px;
     &:before {
       content: '';
       display: block;
@@ -377,7 +381,7 @@ p {
         justify-content: space-between;
       }
       &__title {
-        line-height: 46px;
+        line-height: 1.1em;
         font-size: 42px;
         font-weight: bold;
         display: block;
@@ -392,6 +396,7 @@ p {
       &__image {
         height: 60px;
         width: auto;
+        margin-bottom: 22px;
       }
       .button {
         padding: 10px 34px;
@@ -438,6 +443,48 @@ p {
       text-align: center;
       white-space: nowrap;
     }
+  }
+  &__block {
+    margin-bottom: 20px;
+    border-radius: 5px;
+    overflow: hidden;
+    &:last-child {
+      margin-bottom: 0;
+    }
+    .table__col {
+      background-color: transparent;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+    &:hover {
+      .table__flex {
+        background-color: #f1f1f1;
+      }
+    }
+  }
+  &__flex {
+    display: flex;
+    background-color: #fff;
+    transition: 0.3s;
+  }
+}
+.col-text {
+  font-size: 10px;
+}
+.col-bet {
+  &__label {
+    color: #494949;
+    display: block;
+    text-align: center;
+    font-size: 12px;
+    line-height: 1.25em;
+    font-style: italic;
+    padding-bottom: 8px;
+  }
+  .button {
+    padding: 10px 32px;
   }
 }
 .col-rank {
@@ -498,10 +545,10 @@ p {
   }
   &__link {
     padding: 5px 15px 5px 0;
+    width: 140px;
     a {
       text-decoration: none;
-      display: block;
-      max-width: 125px;
+      display: inline-block;
       max-height: 26px;
     }
     img {
@@ -654,6 +701,17 @@ p {
     }
   }
 }
+@media screen and(max-width: 992px) {
+  .main_width-aside .container {
+    flex-wrap: wrap;
+  }
+  .main__container {
+    padding-right: 0;
+  }
+  .text-block p {
+    padding-right: 0;
+  }
+}
 @media screen and(max-width: 768px) {
   .table {
     &__col {
@@ -671,7 +729,6 @@ p {
 @import "./partials/header";
 @import "./partials/mobile-nav";
 @import "./partials/hot-offers";
-@import "./partials/best-bookmakers";
 @import "./partials/footer";
 
 
