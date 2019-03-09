@@ -54,14 +54,19 @@ function headerSearch() {
   var buttonSearchOpen = $('.search-block__button'),
     buttonSearchClose = $('.search-block__close'),
     searchBlock = $('.search-block__container'),
-    formBlock = $('.search-block__form');
+    formBlock = $('.search-block__form'),
+    flag;
 
   $(document).on('click touchstart touchend', function (e) {
-    if (buttonSearchOpen.is(e.target)) {
-      searchBlock.addClass('search-block__container_visible').fadeIn(300);
-    } else if (searchBlock.hasClass('search-block__container_visible') && !formBlock.is(e.target) &&
-      formBlock.has(e.target).length === 0 || buttonSearchClose.is(e.target)) {
-      searchBlock.removeClass('search-block__container_visible').fadeOut(300);
+    if (!flag) {
+      flag = true;
+      setTimeout(function(){ flag = false; }, 300);
+      if (buttonSearchOpen.is(e.target)) {
+        searchBlock.addClass('search-block__container_visible').fadeIn(300);
+      } else if (searchBlock.hasClass('search-block__container_visible') && !formBlock.is(e.target) &&
+        formBlock.has(e.target).length === 0 || buttonSearchClose.is(e.target)) {
+        searchBlock.removeClass('search-block__container_visible').fadeOut(300);
+      }
     }
   });
 }
