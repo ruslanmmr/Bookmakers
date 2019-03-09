@@ -70,7 +70,7 @@ function sliderOffers() {
   slider.slick({
     slidesToShow: 4,
     slidesToScroll: 4,
-    //autoplay: true,
+    autoplay: true,
     autoplaySpeed: 3000,
     dots: false,
     arrows: false,
