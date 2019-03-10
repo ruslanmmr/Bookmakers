@@ -1,8 +1,0 @@
-@import "../_mixins/font-face";
-
-@include font-face("RobotoCondensed", "../fonts/RobotoCondensed/roboto-condensed-v16-latin-regular", "normal");
-@include font-face("RobotoCondensed", "../fonts/RobotoCondensed/roboto-condensed-v16-latin-700", "bold");
-@include font-face("OpenSans", "../fonts/OpenSans/open-sans-v15-latin-regular", "normal");
-@include font-face("OpenSans", "../fonts/OpenSans/open-sans-v15-latin-600", "600");
-@include font-face("OpenSans", "../fonts/OpenSans/open-sans-v15-latin-700", "bold");
-

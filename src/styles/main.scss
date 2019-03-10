@@ -5,8 +5,10 @@
 
 @media screen and(max-width: 768px) {
   .banner_style2 {
-    padding: 20px;
     .banner {
+      &__container {
+        padding: 20px;
+      }
       &__title {
         font-size: 34px;
       }

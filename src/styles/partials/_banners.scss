@@ -1,0 +1,142 @@
+.banner {
+  position: relative;
+  display: block;
+  overflow: hidden;
+  border-radius: 5px;
+  background:#00247D;
+  transition: 0.3s;
+  text-decoration: none;
+  color: #fff;
+  &__background {
+    background-size: cover;
+    background-position: center center;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    z-index: 1;
+    opacity: 0.6;
+  }
+  &__container {
+    position: relative;
+    z-index: 2;
+  }
+  &:hover {
+    opacity: 0.9;
+  }
+  &_style1 {
+    .banner {
+        &__container {
+          padding: 22px;
+        }
+        &__title {
+          display: block;
+          text-align: center;
+          font-family: 'Roboto Condensed';
+          font-weight: bold;
+          font-size: 24px;
+        }
+        &__sub-title {
+          display: block;
+          text-align: center;
+          font-style: italic;
+        }
+        &__image {
+          height: 47px;
+          width: auto;
+          margin-bottom: 5px;
+        }
+        &__content {
+          padding: 12px 30px 15px 30px;
+          margin-top: 12px;
+          background: rgba(0, 12, 78, 0.5);
+          box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+          border-radius: 3px;
+        }
+        &__list {
+          list-style: none;
+          padding: 0;
+          margin: 0;
+        }
+        &__item {
+          display: flex;
+          padding-left: 31px;
+          position: relative;
+          &:not(:last-child) {
+            margin-bottom: 5px;
+          }
+          .icon {
+            position: absolute;
+            width: 18px;
+            height: 18px;
+            left: 0;
+          }
+        }
+      }
+  }
+  &_style2 {
+    position: relative;
+    margin: 30px 0 20px;
+    .banner {
+      &__container {
+        padding: 28px 47px 36px 47px;
+        display: flex;
+        justify-content: space-between;
+      }
+      &__title {
+        line-height: 1.1em;
+        font-size: 42px;
+        font-weight: bold;
+        display: block;
+        padding-bottom: 5px;
+      }
+      &__sub-title {
+        font-size: 12px;
+        a {
+          margin-left: 1px;
+        }
+      }
+      &__image {
+        height: 60px;
+        width: auto;
+        margin-bottom: 22px;
+      }
+      .button {
+        padding: 10px 34px;
+      }
+    }
+  }
+  &_style3 {
+    .icon {
+      width: 64px;
+      height: 46px;
+      fill: #fff;
+    }
+    .banner {
+      &__title {
+        text-align: center;
+        font-family: 'Roboto Condensed';
+        font-weight: bold;
+        font-size: 20px;
+        padding-top: 10px;
+      }
+      &__container {
+        padding: 20px 25px 15px 25px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+      }
+    }
+  }
+  &_style4 {
+    &__title {
+      display: block;
+      text-align: center;
+      font-size: 18px;
+      font-weight: bold;
+      font-family: 'Roboto Condensed';
+    }
+  }
+}

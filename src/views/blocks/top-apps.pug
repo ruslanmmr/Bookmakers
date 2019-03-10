@@ -1,0 +1,28 @@
+mixin app()
+  .top-apps-block
+    .top-apps-block__container
+      img(src="img/icons/phone.png", alt="").top-apps-block__image
+      .top-apps-block__content
+        ul.top-apps-block__os-list
+          li.top-apps-block__os-item.top-apps-block__os-item_android
+          li.top-apps-block__os-item.top-apps-block__os-item_ios
+        a(href="#").top-apps-block__title 10Bet Betting App
+        include rating-block
+        .top-apps-block__content-bottom
+          .top-apps-block__section
+            a(href="#").inline-link.inline-link_style1.solid Read Review
+            span.top-apps-block__text Get up to <strong>£100</strong> <br>in Bonuses
+          .top-apps-block__section
+            a(href="#").button.button_style4.top-apps-block__button Claim
+.top-apps.aside-block
+  h4.title.title_style1 Top UK Betting Apps
+  .top-apps__container
+    +app
+    +app
+    +app
+    +app
+    +app
+    a(href="#").button.button_style3.top-apps__button View All
+    
+          
+

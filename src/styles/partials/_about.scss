@@ -13,15 +13,15 @@
   &__section {
     flex: 1 1 100%;
   }
-  .banner {
-    width: 370px;
-    box-sizing: content-box;
+  &__banner {
+    width: 400px;
     padding-left: 30px;
+    flex-shrink: 0;
   }
 }
 @media screen and(max-width: 992px) {
   .about {
-    .banner {
+    &__banner {
       width: 280px;
     }
   }
@@ -31,7 +31,7 @@
     &__container {
       display: block;
     }
-    .banner {
+    &__banner {
       width: 100%;
       padding: 20px 0 0 0;
     }

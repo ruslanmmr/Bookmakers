@@ -1,0 +1,19 @@
+mixin aside-news()
+  .aside-news-block
+    .aside-news-block__container
+      a(href="#").aside-news-block__image.hover_style1
+        img(data-src="img/news/news1.jpg", alt="").lazy
+      .aside-news-block__content
+        span.aside-news-block__date January 10, 2019
+        a(href="").inline-link.inline-link_style4.aside-news-block__text Advertising Standards Authority clears Coral of advertising breach
+.aside-news.aside-block
+  h4.title.title_style1 Bookies News
+  .aside-news__container
+    +aside-news()
+    +aside-news()
+    +aside-news()
+    +aside-news()
+    +aside-news()
+    a(href="#").aside-news__button.button.button_style2 View All
+
+
