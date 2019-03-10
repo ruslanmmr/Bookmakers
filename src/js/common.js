@@ -6,6 +6,7 @@ $(document).ready(function () {
   scrolltop();
   navDropdowns();
   lazy();
+  floating();
 });
 window.addEventListener('load',
   function () {
@@ -13,6 +14,7 @@ window.addEventListener('load',
   }, false);
 $(window).resize(function () {
   innerWidth = $('body').innerWidth();
+  floating();
 });
 
 //global variables
@@ -33,6 +35,7 @@ function cookies() {
 //scrolltop
 function scrolltop() {
   var buttonUp = $('.up');
+
   function check() {
     if ($(window).scrollTop() > 100) {
       buttonUp.fadeIn();
@@ -61,7 +64,9 @@ function headerSearch() {
   $(document).on('click touchstart touchend', function (e) {
     if (!flag) {
       flag = true;
-      setTimeout(function(){ flag = false; }, 300);
+      setTimeout(function () {
+        flag = false;
+      }, 300);
       if (buttonSearchOpen.is(e.target)) {
         searchBlock.addClass('search-block__container_visible').fadeIn(300);
       } else if (searchBlock.hasClass('search-block__container_visible') && !formBlock.is(e.target) &&
@@ -81,7 +86,9 @@ function signIn() {
   buttonSignIn.on('click mouseenter', function (event) {
     if (!flag) {
       flag = true;
-      setTimeout(function(){ flag = false; }, 300);
+      setTimeout(function () {
+        flag = false;
+      }, 300);
       if (event.type == 'click') {
         blockSignIn.toggleClass('sign-in_active');
         state();
@@ -100,7 +107,7 @@ function signIn() {
 
   $(document).bind('touchstart touchend', function (e) {
     if (blockSignIn.hasClass('sign-in_active') && !blockSignIn.is(e.target) &&
-    blockSignIn.has(e.target).length === 0) {
+      blockSignIn.has(e.target).length === 0) {
       blockSignIn.removeClass('sign-in_active');
       state();
     }
@@ -176,18 +183,20 @@ function nav() {
 //nav-dropdowns
 function navDropdowns() {
   var dropdownButton = $('.nav__link_dropdown'),
-      desktopDropdown = $('.header .nav__dropdown'),
-      container = $('.header .nav__item'),
-      flag;
+    desktopDropdown = $('.header .nav__dropdown'),
+    container = $('.header .nav__item'),
+    flag;
 
-  dropdownButton.on('click mouseenter', function(event){
+  dropdownButton.on('click mouseenter', function (event) {
     if (!flag) {
       flag = true;
-      setTimeout(function(){ flag = false; }, 300);
+      setTimeout(function () {
+        flag = false;
+      }, 300);
       if (event.type == 'click') {
         $(this).toggleClass('nav__link_active');
         $(this).siblings('.nav__dropdown').toggleClass('nav__dropdown_active');
-        if($(this).hasClass('nav__link_mobile')) {
+        if ($(this).hasClass('nav__link_mobile')) {
           $(this).siblings('.nav__dropdown').slideToggle(300);
         } else {
           $(this).siblings('.nav__dropdown').fadeToggle(300);
@@ -202,7 +211,7 @@ function navDropdowns() {
     return false
   })
 
-  container.on('mouseleave', function(){
+  container.on('mouseleave', function () {
     dropdownButton.removeClass('nav__link_active');
     desktopDropdown.fadeOut(300).removeClass('nav__dropdown_active');
   })
@@ -216,4 +225,30 @@ function lazy() {
     effect: 'fadeIn',
     effectTime: '300'
   });
+}
+//плавающие блоки
+function floating() {
+  var floatingBlock = $('.floating-block');
+  if ($('*').is(floatingBlock)) {
+    var topPos = floatingBlock.offset().top - 15;
+    $(window).scroll(function () {
+      if (innerWidth > 992) {
+        var top = $(document).scrollTop(),
+          pip = $('.join').offset().top,
+          height = floatingBlock.height();
+        if (top > topPos && top < (pip - 30) - height) {
+          floatingBlock.removeClass('floating-block_bottom');
+          floatingBlock.addClass('floating-block_fixed').fadeIn();
+        } else if (top > (pip - 30) - height) {
+          floatingBlock.addClass('floating-block_bottom');
+        } else {
+          floatingBlock.removeClass('floating-block_fixed');
+          floatingBlock.removeClass('floating-block_bottom');
+        }
+      } else {
+        floatingBlock.removeClass('floating-block_fixed').fadeIn();
+        floatingBlock.removeClass('floating-block_bottom');
+      }
+    });
+  }
 }

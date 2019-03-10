@@ -1,12 +1,22 @@
 .aside {
   width: 270px;
   flex-shrink: 0;
-  .container {
-    padding: 0;
+  &__container {
+    margin: -15px;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .row {
+    margin: -10px;
+  }
+  .col {
+    padding: 10px;
+    width: 100%;
   }
 }
 .aside-block {
-  padding-bottom: 30px;
+  padding: 15px;
+  width: 100%;
 }
 .best-bookie {
   width: 100%;
@@ -16,9 +26,6 @@
   font-family: 'Roboto Condensed';
   font-weight: bold;
   font-size: 24px;
-  &:not(:last-child) {
-    margin-bottom: 30px;
-  }
   &__container {
     border-radius: 5px;
     overflow: hidden;
@@ -76,6 +83,7 @@
   &__button {
     display: block;
     width: 100%;
+    margin-top: 20px;
   }
 }
 .top-apps-block {
@@ -154,6 +162,7 @@
   &__button {
     display: block;
     width: 100%;
+    margin-top: 20px;
   }
 }
 .aside-news-block {
@@ -208,6 +217,12 @@
   }
 }
 .sign-up-offers {
+  .col {
+    padding: 0;
+  }
+  .row {
+    margin: 0;
+  }
   &__container {
     border-radius: 5px;
     border: 1px solid rgba(0, 36, 125, 0.05);
@@ -217,6 +232,7 @@
   &__button {
     display: block;
     width: 100%;
+    margin-top: 20px;
   }
 }
 .sign-up-offers-block {
@@ -245,6 +261,7 @@
     font-weight: bold;
     font-size: 12px;
     transition: .3s;
+    flex-shrink: 0;
   }
   &__section {
     display: flex;
@@ -271,6 +288,7 @@
   }
   &__titles {
     padding: 0 10px;
+    flex: 1 1 100%;
   }
   &__title {
     transition: .3s;
@@ -306,20 +324,94 @@
   }
   &__link {
     color: #494949;
-    display: flex;
-    align-items: center;
+    position: relative;
+    padding-left: 20px;
+    display: block;
     .icon {
       width: 14px;
       height: 14px;
       transition: 0.3s;
       fill: #BCBCBC;
-      margin-right: 5px;
       transition: 0.3s;
+      position: absolute;
+      top: 3px;
+      left: 0;
     }
     &:hover {
       .icon {
         fill: #CF142B;
       }
     }
+  }
+}
+.online-bookmaker-recommends-banner {
+  width: 270px;
+}
+
+@media screen and(max-width: 992px) {
+  .aside {
+    width: 100%;
+    .col {
+      width: 33.33%;
+    }
+    &-block {
+      width: 100%;
+    }
+  }
+  .existing-offers-banner,
+  .aside-nav,
+  .online-bookmaker-recommends-banner {
+    width: 33.33%;
+  }
+  .best-bookie-block {
+    font-size: 20px;
+  }
+  .top-apps {
+    .col {
+      width: 50%;
+    }
+  }
+  .top-apps-block {
+    &__section {
+      flex: 1 1 50%;
+      &:first-child {
+        padding-right: 10px;
+      }
+    }
+    &__text {
+      br {
+        display: none;
+      }
+    }
+    &__button {
+      padding: 10px;
+      display: block;
+    }
+  }
+}
+@media screen and(max-width: 768px) {
+  .aside {
+    .col {
+      width: 50%;
+    }
+  }
+  .aside-nav,
+  .online-bookmaker-recommends-banner {
+    width: 50%;
+  }
+  .existing-offers-banner {
+    order: 100;
+    width: 100%;
+  }
+}
+@media screen and(max-width: 576px) {
+  .aside {
+    .col {
+      width: 100%;
+    }
+  }
+  .aside-nav,
+  .online-bookmaker-recommends-banner {
+    width: 100%;
   }
 }

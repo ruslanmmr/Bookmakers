@@ -1,5 +1,5 @@
 mixin aside-news()
-  .aside-news-block
+  .aside-news-block.col
     .aside-news-block__container
       a(href="#").aside-news-block__image.hover_style1
         img(data-src="img/news/news1.jpg", alt="").lazy
@@ -8,12 +8,12 @@ mixin aside-news()
         a(href="").inline-link.inline-link_style4.aside-news-block__text Advertising Standards Authority clears Coral of advertising breach
 .aside-news.aside-block
   h4.title.title_style1 Bookies News
-  .aside-news__container
+  .aside-news__container.row
     +aside-news()
     +aside-news()
     +aside-news()
     +aside-news()
     +aside-news()
-    a(href="#").aside-news__button.button.button_style2 View All
+  a(href="#").aside-news__button.button.button_style2 View All
 
 

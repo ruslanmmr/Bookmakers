@@ -131,12 +131,25 @@
     }
   }
   &_style4 {
-    &__title {
-      display: block;
-      text-align: center;
-      font-size: 18px;
-      font-weight: bold;
-      font-family: 'Roboto Condensed';
+    .banner {
+      &__title {
+        display: block;
+        text-align: center;
+        font-size: 18px;
+        font-weight: bold;
+        font-family: 'Roboto Condensed';
+        padding: 15px;
+      }
+      &__background {
+        opacity: 1;
+      }
+      &__container {
+        &:before {
+          content: '';
+          display: block;
+          padding-top: 90%;
+        }
+      }
     }
   }
 }
