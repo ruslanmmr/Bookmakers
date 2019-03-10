@@ -5,6 +5,7 @@ $(document).ready(function () {
   nav();
   scrolltop();
   navDropdowns();
+  lazy();
 });
 window.addEventListener('load',
   function () {
@@ -205,4 +206,14 @@ function navDropdowns() {
     dropdownButton.removeClass('nav__link_active');
     desktopDropdown.fadeOut(300).removeClass('nav__dropdown_active');
   })
+}
+
+//lazy
+function lazy() {
+  $(".lazy").Lazy({
+    visibleOnly: true,
+    threshold: '',
+    effect: 'fadeIn',
+    effectTime: '300'
+  });
 }
