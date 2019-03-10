@@ -854,7 +854,6 @@ p {
 }
 .best-bookie-block {
   width: 100%;
-  color: #fff;
   font-family: 'Roboto Condensed';
   font-weight: bold;
   font-size: 24px;
@@ -865,6 +864,9 @@ p {
     border-radius: 5px;
     overflow: hidden;
     position: relative;
+    text-decoration: none;
+    color: #fff;
+    display: block;
     &:before {
       content: '';
       display: block;
@@ -875,6 +877,12 @@ p {
       z-index: 2;
       top: 0;
       left: 0;
+      transition: 0.3s;
+    }
+    &:hover {
+      &:before {
+        background-color: rgba(0, 0, 0, 0.4);
+      }
     }
   }
   &__background {
@@ -942,6 +950,19 @@ p {
   .main_width-aside .container {
     flex-wrap: wrap;
   }
+  .best-bookie-block:not(:last-child) {
+    margin-bottom: 20px;
+  }
+  .aside {
+    width: 100%;
+    &__container {
+      margin: 0 -10px;
+    }
+    &-block {
+      padding: 0 10px;
+      width: 33.33%;
+    }
+  }
   .main__container {
     padding-right: 0;
   }
@@ -962,8 +983,18 @@ p {
       padding: 10px;
     }
   }
+  .aside {
+    &-block {
+      width: 50%;
+    }
+  }
 }
 @media screen and(max-width: 576px) {
+  .aside {
+    &-block {
+      width: 100%;
+    }
+  }
   .title_style1 {
     font-size: 22px;
   }
