@@ -389,6 +389,11 @@ p {
     font-size: 14px;
     margin: 0 0 0.5em 0;
   }
+  &_style3 {
+    font-family: 'Roboto Condensed';
+    font-size: 18px;
+    margin: 0 0 0.7em 0;
+  }
 }
 .inline-link {
   transition: 0.1s;
@@ -747,6 +752,30 @@ p {
     bottom: 30px;
   }
 }
+.breadcrumbs {
+  &__container {
+    padding: 20px 0;
+  }
+  &__list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+  }
+  &__item {
+    color: #888888;
+    &:not(:last-child) {
+      &:after {
+        content: '>';
+        padding: 0 0.3em;
+      }
+    }
+  }
+  &__link {
+    color: inherit;
+    text-decoration: none;
+  }
+}
 @media screen and(max-width: 1200px) {
   .table {
     &__col {
@@ -849,6 +878,7 @@ p {
 @import "./partials/join";
 @import "./partials/banners";
 @import "./partials/aside-content";
+@import "./partials/filter";
 @import "./partials/footer";
 
 

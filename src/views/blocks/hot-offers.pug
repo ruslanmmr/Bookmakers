@@ -17,9 +17,18 @@ mixin slide(title)
         span.hot-offers__title Hot Offers
         a(href="#").inline-link.inline-link_style2.solid.hot-offers__link-more View All
     .hot-offers-slider
-      +slide('MoPlay Free Bets - Bet £10 Get £30')(src="img/offers/offer1.jpg")
-      +slide('MoPlay Free Bets - Bet £10 Get £30')(src="img/offers/offer2.jpg")
-      +slide('Betfred - Get £30 Free Bet + 30 Spins!')(src="img/offers/offer3.jpg")
-      +slide('Betfair Casino Free Bet No Deposit - 20 Free Chips + £50 Free Bets')(src="img/offers/offer4.jpg")
-      +slide('Betfair Casino Free Bet No Deposit - 20 Free Chips + £50 Free Bets')(src="img/offers/offer3.jpg")
-      +slide('MoPlay Free Bets - Bet £10 Get £30')(src="img/offers/offer2.jpg")
+      button.hot-offers-slider__button.hot-offers-slider__button_prev
+        svg.icon <use xlink:href="img/icons/icon-sprite.svg#ico40"></use>
+      button.hot-offers-slider__button.hot-offers-slider__button_next
+        svg.icon <use xlink:href="img/icons/icon-sprite.svg#ico40"></use>
+      .hot-offers-slider__container
+        +slide('MoPlay Free Bets - Bet £10 Get £30')(src="img/offers/offer1.jpg")
+        +slide('MoPlay Free Bets - Bet £10 Get £30')(src="img/offers/offer2.jpg")
+        +slide('Betfred - Get £30 Free Bet + 30 Spins!')(src="img/offers/offer3.jpg")
+        +slide('Betfair Casino Free Bet No Deposit - 20 Free Chips + £50 Free Bets')(src="img/offers/offer4.jpg")
+        +slide('Betfair Casino Free Bet No Deposit - 20 Free Chips + £50 Free Bets')(src="img/offers/offer3.jpg")
+        +slide('MoPlay Free Bets - Bet £10 Get £30')(src="img/offers/offer2.jpg")
+        +slide('Betfred - Get £30 Free Bet + 30 Spins!')(src="img/offers/offer3.jpg")
+        +slide('Betfair Casino Free Bet No Deposit - 20 Free Chips + £50 Free Bets')(src="img/offers/offer4.jpg")
+        +slide('Betfair Casino Free Bet No Deposit - 20 Free Chips + £50 Free Bets')(src="img/offers/offer3.jpg")
+        +slide('MoPlay Free Bets - Bet £10 Get £30')(src="img/offers/offer2.jpg")

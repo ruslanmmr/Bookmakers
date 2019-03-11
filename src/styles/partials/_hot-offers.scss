@@ -2,14 +2,52 @@
 .hot-offers {
   &__title {
     text-transform: uppercase;
+    font-family: 'Roboto Condensed';
+    font-weight: bold;
   }
   &__title-section-content {
     position: relative;
   }
 }
 .hot-offers-slider {
-  border-radius: 5px;
-  overflow: hidden;
+  &__container {
+    border-radius: 5px;
+    overflow: hidden;
+  }
+  &__button {
+    outline: none;
+    height: 30px;
+    width: 30px;
+    border-radius: 100%;
+    background-color: #fff;
+    box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.15);
+    padding: 0;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    border: 0;
+    cursor: pointer;
+    transition: 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    .icon {
+      width: 12px;
+      height: 12px;
+    }
+    &_prev {
+      left: -41px;
+    }
+    &_next {
+      right: -41px;
+      .icon {
+        transform: rotate(180deg);
+      }
+    }
+    &:hover {
+      background: #F7F7F7;
+    }
+  }
   .slick-track {
     display: flex;
   }
@@ -105,6 +143,91 @@
     .hot-offers-slide__links-container {
       opacity: 1;
       visibility: visible;
+    }
+  }
+}
+
+.hot-offers-block {
+  background-color: #E0E8FF;
+  &__container {
+    padding: 15px 0 32px 0;
+  }
+  .hot-offers-slider {
+    position: relative;
+    &__container {
+      background: #F7F7F7;
+    }
+  }
+  .hot-offers-slide {
+    &:before {
+      background: #fff;
+    }
+    &__title {
+      color: #070707;
+    }
+    &__button {
+      background: #CF142B;
+      color: #fff;
+      &:hover {
+        background: #FF1B37;
+      }
+    }
+    &__link {
+      color: #2A2A2A;
+      border-color: #2A2A2A;
+      &:hover {
+        color: #2A2A2A;
+        border-color: #2A2A2A;
+      }
+    }
+  }
+  .hot-offers {
+    &__title-section {
+      text-align: center;
+      padding-bottom: 10px;
+      display: flex;
+      justify-content: center;
+      &-content {
+        position: relative;
+      }
+    }
+    &__title {
+      font-size: 18px;
+      color: #000;
+    }
+    &__link-more {
+      color: #000;
+      font-size: 12px;
+      position: absolute;
+      right: -10px;
+      transform: translateX(100%);
+    }
+  }
+}
+@media screen and(max-width: 1270px) {
+  .hot-offers-block {
+    .hot-offers {
+      &__container {
+        padding: 0 40px;
+      }
+    }
+  }
+}
+@media screen and(max-width: 576px) {
+  .hot-offers-block {
+    .hot-offers {
+      &__container {
+        padding: 0 40px;
+      }
+    }
+    .hot-offers__link-more {
+      position: relative;
+      right: 0;
+      bottom: 0;
+      transform: translateX(0);
+    }
+    .hot-offers__title {
+      display: block;
     }
   }
 }
