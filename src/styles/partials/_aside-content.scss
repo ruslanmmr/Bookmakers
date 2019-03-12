@@ -347,6 +347,18 @@
 .online-bookmaker-recommends-banner {
   width: 270px;
 }
+.also-recommend {
+  &__list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+  &__item {
+    &:not(:last-child) {
+      padding-bottom: 7px;
+    }
+  }
+}
 
 @media screen and(max-width: 992px) {
   .aside {
@@ -360,7 +372,8 @@
   }
   .existing-offers-banner,
   .aside-nav,
-  .online-bookmaker-recommends-banner {
+  .online-bookmaker-recommends-banner,
+  .also-recommend {
     width: 33.33%;
   }
   .best-bookie-block {
@@ -388,6 +401,12 @@
       display: block;
     }
   }
+  .aside-nav {
+    order: 102;
+  }
+  .also-recommend {
+    order: 103;
+  }
 }
 @media screen and(max-width: 768px) {
   .aside {
@@ -396,7 +415,8 @@
     }
   }
   .aside-nav,
-  .online-bookmaker-recommends-banner {
+  .online-bookmaker-recommends-banner,
+  .also-recommend {
     width: 50%;
   }
   .existing-offers-banner {
@@ -411,7 +431,8 @@
     }
   }
   .aside-nav,
-  .online-bookmaker-recommends-banner {
+  .online-bookmaker-recommends-banner,
+  .also-recommend {
     width: 100%;
   }
 }

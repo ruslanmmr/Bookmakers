@@ -1,30 +1,33 @@
 .filter {
+  position: relative;
+  z-index: 2;
   &__container {
     background-color: #fff;
     box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.15);
     border-radius: 5px;
     padding: 20px;
   }
-  &__content {
-
+  .row {
+    margin: -10px;
   }
 }
 .filter-block {
-  &__container {
-
-  }
+  position: relative;
   &__list {
     list-style: none;
     margin: 0;
     padding: 0;
-    margin: -4px -30px;
+    margin: -4px -20px;
   }
   &__item {
-    padding: 4px 30px;
+    padding: 4px 20px;
   }
   &__label {
+    cursor: pointer;
     padding-left: 19px;
     position: relative;
+    display: block;
+    transition: 0.3s;
     &:before,
     &:after {
       content: '';
@@ -46,7 +49,11 @@
       z-index: 2;
       opacity: 0;
     }
+    &:hover {
+      color: #00247D;
+    }
     &_checked {
+      color: #00247D;
       &:after {
         opacity: 1;
       }
@@ -75,20 +82,26 @@
       height: 8px;
       position: absolute;
       right: 10px;
-      top: 50%;
-      transform: translateY(-50%);
+      top: 13px;
+    }
+    &_disabled {
+      color: #9C9C9C !important;
+      border-color: #00247d0d !important;
     }
   }
   &__dropdown {
     position: relative;
     margin-top: 8px;
+    z-index: 1;
     .filter-block__list {
-      display: flex;
-      flex-direction: column;
-      flex-wrap: wrap;
-      max-height: 100px;
+      column-count: 2;
+      column-gap: 0;
+      width: 100%;
     }
     .filter-block__item {
+      flex-shrink: 0;
+      break-inside: avoid-column;
+      width: 100%;
     }
   }
   &__dropdown-container {
@@ -100,10 +113,30 @@
     border: 1px solid rgba(0, 36, 125, 0.05);
     box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.25);
     border-radius: 5px;
-    padding: 20px;
+    padding: 33px 14px 20px 20px;
+    width: 400px;
+    height: 366px;
+    display: none;
+    .icon {
+      width: 8px;
+      height: 8px;
+      position: absolute;
+      right: 10px;
+      top: 13px;
+    }
+    .nicescroll-rails {
+    }
+  }
+  &__dropdown-section {
+    display: flex;
+    &:not(:last-child) {
+      padding-bottom: 10px;
+    }
   }
   &__dropdown-content {
-    display: flex;
+    padding: 0 40px 0 0;
+    overflow-y: auto;
+    height: 100%;
   }
   &__alphabet {
     font-size: 20px;

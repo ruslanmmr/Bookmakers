@@ -8,7 +8,8 @@ $(document).ready(function () {
   navDropdowns();
   lazy();
   floating();
-  filter();
+  readmore();
+  sort();
 });
 window.addEventListener('load',
   function () {
@@ -390,7 +391,7 @@ function sliderOffers() {
         }
         ,
         {
-          breakpoint: 576,
+          breakpoint: 480,
           settings: {
             slidesToShow: 1,
             slidesToScroll: 1
@@ -399,4 +400,64 @@ function sliderOffers() {
       ]
     });
   }
+}
+//readmore 
+function readmore() {
+  var button = $('.read-more-dropdown__button'),
+      block = $('.read-more-dropdown__container');
+  
+  button.on('click', function(e) {
+    e.preventDefault();
+    $(this).siblings(block).slideToggle(300);
+    $(this).toggleClass('read-more-dropdown__button_active');
+    if($(this).hasClass('read-more-dropdown__button_active')) {
+      $(this).find('span').text('Hide');
+    } else {
+      $(this).find('span').text('Show more');
+    }
+  })   
+}
+
+//sort
+function sort() {
+  var sortButton = $('.sort-item__button'),
+      dropdown = $('.sort-item__list'),
+      sortValue = $('.sort-item__link'),
+      sortBlock = $('.sort-item'),
+      flag;
+  
+      $(document).on('click touchstart touchend', function (e) {
+        if (!flag) {
+          flag = true;
+          setTimeout(function () {
+            flag = false;
+          }, 300);
+          if (sortButton.is(e.target)) {
+            $(e.target).parent().toggleClass('sort-item_active');
+            state();
+          } else if (sortValue.is(e.target)) {
+            $(e.target).parents('.sort-item').find('.sort-item__button span').text($(e.target).text());
+            sortBlock.removeClass('sort-item_active');
+            state();
+          } else if (sortBlock.hasClass('sort-item_active') && !dropdown.is(e.target) &&
+          dropdown.has(e.target).length === 0) {
+            sortBlock.removeClass('sort-item_active');
+            state();
+          }
+        }
+      });
+  
+      function state() {
+        sortBlock.each(function() {
+          if($(this).hasClass('sort-item_active')) {
+            $(this).find(dropdown).fadeIn(300);
+          } else {
+            $(this).find(dropdown).fadeOut(300);
+          }
+        })
+      }
+  sortValue.on('click', function(e) {
+    e.preventDefault();
+  })
+
 }

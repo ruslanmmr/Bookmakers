@@ -1,3 +1,100 @@
+mixin dropdown(title)
+  .filter-block__dropdown
+    a(href="#").filter-block__dropdown-button=title
+      svg.icon <use xlink:href="img/icons/icon-sprite.svg#ico43"></use>
+    .filter-block__dropdown-container
+      svg.icon <use xlink:href="img/icons/icon-sprite.svg#ico43"></use>
+      .filter-block__dropdown-content
+        .filter-block__dropdown-section
+          span.filter-block__alphabet a
+          ul.filter-block__list
+            li.filter-block__item
+              label.filter-block__label Afghanistan
+                input(type="checkbox").filter-block__checkbox
+            li.filter-block__item
+              label.filter-block__label Afghanistan
+                input(type="checkbox").filter-block__checkbox
+            li.filter-block__item
+              label.filter-block__label Afghanistan
+                input(type="checkbox").filter-block__checkbox
+            li.filter-block__item
+              label.filter-block__label Afghanistan
+                input(type="checkbox").filter-block__checkbox
+            li.filter-block__item
+              label.filter-block__label Afghanistan
+                input(type="checkbox").filter-block__checkbox
+            li.filter-block__item
+              label.filter-block__label Afghanistan
+                input(type="checkbox").filter-block__checkbox
+            li.filter-block__item
+              label.filter-block__label Afghanistan
+                input(type="checkbox").filter-block__checkbox
+            li.filter-block__item
+              label.filter-block__label Afghanistan
+                input(type="checkbox").filter-block__checkbox
+            li.filter-block__item
+              label.filter-block__label Antigua and Barbuda
+                input(type="checkbox").filter-block__checkbox
+        .filter-block__dropdown-section
+          span.filter-block__alphabet b
+          ul.filter-block__list
+            li.filter-block__item
+              label.filter-block__label Botswana
+                input(type="checkbox").filter-block__checkbox
+            li.filter-block__item
+              label.filter-block__label Botswana
+                input(type="checkbox").filter-block__checkbox
+            li.filter-block__item
+              label.filter-block__label Botswana
+                input(type="checkbox").filter-block__checkbox
+            li.filter-block__item
+              label.filter-block__label Botswana
+                input(type="checkbox").filter-block__checkbox
+            li.filter-block__item
+              label.filter-block__label Botswana
+                input(type="checkbox").filter-block__checkbox
+            li.filter-block__item
+              label.filter-block__label Botswana
+                input(type="checkbox").filter-block__checkbox
+            li.filter-block__item
+              label.filter-block__label Botswana
+                input(type="checkbox").filter-block__checkbox
+            li.filter-block__item
+              label.filter-block__label Botswana
+                input(type="checkbox").filter-block__checkbox
+            li.filter-block__item
+              label.filter-block__label Botswana
+                input(type="checkbox").filter-block__checkbox
+        .filter-block__dropdown-section
+          span.filter-block__alphabet a
+          ul.filter-block__list
+            li.filter-block__item
+              label.filter-block__label Afghanistan
+                input(type="checkbox").filter-block__checkbox
+            li.filter-block__item
+              label.filter-block__label Afghanistan
+                input(type="checkbox").filter-block__checkbox
+            li.filter-block__item
+              label.filter-block__label Afghanistan
+                input(type="checkbox").filter-block__checkbox
+            li.filter-block__item
+              label.filter-block__label Afghanistan
+                input(type="checkbox").filter-block__checkbox
+            li.filter-block__item
+              label.filter-block__label Afghanistan
+                input(type="checkbox").filter-block__checkbox
+            li.filter-block__item
+              label.filter-block__label Afghanistan
+                input(type="checkbox").filter-block__checkbox
+            li.filter-block__item
+              label.filter-block__label Afghanistan
+                input(type="checkbox").filter-block__checkbox
+            li.filter-block__item
+              label.filter-block__label Afghanistan
+                input(type="checkbox").filter-block__checkbox
+            li.filter-block__item
+              label.filter-block__label Antigua and Barbuda
+                input(type="checkbox").filter-block__checkbox
 .filter.aside-block
   form(action="").filter__container
     .filter__content.row
@@ -8,31 +105,121 @@
             li.filter-block__item
               label.filter-block__label United Kingdom
                 input(type="checkbox").filter-block__checkbox
+          +dropdown('-- see more country')     
+      .filter-block.col
+        .filter-block__container
+          h4.title.title_style3 Online Bookie
+          ul.filter-block__list
             li.filter-block__item
-              label.filter-block__label United Kingdom
+              label.filter-block__label Pinnacle
+                input(type="checkbox").filter-block__checkbox
+            li.filter-block__item
+              label.filter-block__label Bet36
+                input(type="checkbox").filter-block__checkbox
+            li.filter-block__item
+              label.filter-block__label William Hill
+                input(type="checkbox").filter-block__checkbox
+            li.filter-block__item
+              label.filter-block__label 888sport
+                input(type="checkbox").filter-block__checkbox
+            li.filter-block__item
+              label.filter-block__label Karamba
+                input(type="checkbox").filter-block__checkbox
+          +dropdown('-- see more sports bookie')
+      .filter-block.col
+        .filter-block__container
+          h4.title.title_style3 Sports Markets
+          ul.filter-block__list
+            li.filter-block__item
+              label.filter-block__label Football
+                input(type="checkbox").filter-block__checkbox
+            li.filter-block__item
+              label.filter-block__label Horse Racing
+                input(type="checkbox").filter-block__checkbox
+            li.filter-block__item
+              label.filter-block__label Tennis
+                input(type="checkbox").filter-block__checkbox
+            li.filter-block__item
+              label.filter-block__label Cybersport
+                input(type="checkbox").filter-block__checkbox
+          +dropdown('-- see more sports markets')
+      .filter-block.col
+        .filter-block__container
+          h4.title.title_style3 Deposit Methods
+          ul.filter-block__list
+            li.filter-block__item
+              label.filter-block__label Paypal
+                input(type="checkbox").filter-block__checkbox
+            li.filter-block__item
+              label.filter-block__label Webmoney
+                input(type="checkbox").filter-block__checkbox
+            li.filter-block__item
+              label.filter-block__label Visa
+                input(type="checkbox").filter-block__checkbox
+            li.filter-block__item
+              label.filter-block__label Mastercard
+                input(type="checkbox").filter-block__checkbox
+            li.filter-block__item
+              label.filter-block__label Cryptocurrency
+                input(type="checkbox").filter-block__checkbox
+          +dropdown('-- see more deposit methods')
+      .filter-block.col
+        .filter-block__container
+          h4.title.title_style3 Currency
+          ul.filter-block__list
+            li.filter-block__item
+              label.filter-block__label USD
+                input(type="checkbox").filter-block__checkbox
+            li.filter-block__item
+              label.filter-block__label Euro 
                 input(type="checkbox").filter-block__checkbox
           .filter-block__dropdown
-            a(href="#").filter-block__dropdown-button -- see more sports bookie
+            a(href="#").filter-block__dropdown-button.filter-block__dropdown-button_disabled -- see more currency
               svg.icon <use xlink:href="img/icons/icon-sprite.svg#ico43"></use>
-            .filter-block__dropdown-container
-              .filter-block__dropdown-content
-                span.filter-block__alphabet a
-                ul.filter-block__list
-                  li.filter-block__item
-                    label.filter-block__label United Kingdom
-                      input(type="checkbox").filter-block__checkbox
-                  li.filter-block__item
-                    label.filter-block__label United Kingdom
-                      input(type="checkbox").filter-block__checkbox
-                  li.filter-block__item
-                    label.filter-block__label United Kingdom
-                      input(type="checkbox").filter-block__checkbox
-                  li.filter-block__item
-                    label.filter-block__label United Kingdom
-                      input(type="checkbox").filter-block__checkbox
-                  li.filter-block__item
-                    label.filter-block__label United Kingdom
-                      input(type="checkbox").filter-block__checkbox
-                  li.filter-block__item
-                    label.filter-block__label United Kingdom
-                      input(type="checkbox").filter-block__checkbox
+      .filter-block.col
+        .filter-block__container
+          h4.title.title_style3 Languages
+          ul.filter-block__list
+            li.filter-block__item
+              label.filter-block__label English
+                input(type="checkbox").filter-block__checkbox
+            li.filter-block__item
+              label.filter-block__label Spain 
+                input(type="checkbox").filter-block__checkbox
+          +dropdown('-- see more languages')
+      .filter-block.col
+        .filter-block__container
+          h4.title.title_style3 Betting Apps
+          ul.filter-block__list
+            li.filter-block__item
+              label.filter-block__label Android
+                input(type="checkbox").filter-block__checkbox
+            li.filter-block__item
+              label.filter-block__label IOS 
+                input(type="checkbox").filter-block__checkbox
+            li.filter-block__item
+              label.filter-block__label Windows Phone
+                input(type="checkbox").filter-block__checkbox
+            li.filter-block__item
+              label.filter-block__label Windows PC 
+                input(type="checkbox").filter-block__checkbox
+      .filter-block.col
+        .filter-block__container
+          h4.title.title_style3 Bonuses
+          ul.filter-block__list
+            li.filter-block__item
+              label.filter-block__label Existing Customer
+                input(type="checkbox").filter-block__checkbox
+            li.filter-block__item
+              label.filter-block__label Reload Offers 
+                input(type="checkbox").filter-block__checkbox
+            li.filter-block__item
+              label.filter-block__label Free Bets
+                input(type="checkbox").filter-block__checkbox
+            li.filter-block__item
+              label.filter-block__label Deposit
+                input(type="checkbox").filter-block__checkbox
+            li.filter-block__item
+              label.filter-block__label Mobile App Offers
+                input(type="checkbox").filter-block__checkbox
+

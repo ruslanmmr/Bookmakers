@@ -1,0 +1,193 @@
+.catalogue-head {
+  padding-bottom: 20px;
+  position: relative;
+  z-index: 2;
+  display: flex;
+  justify-content: space-between;
+  &__sorting {
+    flex-shrink: 0;
+  }
+  &__list {
+    padding: 0 20px 0 0;
+    display: flex;
+    flex-wrap: wrap;
+    margin: -4px;
+    list-style: none;
+  }
+  &__item-close {
+    position: absolute;
+    right: 8px;
+    top: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 15px;
+    height: 15px;
+    .icon {
+      width: 7px;
+      height: 7px;
+      transition: 0.3s;
+    }
+    &:hover {
+      .icon {
+        opacity: 0.7;
+      }
+    }
+  }
+  &__item-content {
+    border: 1px solid #C4C4C4;
+    border-radius: 5px;
+    padding: 7px 27px 7px 10px;
+    position: relative;
+  }
+  &__item {
+    padding: 4px;
+  }
+}
+.sort-item {
+  position: relative;
+  display: inline-block;
+  transition: 0.3s;
+  &__button {
+    background: #FFFFFF;
+    border: 1px solid rgba(0, 36, 125, 0.05);
+    border-radius: 5px;
+    padding: 8px 27px 8px 10px;
+    position: relative;
+    cursor: pointer;
+    outline: none;
+    min-width: 190px;
+    text-align: left;
+    transition: .3s;
+    z-index: 2;
+    .icon {
+      width: 8px;
+      height: 8px;
+      position: absolute;
+      right: 10px;
+      top: 12px;
+      transition: .3s;
+    }
+    span {
+      pointer-events: none;
+    }
+  }
+  &_active {
+    .sort-item__button {
+      border-radius: 5px 5px 0 0;
+      border-bottom: 1px solid #fff;
+      .icon {
+        transform: rotate(180deg);
+      }
+    }
+  }
+  &__list {
+    position: absolute;
+    top: 0;
+    box-shadow: 0 8px 16px rgba(0,0,0,.25);
+    transition: box-shadow .3s;
+    border: 1px solid rgba(0, 36, 125, 0.05);
+    z-index: 1;
+    padding: 35px 0 10px 0;
+    margin: 0;
+    list-style: none;
+    border-top: 0;
+    background-color: #fff;
+    border-radius: 0 0 5px 5px;
+    width: 100%;
+    display: none;
+  }
+  &__item {
+  }
+  &__link {
+    text-decoration: none;
+    color: #BCBCBC;
+    display: block;
+    padding: 7px 27px 7px 10px;
+    transition: 0.3s;
+    &:hover {
+      color: #494949;
+    }
+  }
+}
+.catalogue {
+  .col-rank__container {
+    flex-direction: column;
+    align-items: center;
+  }
+  .col-rank__order {
+    padding: 0;
+  }
+  .col-claim-bonus__content {
+    margin: 0;
+    flex-direction: column;
+    align-items: center;
+  }
+  .col-claim-bonus__section {
+    padding: 0;
+    width: 100%;
+  }
+  .col-claim-bonus .button {
+    display: block;
+    width: 100%;
+    margin: 5px 0;
+  }
+}
+
+@media screen and(max-width: 1200px) {
+  .catalogue {
+    .col-betting-sites__container {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+    .col-betting-sites__image {
+      margin: 0 0 10px 0;
+    }
+  }
+}
+@media screen and(max-width: 768px) {
+  .catalogue {
+    .col-claim-bonus .button {
+      padding: 10px;
+    }
+    .table__col {
+      &:nth-child(4) {
+        display: none;
+      }
+    }
+  }
+  .catalogue-head {
+    flex-direction: column;
+  }
+  .catalogue-head__list {
+    padding: 0 0 20px 0;
+  }
+}
+@media screen and(max-width: 576px) {
+  .catalogue {
+    .table__row {
+      display: flex;
+      flex-wrap: wrap;
+    }
+    .table__col {
+      padding: 20px;
+      flex: 1 1 50%;
+    }
+    .table__row_head {
+      display: none;
+    }
+    .col-betting-sites {
+      flex: 1 1 100%;
+    }
+    .col-rank {
+      flex: 1 1 100%;
+      &__container {
+        flex-direction: row;
+        justify-content: flex-start;
+      }
+    }
+    .col-rank__order {
+      padding-right: 8px;
+    }
+  }
+}

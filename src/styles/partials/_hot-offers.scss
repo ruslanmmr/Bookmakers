@@ -217,7 +217,7 @@
   .hot-offers-block {
     .hot-offers {
       &__container {
-        padding: 0 40px;
+        padding: 0;
       }
     }
     .hot-offers__link-more {
@@ -229,5 +229,8 @@
     .hot-offers__title {
       display: block;
     }
+  }
+  .hot-offers-slider__button {
+    display: none !important;
   }
 }

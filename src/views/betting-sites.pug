@@ -2,7 +2,7 @@ doctype html
 html(lang="ru")
   head
     include blocks/head
-    //link(rel="stylesheet" href="styles/main.min.css")
+    link(rel="stylesheet" href="styles/betting-sites.min.css")
   body.body
     .wrapper
       header.header.header_style2
@@ -14,9 +14,13 @@ html(lang="ru")
         .main.main_width-aside
           .container
             .main__container
+              include blocks/bonuses-text
+              include blocks/betting-catalogue
+              include blocks/guide
             aside.aside
               .aside__container
                 include blocks/filter
+                include blocks/also-recommend
                 include blocks/sign-up-offers
                 include blocks/existing-offers-banner
                 include blocks/aside-nav
