@@ -1,11 +1,19 @@
 .filter {
   position: relative;
   z-index: 2;
+  &__toggle {
+    margin-bottom: 20px;
+    display: none;
+    width: 100%;
+  }
   &__container {
     background-color: #fff;
     box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.15);
     border-radius: 5px;
     padding: 20px;
+    &_visible {
+      margin-bottom: 20px;
+    }
   }
   .row {
     margin: -10px;
@@ -113,9 +121,9 @@
     border: 1px solid rgba(0, 36, 125, 0.05);
     box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.25);
     border-radius: 5px;
-    padding: 33px 14px 20px 20px;
+    padding: 33px 14px 69px 20px;
     width: 400px;
-    height: 366px;
+    height: 400px;
     display: none;
     .icon {
       width: 8px;
@@ -146,5 +154,31 @@
     text-transform: uppercase;
     padding-right: 10px;
     flex-shrink: 0;
+  }
+  &__close {
+    padding: 10px 20px;
+    position: absolute;
+    bottom: 15px;
+    left: 20px;
+    .icon {
+      fill: #fff;
+      position: relative;
+      top: auto;
+      right: auto;
+      margin-left: 5px;
+      width: 8px;
+      height: 8px;
+    }
+  }
+}
+
+@media screen and(max-width: 992px) {
+  .filter {
+    &__toggle {
+      display: block;
+    }
+    &__container {
+      display: none;
+    }
   }
 }

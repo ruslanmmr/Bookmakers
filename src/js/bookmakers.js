@@ -5,16 +5,19 @@ $(document).ready(function () {
 $(window).resize(function () {
   filterPos();
 });
-
-//filter
-function filter() {
-  var checkbox = $('.filter-block__checkbox'),
+var checkbox = $('.filter-block__checkbox'),
       label = $('.filter-block__label'),
       buttonDropdown = $('.filter-block__dropdown-button'),
       dropdownBlock = $('.filter-block__dropdown-container'),
+      filterBlock = $('.filter'),
+      filterContainer = $('.filter__container'),
       flag,
+      filterToggle = $('.filter__toggle'),
+      close = $('.filter-block__close'),
       zIndex = 1;
 
+//filter
+function filter() {
   label.on('click', function() {
     if($(this).children().is(':checked')) {
       $(this).addClass('filter-block__label_checked');
@@ -25,7 +28,9 @@ function filter() {
   buttonDropdown.on('click', function(e) {
     e.preventDefault();
   })
-
+  close.on('click', function(e) {
+    e.preventDefault();
+  })
   $(document).on('click touchstart touchend', function (e) {
     if (!flag) {
       flag = true;
@@ -39,14 +44,24 @@ function filter() {
         state();
       }
       else if (dropdownBlock.hasClass('filter-block__dropdown-container_visible') && !dropdownBlock.is(e.target) &&
-      dropdownBlock.has(e.target).length === 0) {
+      dropdownBlock.has(e.target).length === 0 || close.is(e.target)) {
         console.log('click')
         $('.filter-block__dropdown-container').removeClass('filter-block__dropdown-container_visible');
         state();
       }
     }
   });
-
+  filterToggle.on('click', function(e) {
+    e.preventDefault();
+    filterContainer.toggleClass('filter__container_visible');
+    if(filterContainer.hasClass('filter__container_visible')) {
+      filterToggle.text('Hide Filters');
+      filterContainer.slideDown(300);
+    } else {
+      filterToggle.text('Show Filters');
+      filterContainer.slideUp(300);
+    }
+  })
   function state() {
     $('.filter-block__dropdown-container').each(function() {
       if($(this).hasClass('filter-block__dropdown-container_visible')) {
@@ -72,10 +87,13 @@ function filter() {
 }
 //filterpos
 function filterPos() {
-  var filter = $('.filter');
   if(innerWidth < 993) {
-    filter.prependTo('.catalogue');
+    filterBlock.prependTo('.catalogue');
+    filterContainer.hide();
+    filterContainer.removeClass('filter__container_visible')
+    filterToggle.text('Show Filters');
   } else {
-    filter.prependTo('.aside__container');
+    filterBlock.prependTo('.aside__container');
+    filterContainer.show();
   }
 }

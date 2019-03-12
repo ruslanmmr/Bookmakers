@@ -95,7 +95,10 @@ mixin dropdown(title)
             li.filter-block__item
               label.filter-block__label Antigua and Barbuda
                 input(type="checkbox").filter-block__checkbox
+      a(href="").filter-block__close.button.button_style3 Close
+        svg.icon <use xlink:href="img/icons/icon-sprite.svg#ico-close"></use>
 .filter.aside-block
+  a(href="#").filter__toggle.button.button_style2 Show Filters
   form(action="").filter__container
     .filter__content.row
       .filter-block.col
