@@ -233,16 +233,16 @@ function lazy() {
 function floating() {
   var floatingBlock = $('.floating-block');
   if ($('*').is(floatingBlock)) {
-    var topPos = floatingBlock.offset().top - 15;
+    var topPos = floatingBlock.offset().top;
     $(window).scroll(function () {
       if (innerWidth > 992) {
         var top = $(document).scrollTop(),
           pip = $('.join').offset().top,
           height = floatingBlock.height();
-        if (top > topPos && top < (pip - 30) - height) {
+        if (top > topPos && top < (pip - 15) - height) {
           floatingBlock.removeClass('floating-block_bottom');
           floatingBlock.addClass('floating-block_fixed').fadeIn();
-        } else if (top > (pip - 30) - height) {
+        } else if (top > (pip - 15) - height) {
           floatingBlock.addClass('floating-block_bottom');
         } else {
           floatingBlock.removeClass('floating-block_fixed');

@@ -1,0 +1,51 @@
+mixin row(title, value)
+  tr.overall-rating__row
+    td.overall-rating__col
+      a(href="#").inline-link.inline-link_style3.solid.overall-rating__title=title
+    td.overall-rating__col
+      ul.overall-rating__list
+        li.overall-rating__item.overall-rating__item_active
+        li.overall-rating__item.overall-rating__item_active
+        li.overall-rating__item.overall-rating__item_active
+        li.overall-rating__item.overall-rating__item_active
+        li.overall-rating__item.overall-rating__item_active
+        li.overall-rating__item.overall-rating__item_active
+        li.overall-rating__item.overall-rating__item_active
+        li.overall-rating__item.overall-rating__item_active
+        li.overall-rating__item
+        li.overall-rating__item
+    td.overall-rating__col
+      .overall-rating__value=value
+.overall-rating.aside-block.floating-block
+  .overall-rating__container
+    h4.title.title_style3 Overall Rating
+    table.overall-rating__table
+      +row('Odds Level', '9/10')
+      +row('In-play Betting', '10/10')
+      +row('Odds Level', '9/10')
+      +row('Platform', '9/10')
+      +row('Mobile App', '9/10')
+      +row('Payment methods', '9/10')
+      +row('Security', '9/10')
+      +row('Customer Support', '7/10')
+      +row('Bonus Offer', '9/10')
+      +row('User Rating', '6/10')
+    h4.title.title_style3 Reasons to Bet with bet365
+    ul.overall-rating__reasons-list
+      li.overall-rating__reasons-item
+        svg.icon <use xlink:href="img/icons/icon-sprite.svg#ico46"></use>
+        | Bookmaker Special Bonus List
+      li.overall-rating__reasons-item
+        svg.icon <use xlink:href="img/icons/icon-sprite.svg#ico46"></use>
+        | Bookies Without Betting Limits
+      li.overall-rating__reasons-item
+        svg.icon <use xlink:href="img/icons/icon-sprite.svg#ico46"></use>
+        | Best Free Bets Offers
+    .overall-rating__banner
+      .banner.banner_style5
+        .banner__container
+          .banner__title
+            span.banner__title-text Welcome Bonus
+            span.banner__title-value £100
+          a(href="#").button.button_style1.banner__button Bet Now
+          a(href="#" data-tooltip-content="#tooltip-block_advertiser").tooltip.inline-link.inline-link_style2.dashed.banner__link T&Cs Apply

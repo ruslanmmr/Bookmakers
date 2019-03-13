@@ -1,0 +1,343 @@
+.bookmaker-head {
+  color: #fff;
+  padding-bottom: 30px;
+  &__banner {
+    width: 225px;
+    flex-shrink: 0;
+  }
+  &__container {
+    border-radius: 5px;
+    background-color: #00247D;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 25px 20px 20px;
+  }
+  &__section {
+    display: flex;
+  }
+  &__info {
+    padding: 0 20px;
+  }
+  &__image {
+    height: 204px;
+    overflow: hidden;
+    border-radius: 5px;
+    flex-shrink: 0;
+    img {
+      height: 100%;
+      width: auto;
+    }
+  }
+  &__title {
+    margin: 0;
+    font-family: 'Roboto Condensed';
+    font-weight: bold;
+    font-size: 42px;
+  }
+  &__link {
+    font-family: 'Roboto Condensed';
+    font-size: 18px;
+    margin-bottom: 2px;
+  }
+  &__rating {
+    display: flex;
+    align-items: flex-end;
+    font-weight: bold;
+    font-family: 'Roboto Condensed';
+    .icon {
+      width: 33px;
+      height: 33px;
+      margin-right: 12px;
+    }
+  }
+  &__rating-value  {
+    margin-right: 15px;
+    font-size: 18px;
+    span {
+      font-size: 28px;
+    }
+  }
+  &__table {
+    margin: -8px -20px;
+    padding: 10px 0 0 0;
+  }
+  &__block {
+    padding: 8px 20px;
+    color: #DAE5FF;
+    vertical-align: top;
+    &-container {
+      display: flex;
+    }
+    &-title {
+      font-size: 14px;
+      display: block;
+      line-height: 1.25em;
+    }
+    &-text {
+      font-size: 12px;
+    }
+    .icon {
+      width: 32px;
+      height: 32px;
+      margin-right: 14px;
+    }
+  }
+}
+.bookmaker {
+  .main__content {
+    background-color: #fff;
+    padding: 30px 20px 20px 20px;
+    border-radius: 5px;
+    margin-bottom: 30px;
+  } 
+}
+.sport-markets {
+  margin: 25px 0;
+  &__head {
+    background: #00247D;
+    border-radius: 5px;
+    margin-bottom: 8px;
+    color: #fff;
+    text-transform: uppercase;
+    text-align: center;
+    padding: 15px;
+    font-weight: bold;
+    font-size: 15px;
+    font-family: 'Roboto Condensed';
+  }
+  &__title {
+    font-family: 'Roboto Condensed';
+    font-weight: bold;
+    font-size: 15px;
+    text-transform: uppercase;
+  }
+  &__container {
+    margin: -4px;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  &__block {
+    padding: 4px;
+    width: 20%;
+  }
+  &__image {
+    position: relative;
+    overflow: hidden;
+    border-radius: 5px;
+    &:before {
+      content: '';
+      display: block;
+      padding-top: 55%;
+    }
+    img {
+      display: block;
+      position: absolute;
+      width: 100%;
+      height: auto;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+    }
+  }
+  &__label {
+    background: #E0E8FF;
+    border-radius: 5px;
+    color: #00247D;
+    font-family: 'Roboto Condensed';
+    font-weight: bold;
+    font-size: 15px;
+    text-align: center;
+    padding: 10px;
+    display: block;
+    margin: 8px 0;
+  }
+  &__list {
+    background-color: #FCFCFF;
+    margin: 8px 0 0 0;
+    border-radius: 5px;
+    list-style: none;
+    padding: 10px;
+    font-size: 12px;
+  }
+  &__item {
+    &:not(:last-child) {
+      margin-bottom: 7px;
+    }
+  }
+}
+.table-rank {
+  box-shadow: none;
+  margin: 25px 0;
+  .table__row_head td:first-child {
+    border-radius: 5px 5px 0 0;
+    padding: 15px;
+    font-size: 15px;
+  }
+  .table__col {
+    padding: 10px;
+    text-align: center;
+    &:nth-child(1) {
+      padding: 10px 40px;
+    }
+    &:nth-child(2) {
+      width: 11%;
+    }
+    &:nth-child(3) {
+      width: 100%;
+    }
+  }
+  .table__row {
+    &:nth-child(2) {
+      .table__col {
+        font-weight: bold;
+        font-family: 'Roboto Condensed';
+        font-size: 15px;
+        background-color: #fff !important;
+      }
+    }
+  }
+}
+.how-to-bet {
+  margin: 25px 0;
+  &__container {
+    display: flex;
+    flex-wrap: wrap;
+    margin: -9px;
+  }
+}
+.how-to-bet-block {
+  padding: 9px;
+  width: 33.33%;
+  &__container {
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.35);
+  }
+  &__image {
+    position: relative;
+    &:before {
+      content: '';
+      display: block;
+      padding-top: 58%;
+    }
+    img {
+      width: 100%;
+      height: auto;
+      display: block;
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+    }
+  }
+  &__title {
+    background: #00247D;
+    border-radius: 5px 5px 0px 0px;
+    color: #fff;
+    padding: 14px;
+    font-family: Roboto Condensed;
+    font-weight: bold;
+    text-align: center;
+    display: block;
+    font-size: 15px;
+  }
+  &__text-container {
+    padding: 15px 10px 20px 10px;
+    background-color: #FCFCFF;
+    border-radius: 0 0 5px 5px;
+  }
+  &__sub-title {
+    display: block;
+    font-family: 'Roboto Condensed';
+    font-weight: bold;
+    font-size: 15px;
+    text-transform: uppercase;
+    padding-bottom: 7px;
+  }
+  &__text {
+    font-size: 12px;
+    line-height: 1.5em;
+  }
+}
+.text-width-banner {
+  margin-bottom: 1em;
+}
+
+@media screen and(max-width: 1200px) {
+  .bookmaker-head__table {
+    margin: -8px;
+  }
+  .bookmaker-head__block {
+    padding: 8px;
+  }
+}
+@media screen and(max-width: 992px) {
+  .bookmaker-head__banner {
+    display: none;
+  }
+  .bookmaker-head__container {
+    padding-right: 20px;
+  }
+  .bookmaker-head__image {
+    height: 150px;
+  }
+  .bookmaker-head__title {
+    font-size: 32px;
+  }
+  .bookmaker-head__info {
+    padding-right: 0;
+  }
+}
+@media screen and(max-width: 768px) {
+  .bookmaker-head__image {
+    height: 100px;
+  }
+  .sport-markets__block {
+    width: 33.33%;
+  }
+  .table-rank .table__col:nth-child(1) {
+    padding: 10px 20px;
+  }
+}
+@media screen and(max-width: 576px) {
+  .bookmaker-head__section {
+    display: block;
+    width: 100%;
+  }
+  .table-rank .table__col {
+    flex: 1 1 50%;
+  }
+  .table-rank .table__row:nth-child(2) .table__col {
+    display: none;
+  }
+  .table-rank .table__col:nth-child(1) {
+    padding: 10px;
+  }
+  .table-rank .table__row {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+  }
+  .bookmaker-head__title,
+  .bookmaker-head__rating {
+    padding-bottom: 10px;
+  }
+  .bookmaker-head__info {
+    padding: 0;
+  }
+  .bookmaker-head__image {
+    width: 100%;
+    height: auto;
+    padding: 0 0 20px 0;
+    img {
+      width: 100%;
+      height: auto;
+    }
+  }
+  .sport-markets__block {
+    width: 50%;
+  }
+}
+@media screen and(max-width: 420px) {
+  .sport-markets__block {
+    width: 100%;
+  }
+}

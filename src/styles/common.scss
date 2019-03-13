@@ -117,6 +117,7 @@ p {
   &__button {
     padding-left: 40px;
     padding-right: 40px;
+    flex-shrink: 0;
   }
 }
 .main {
@@ -397,7 +398,7 @@ p {
   &_style3 {
     font-family: 'Roboto Condensed';
     font-size: 18px;
-    margin: 0 0 0.7em 0;
+    margin: 0 0 0.5em 0;
   }
   &_style4 {
     font-family: 'Roboto Condensed';
@@ -844,6 +845,50 @@ p {
     }
   }
 }
+.col-sport {
+  &__container {
+    display: flex;
+    .icon {
+      width: 18px;
+      height: 18px;
+      margin-right: 10px;
+    }
+    span {
+      font-size: 12px;
+      text-align: left;
+      white-space: nowrap;
+    }
+  }
+}
+.col-percentage {
+  &__container {
+    background: #E0E8FF;
+    border: 1px solid rgba(0, 36, 125, 0.05);
+    border-radius: 5px;
+    position: relative;
+    overflow: hidden;
+  }
+  &__scale {
+    background: #587DD8;
+    border: 1px solid rgba(0, 36, 125, 0.05);
+    box-sizing: border-box;
+    height: 100%;
+    width: 100%;
+    right: 0;
+    transform: translateX(-90%);
+    text-align: right;
+    padding-right: 5px;
+    span {
+      color: #fff;
+      font-size: 12px;
+      font-weight: bold;
+      line-height: 17px;
+      &:after {
+        content: '%';
+      }
+    }
+  }
+}
 .row {
   display: flex;
   flex-wrap: wrap;
@@ -851,18 +896,6 @@ p {
 }
 .col {
   padding: 0 10px;
-}
-.floating-block {
-  width: 270px;
-  &_fixed {
-    position: fixed;
-    top: 15px;
-  }
-  &_bottom {
-    position: absolute;
-    top: auto;
-    bottom: 30px;
-  }
 }
 .breadcrumbs {
   &__container {

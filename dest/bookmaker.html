@@ -1,0 +1,875 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Bookmakers</title>
+    <meta name="theme-color" content="">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <link rel="shortcut icon" href="img/favicons/favicon-16x16.png" type="image/x-icon">
+    <!--styles for all pages-->
+    <link rel="stylesheet" href="styles/libs.min.css">
+    <link rel="stylesheet" href="styles/common.min.css">
+    <link rel="stylesheet" href="styles/bookmaker.min.css">
+  </head>
+  <body class="body">
+    <div class="wrapper bookmaker">
+      <header class="header header_style2">
+        <div class="container">
+          <div class="header__container">
+            <div class="logo"><a class="logo__link" href="#"><img class="logo__image" src="img/logos/logo.svg" alt=""></a></div>
+            <div class="header__section">
+              <nav class="nav header__nav">
+                <ul class="nav__list">
+                  <li class="nav__item"><a class="nav__link" href="#">ONLINE BOOKMAKERS</a></li>
+                  <li class="nav__item"><a class="nav__link" href="#">BETTING SITES</a></li>
+                  <li class="nav__item"><a class="nav__link" href="#">BETTING APPS</a></li>
+                  <li class="nav__item"><a class="nav__link" href="#">FREE BETS</a></li>
+                  <li class="nav__item nav__item_dropdown"><span class="nav__link nav__link_dropdown">GUIDES
+                      <svg class="icon"><use xlink:href="img/icons/icon-sprite.svg#ico-arrow_bottom"></use></svg></span>
+                    <div class="nav__dropdown">
+                      <ul class="nav__dropdown-list">
+                        <li class="nav__dropdown-item"><a class="nav__dropdown-link" href="#">nav link 1</a></li>
+                        <li class="nav__dropdown-item"><a class="nav__dropdown-link" href="#">nav link 2</a></li>
+                        <li class="nav__dropdown-item"><a class="nav__dropdown-link" href="#">nav link 3</a></li>
+                        <li class="nav__dropdown-item"><a class="nav__dropdown-link" href="#">nav long link 4</a></li>
+                      </ul>
+                    </div>
+                  </li>
+                </ul>
+              </nav>
+              <div class="search-block">
+                <button class="search-block__button">
+                  <svg class="icon"><use xlink:href="img/icons/icon-sprite.svg#ico-search"></use></svg>
+                </button>
+                <div class="search-block__container">
+                  <div class="search-block__content">
+                    <form class="search-block__form" action="">
+                      <button class="search-block__submit" type="submit">
+                        <svg class="icon"><use xlink:href="img/icons/icon-sprite.svg#ico-search"></use></svg>
+                      </button>
+                      <input class="search-block__input" placeholder="Search..." required>
+                    </form>
+                    <button class="search-block__close">
+                      <svg class="icon"><use xlink:href="img/icons/icon-sprite.svg#ico-close"></use></svg>
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <div class="sign-in">
+                <button class="sign-in__button">
+                  <svg class="icon"><use xlink:href="img/icons/icon-sprite.svg#ico-user"></use></svg>Sign in
+                </button>
+                <div class="sign-in__container">
+                  <div class="sign-in__content">
+                    <ul class="sign-in__list">
+                      <li class="sign-in__item"><a class="sign-in__link" href="#">
+                          <svg class="icon"><use xlink:href="img/icons/icon-sprite.svg#ico-facebook"></use></svg>Facebook</a></li>
+                      <li class="sign-in__item"><a class="sign-in__link" href="#">
+                          <svg class="icon"><use xlink:href="img/icons/icon-sprite.svg#ico-twitter"></use></svg>Twitter</a></li>
+                      <li class="sign-in__item"><a class="sign-in__link" href="#">
+                          <svg class="icon"><use xlink:href="img/icons/icon-sprite.svg#ico-google"></use></svg>Google</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div><a class="mobile-button" href="#"><span></span></a>
+            </div>
+          </div>
+        </div>
+      </header>
+      <div class="mobile-nav">
+        <div class="mobile-nav__close-container"><a class="mobile-nav__close" href="#"><span></span></a></div>
+        <div class="mobile-nav__container sl--scrollable">
+          <nav class="nav mobile__nav">
+            <ul class="nav__list">
+              <li class="nav__item"><a class="nav__link" href="#"><span>ONLINE BOOKMAKERS</span></a></li>
+              <li class="nav__item"><a class="nav__link" href="#"><span>BETTING SITES</span></a></li>
+              <li class="nav__item"><a class="nav__link" href="#"><span>BETTING APPS</span></a></li>
+              <li class="nav__item"><a class="nav__link" href="#"><span>FREE BETS</span></a></li>
+              <li class="nav__item"><span class="nav__link nav__link_dropdown nav__link_mobile"><span>GUIDES</span>
+                  <svg class="icon"><use xlink:href="img/icons/icon-sprite.svg#ico-arrow_bottom"></use></svg></span>
+                <div class="nav__dropdown">
+                  <ul class="nav__dropdown-list">
+                    <li class="nav__dropdown-item"><a class="nav__dropdown-link" href="#">nav link 1</a></li>
+                    <li class="nav__dropdown-item"><a class="nav__dropdown-link" href="#">nav link 2</a></li>
+                    <li class="nav__dropdown-item"><a class="nav__dropdown-link" href="#">nav link 3</a></li>
+                    <li class="nav__dropdown-item"><a class="nav__dropdown-link" href="#">nav long link 4</a></li>
+                  </ul>
+                </div>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+      <div class="overlay"></div>
+      <main class="main">
+        <div class="hot-offers-block">
+          <div class="container">
+            <div class="hot-offers-block__container">
+              <div class="hot-offers">
+                <div class="hot-offers__container">
+                  <div class="hot-offers__title-section">
+                    <div class="hot-offers__title-section-content"><span class="hot-offers__title">Hot Offers</span><a class="inline-link inline-link_style2 solid hot-offers__link-more" href="#">View All</a></div>
+                  </div>
+                  <div class="hot-offers-slider">
+                    <button class="hot-offers-slider__button hot-offers-slider__button_prev">
+                      <svg class="icon"><use xlink:href="img/icons/icon-sprite.svg#ico40"></use></svg>
+                    </button>
+                    <button class="hot-offers-slider__button hot-offers-slider__button_next">
+                      <svg class="icon"><use xlink:href="img/icons/icon-sprite.svg#ico40"></use></svg>
+                    </button>
+                    <div class="hot-offers-slider__container">
+                                    <div class="hot-offers-slide">
+                                      <div class="hot-offers-slide__container">
+                                        <div class="hot-offers-slide__image-container"><img class="hot-offers-slide__image" alt="" src="img/offers/offer1.jpg"></div>
+                                        <div class="hot-offers-slide__content">
+                                          <div class="hot-offers-slide__title-container"><span class="hot-offers-slide__title">MoPlay Free Bets - Bet £10 Get £30</span></div>
+                                          <div class="hot-offers-slide__links-container">
+                                            <div class="hot-offers-slide__links-content"><a class="button hot-offers-slide__button" href="#">Claim</a><a class="inline-link inline-link_style2 dashed hot-offers-slide__link tooltip tooltip_offers" href="#" data-tooltip-content="#tooltip-block_1">T&Cs Apply</a></div>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                    <div class="hot-offers-slide">
+                                      <div class="hot-offers-slide__container">
+                                        <div class="hot-offers-slide__image-container"><img class="hot-offers-slide__image" alt="" src="img/offers/offer2.jpg"></div>
+                                        <div class="hot-offers-slide__content">
+                                          <div class="hot-offers-slide__title-container"><span class="hot-offers-slide__title">MoPlay Free Bets - Bet £10 Get £30</span></div>
+                                          <div class="hot-offers-slide__links-container">
+                                            <div class="hot-offers-slide__links-content"><a class="button hot-offers-slide__button" href="#">Claim</a><a class="inline-link inline-link_style2 dashed hot-offers-slide__link tooltip tooltip_offers" href="#" data-tooltip-content="#tooltip-block_1">T&Cs Apply</a></div>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                    <div class="hot-offers-slide">
+                                      <div class="hot-offers-slide__container">
+                                        <div class="hot-offers-slide__image-container"><img class="hot-offers-slide__image" alt="" src="img/offers/offer3.jpg"></div>
+                                        <div class="hot-offers-slide__content">
+                                          <div class="hot-offers-slide__title-container"><span class="hot-offers-slide__title">Betfred - Get £30 Free Bet + 30 Spins!</span></div>
+                                          <div class="hot-offers-slide__links-container">
+                                            <div class="hot-offers-slide__links-content"><a class="button hot-offers-slide__button" href="#">Claim</a><a class="inline-link inline-link_style2 dashed hot-offers-slide__link tooltip tooltip_offers" href="#" data-tooltip-content="#tooltip-block_1">T&Cs Apply</a></div>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                    <div class="hot-offers-slide">
+                                      <div class="hot-offers-slide__container">
+                                        <div class="hot-offers-slide__image-container"><img class="hot-offers-slide__image" alt="" src="img/offers/offer4.jpg"></div>
+                                        <div class="hot-offers-slide__content">
+                                          <div class="hot-offers-slide__title-container"><span class="hot-offers-slide__title">Betfair Casino Free Bet No Deposit - 20 Free Chips + £50 Free Bets</span></div>
+                                          <div class="hot-offers-slide__links-container">
+                                            <div class="hot-offers-slide__links-content"><a class="button hot-offers-slide__button" href="#">Claim</a><a class="inline-link inline-link_style2 dashed hot-offers-slide__link tooltip tooltip_offers" href="#" data-tooltip-content="#tooltip-block_1">T&Cs Apply</a></div>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                    <div class="hot-offers-slide">
+                                      <div class="hot-offers-slide__container">
+                                        <div class="hot-offers-slide__image-container"><img class="hot-offers-slide__image" alt="" src="img/offers/offer3.jpg"></div>
+                                        <div class="hot-offers-slide__content">
+                                          <div class="hot-offers-slide__title-container"><span class="hot-offers-slide__title">Betfair Casino Free Bet No Deposit - 20 Free Chips + £50 Free Bets</span></div>
+                                          <div class="hot-offers-slide__links-container">
+                                            <div class="hot-offers-slide__links-content"><a class="button hot-offers-slide__button" href="#">Claim</a><a class="inline-link inline-link_style2 dashed hot-offers-slide__link tooltip tooltip_offers" href="#" data-tooltip-content="#tooltip-block_1">T&Cs Apply</a></div>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                    <div class="hot-offers-slide">
+                                      <div class="hot-offers-slide__container">
+                                        <div class="hot-offers-slide__image-container"><img class="hot-offers-slide__image" alt="" src="img/offers/offer2.jpg"></div>
+                                        <div class="hot-offers-slide__content">
+                                          <div class="hot-offers-slide__title-container"><span class="hot-offers-slide__title">MoPlay Free Bets - Bet £10 Get £30</span></div>
+                                          <div class="hot-offers-slide__links-container">
+                                            <div class="hot-offers-slide__links-content"><a class="button hot-offers-slide__button" href="#">Claim</a><a class="inline-link inline-link_style2 dashed hot-offers-slide__link tooltip tooltip_offers" href="#" data-tooltip-content="#tooltip-block_1">T&Cs Apply</a></div>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                    <div class="hot-offers-slide">
+                                      <div class="hot-offers-slide__container">
+                                        <div class="hot-offers-slide__image-container"><img class="hot-offers-slide__image" alt="" src="img/offers/offer3.jpg"></div>
+                                        <div class="hot-offers-slide__content">
+                                          <div class="hot-offers-slide__title-container"><span class="hot-offers-slide__title">Betfred - Get £30 Free Bet + 30 Spins!</span></div>
+                                          <div class="hot-offers-slide__links-container">
+                                            <div class="hot-offers-slide__links-content"><a class="button hot-offers-slide__button" href="#">Claim</a><a class="inline-link inline-link_style2 dashed hot-offers-slide__link tooltip tooltip_offers" href="#" data-tooltip-content="#tooltip-block_1">T&Cs Apply</a></div>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                    <div class="hot-offers-slide">
+                                      <div class="hot-offers-slide__container">
+                                        <div class="hot-offers-slide__image-container"><img class="hot-offers-slide__image" alt="" src="img/offers/offer4.jpg"></div>
+                                        <div class="hot-offers-slide__content">
+                                          <div class="hot-offers-slide__title-container"><span class="hot-offers-slide__title">Betfair Casino Free Bet No Deposit - 20 Free Chips + £50 Free Bets</span></div>
+                                          <div class="hot-offers-slide__links-container">
+                                            <div class="hot-offers-slide__links-content"><a class="button hot-offers-slide__button" href="#">Claim</a><a class="inline-link inline-link_style2 dashed hot-offers-slide__link tooltip tooltip_offers" href="#" data-tooltip-content="#tooltip-block_1">T&Cs Apply</a></div>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                    <div class="hot-offers-slide">
+                                      <div class="hot-offers-slide__container">
+                                        <div class="hot-offers-slide__image-container"><img class="hot-offers-slide__image" alt="" src="img/offers/offer3.jpg"></div>
+                                        <div class="hot-offers-slide__content">
+                                          <div class="hot-offers-slide__title-container"><span class="hot-offers-slide__title">Betfair Casino Free Bet No Deposit - 20 Free Chips + £50 Free Bets</span></div>
+                                          <div class="hot-offers-slide__links-container">
+                                            <div class="hot-offers-slide__links-content"><a class="button hot-offers-slide__button" href="#">Claim</a><a class="inline-link inline-link_style2 dashed hot-offers-slide__link tooltip tooltip_offers" href="#" data-tooltip-content="#tooltip-block_1">T&Cs Apply</a></div>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                    <div class="hot-offers-slide">
+                                      <div class="hot-offers-slide__container">
+                                        <div class="hot-offers-slide__image-container"><img class="hot-offers-slide__image" alt="" src="img/offers/offer2.jpg"></div>
+                                        <div class="hot-offers-slide__content">
+                                          <div class="hot-offers-slide__title-container"><span class="hot-offers-slide__title">MoPlay Free Bets - Bet £10 Get £30</span></div>
+                                          <div class="hot-offers-slide__links-container">
+                                            <div class="hot-offers-slide__links-content"><a class="button hot-offers-slide__button" href="#">Claim</a><a class="inline-link inline-link_style2 dashed hot-offers-slide__link tooltip tooltip_offers" href="#" data-tooltip-content="#tooltip-block_1">T&Cs Apply</a></div>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="breadcrumbs">
+          <div class="container">
+            <div class="breadcrumbs__container">
+              <ul class="breadcrumbs__list">
+                <li class="breadcrumbs__item"><a class="breadcrumbs__link inline-link inline-link_style3" href="#">Bookmakers.com</a></li>
+                <li class="breadcrumbs__item">Betting-sites</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="bookmaker-head">
+          <div class="container">
+            <div class="bookmaker-head__container">
+              <div class="bookmaker-head__section">
+                <div class="bookmaker-head__image"><img src="img/Bookies/ff5e94874f1e99b3d906f04bfcaa8bb4.png" alt=""></div>
+                <div class="bookmaker-head__info">
+                  <h5 class="bookmaker-head__title">bet365</h5>
+                  <div class="bookmaker-head__rating">
+                    <svg class="icon"><use xlink:href="img/icons/icon-sprite.svg#ico27"></use></svg><span class="bookmaker-head__rating-value"> <span>9.8</span>/10</span><a class="bookmaker-head__link inline-link inline-link_style2 solid" href="#">No.2 Betting Site</a>
+                  </div>
+                  <table class="bookmaker-head__table">
+                    <tr>
+                      <td class="bookmaker-head__block">
+                        <div class="bookmaker-head__block-container">
+                          <svg class="icon"><use xlink:href="img/icons/icon-sprite.svg#ico16"></use></svg>
+                          <div class="bookmaker-head__block-content"><span class="bookmaker-head__block-title">Sports Markets:</span><span class="bookmaker-head__block-text">around 30</span></div>
+                        </div>
+                      </td>
+                      <td class="bookmaker-head__block">
+                        <div class="bookmaker-head__block-container">
+                          <svg class="icon"><use xlink:href="img/icons/icon-sprite.svg#ico57"></use></svg>
+                          <div class="bookmaker-head__block-content"><span class="bookmaker-head__block-title">Betting Options:</span><span class="bookmaker-head__block-text">over 30,000</span></div>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="bookmaker-head__block">
+                        <div class="bookmaker-head__block-container">
+                          <svg class="icon"><use xlink:href="img/icons/icon-sprite.svg#ico45"></use></svg>
+                          <div class="bookmaker-head__block-content"><span class="bookmaker-head__block-title">Licensed By:</span><span class="bookmaker-head__block-text">UK Gambling Commission</span></div>
+                        </div>
+                      </td>
+                      <td class="bookmaker-head__block">
+                        <div class="bookmaker-head__block-container">
+                          <svg class="icon"><use xlink:href="img/icons/icon-sprite.svg#ico57"></use></svg>
+                          <div class="bookmaker-head__block-content"><span class="bookmaker-head__block-title">Sports Markets:</span><span class="bookmaker-head__block-text">around 30</span></div>
+                        </div>
+                      </td>
+                    </tr>
+                  </table>
+                </div>
+              </div>
+              <div class="bookmaker-head__banner">
+                <div class="banner banner_style5">
+                  <div class="banner__background lazy" data-src="img/backgrounds/bg-banner1.jpg"></div>
+                  <div class="banner__container">
+                    <div class="banner__title"><span class="banner__title-text">Get Up to</span><span class="banner__title-value">£100</span><span class="banner__title-text">in Bet Credits</span></div><a class="button button_style1 banner__button" href="#">Bet Now</a><a class="tooltip inline-link inline-link_style2 dashed banner__link" href="#" data-tooltip-content="#tooltip-block_advertiser">T&Cs Apply</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="main main_width-aside">
+          <div class="container">
+            <div class="main__container">
+              <div class="main__content">
+                <h4 class="title title_style1">Betway Sports Review</h4>
+                <p>Which online bookmaker is the best? Most people ask this question, especially when they find the many types of established bookmakers in the market. In this section, we show you the factors to consider if you want to find the best bookmaker to invest in.</p>
+                <h4 class="title title_style1">Sports Markets and Betting Types</h4>
+                <p>Which online bookmaker is the best? Most people ask this question, especially when they find the many types of established bookmakers in the market. In this section, we show you the factors to consider if you want to find the best bookmaker to invest in.</p>
+                <h4 class="title title_style3">Multiples Bets</h4>
+                <p>Betting odds offered by the best online maker should in most cases exceed the 95 percent limit on particular matches. As such, when trying to get the right match to stake on, the odds should only experience minimum changes. Moreover, opinionated lines exist to prove there is a compiling service for every odd offered and it is not just copied from another online bookmaker or influenced by the market activity.</p>
+                <h4 class="title title_style3">Betting Limits</h4>
+                <p>Betting odds offered by the best online maker should in most cases exceed the 95 percent limit on particular matches. As such, when trying to get the right match to stake on, the odds should only experience minimum changes. Moreover, opinionated lines exist to prove there is a compiling service for every odd offered and it is not just copied from another online bookmaker or influenced by the market activity.</p>
+                <h4 class="title title_style1">In-play Betting & Live Streaming </h4>
+                <p>Which online bookmaker is the best? Most people ask this question, especially when they find the many types of established bookmakers in the market. In this section, we show you the factors to consider if you want to find the best bookmaker to invest in.</p>
+                <div class="sport-markets">
+                  <div class="sport-markets__head">The most Popular Sports markets at betway</div>
+                  <div class="sport-markets__container">
+                    <div class="sport-markets__block">
+                      <div class="sport-markets__block-container">
+                        <div class="sport-markets__image"><img class="lazy" data-src="/img/news/news1.jpg" alt=""></div><span class="sport-markets__label">Football</span>
+                        <ul class="sport-markets__list">
+                          <li class="sport-markets__item">UEFA Champion League</li>
+                          <li class="sport-markets__item">English Premier  League</li>
+                          <li class="sport-markets__item">Bundesliga</li>
+                          <li class="sport-markets__item">La Liga</li>
+                          <li class="sport-markets__item">S-League (SGP)</li>
+                          <li class="sport-markets__item">A PFG (BGR)</li>
+                        </ul>
+                      </div>
+                    </div>
+                    <div class="sport-markets__block">
+                      <div class="sport-markets__block-container">
+                        <div class="sport-markets__image"><img class="lazy" data-src="/img/news/news1.jpg" alt=""></div><span class="sport-markets__label">Horse racing</span>
+                        <ul class="sport-markets__list">
+                          <li class="sport-markets__item">The Cheltenham Festival</li>
+                          <li class="sport-markets__item">Blue Square Winter Derby</li>
+                          <li class="sport-markets__item">Aintree Grand National</li>
+                          <li class="sport-markets__item">Scottish Grand National</li>
+                          <li class="sport-markets__item">Craven Meeting</li>
+                          <li class="sport-markets__item">Bet365 Gold Cup Celebration</li>
+                        </ul>
+                      </div>
+                    </div>
+                    <div class="sport-markets__block">
+                      <div class="sport-markets__block-container">
+                        <div class="sport-markets__image"><img class="lazy" data-src="/img/news/news1.jpg" alt=""></div><span class="sport-markets__label">Tennis</span>
+                        <ul class="sport-markets__list">
+                          <li class="sport-markets__item">AAMI Classic</li>
+                          <li class="sport-markets__item">Masters France</li>
+                          <li class="sport-markets__item">Power Horse World Team Cup</li>
+                          <li class="sport-markets__item">AAMI Classic</li>
+                          <li class="sport-markets__item">Masters France</li>
+                          <li class="sport-markets__item">Power Horse World Team Cup</li>
+                        </ul>
+                      </div>
+                    </div>
+                    <div class="sport-markets__block">
+                      <div class="sport-markets__block-container">
+                        <div class="sport-markets__image"><img class="lazy" data-src="/img/news/news1.jpg" alt=""></div><span class="sport-markets__label">E-sports</span>
+                        <ul class="sport-markets__list">
+                          <li class="sport-markets__item">League of Legends</li>
+                          <li class="sport-markets__item">Hearthstone</li>
+                          <li class="sport-markets__item">Dota 2</li>
+                          <li class="sport-markets__item">CS: GO</li>
+                          <li class="sport-markets__item">World of Tanks</li>
+                          <li class="sport-markets__item">Herose of the Storm</li>
+                        </ul>
+                      </div>
+                    </div>
+                    <div class="sport-markets__block">
+                      <div class="sport-markets__block-container">
+                        <div class="sport-markets__image"><img class="lazy" data-src="/img/news/news1.jpg" alt=""></div><span class="sport-markets__label">Basketball</span>
+                        <ul class="sport-markets__list">
+                          <li class="sport-markets__item">FIBA Women’s World Championship</li>
+                          <li class="sport-markets__item">British Basketball League</li>
+                          <li class="sport-markets__item">FIBA World Cup</li>
+                          <li class="sport-markets__item">FIBA Intercontinental Cup</li>
+                          <li class="sport-markets__item">UEFA Champion League</li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <h4 class="title title_style1">Competitive sports betting odds</h4>
+                <p>Which online bookmaker is the best? Most people ask this question, especially when they find the many types of established bookmakers in the market. In this section, we show you the factors to consider if you want to find the best bookmaker to invest in.</p>
+                <table class="table table-rank">
+                  <tr class="table__row table__row_head">
+                    <td class="table__col table__col_title" colspan="3">Betway Best Odds Rank By Sport</td>
+                  </tr>
+                  <tr class="table__row">
+                    <td class="table__col">Sports</td>
+                    <td class="table__col">Rank</td>
+                    <td class="table__col">Percentage</td>
+                  </tr>
+                  <tr class="table__row">
+                    <td class="table__col col-sport">
+                      <div class="col-sport__container">
+                        <svg class="icon"><use xlink:href="img/icons/icon-sprite.svg#ico47"></use></svg><span>Football</span>
+                      </div>
+                    </td>
+                    <td class="table__col">1st</td>
+                    <td class="table__col col-percentage">
+                      <div class="col-percentage__container">
+                        <div class="col-percentage__scale" data-val="50"></div>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr class="table__row">
+                    <td class="table__col col-sport">
+                      <div class="col-sport__container">
+                        <svg class="icon"><use xlink:href="img/icons/icon-sprite.svg#ico24"></use></svg><span>Snooker</span>
+                      </div>
+                    </td>
+                    <td class="table__col">1st</td>
+                    <td class="table__col col-percentage">
+                      <div class="col-percentage__container">
+                        <div class="col-percentage__scale" data-val="47.6"></div>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr class="table__row">
+                    <td class="table__col col-sport">
+                      <div class="col-sport__container">
+                        <svg class="icon"><use xlink:href="img/icons/icon-sprite.svg#ico48"></use></svg><span>Tennis</span>
+                      </div>
+                    </td>
+                    <td class="table__col">1st</td>
+                    <td class="table__col col-percentage">
+                      <div class="col-percentage__container">
+                        <div class="col-percentage__scale" data-val="47.5"></div>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr class="table__row">
+                    <td class="table__col col-sport">
+                      <div class="col-sport__container">
+                        <svg class="icon"><use xlink:href="img/icons/icon-sprite.svg#ico9"></use></svg><span>Rugby</span>
+                      </div>
+                    </td>
+                    <td class="table__col">1st</td>
+                    <td class="table__col col-percentage">
+                      <div class="col-percentage__container">
+                        <div class="col-percentage__scale" data-val="44.1"></div>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr class="table__row">
+                    <td class="table__col col-sport">
+                      <div class="col-sport__container">
+                        <svg class="icon"><use xlink:href="img/icons/icon-sprite.svg#ico10"></use></svg><span>Darts</span>
+                      </div>
+                    </td>
+                    <td class="table__col">1st</td>
+                    <td class="table__col col-percentage">
+                      <div class="col-percentage__container">
+                        <div class="col-percentage__scale" data-val="54.4"></div>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr class="table__row">
+                    <td class="table__col col-sport">
+                      <div class="col-sport__container">
+                        <svg class="icon"><use xlink:href="img/icons/icon-sprite.svg#ico52"></use></svg><span>Horse Racing</span>
+                      </div>
+                    </td>
+                    <td class="table__col">1st</td>
+                    <td class="table__col col-percentage">
+                      <div class="col-percentage__container">
+                        <div class="col-percentage__scale" data-val="24.5"></div>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr class="table__row">
+                    <td class="table__col col-sport">
+                      <div class="col-sport__container">
+                        <svg class="icon"><use xlink:href="img/icons/icon-sprite.svg#ico49"></use></svg><span>Boxing</span>
+                      </div>
+                    </td>
+                    <td class="table__col">1st</td>
+                    <td class="table__col col-percentage">
+                      <div class="col-percentage__container">
+                        <div class="col-percentage__scale" data-val="35.0"></div>
+                      </div>
+                    </td>
+                  </tr>
+                </table>
+                <h4 class="title title_style1">Betway Online Platform</h4>
+                <p>Which online bookmaker is the best? Most people ask this question, especially when they find the many types of established bookmakers in the market. In this section, we show you the factors to consider if you want to find the best bookmaker to invest in.</p>
+                <h4 class="title title_style2">How to Place a Bet</h4>
+                <p>Betting odds offered by the best online maker should in most cases exceed the 95 percent limit on particular matches. As such, when trying to get the right match to stake on, the odds should only experience minimum changes. Moreover, opinionated lines exist to prove there is a compiling service for every odd offered and it is not just copied from another online bookmaker or influenced by the market activity.</p>
+                <div class="how-to-bet">
+                  <div class="how-to-bet__container">
+                    <div class="how-to-bet-block">
+                      <div class="how-to-bet-block__container"><span class="how-to-bet-block__title">Step 1</span>
+                        <div class="how-to-bet-block__image"><img class="lazy" data-src="img/howtobet/image1.jpg" alt=""></div>
+                        <div class="how-to-bet-block__text-container"><span class="how-to-bet-block__sub-title">Choose your BET</span>
+                          <p class="how-to-bet-block__text">Select your desired bet by clicking on the odds buttons to a given betting market. To add more bets, simply repeat the process.</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="how-to-bet-block">
+                      <div class="how-to-bet-block__container"><span class="how-to-bet-block__title">Step 2</span>
+                        <div class="how-to-bet-block__image"><img class="lazy" data-src="img/howtobet/image2.jpg" alt=""></div>
+                        <div class="how-to-bet-block__text-container"><span class="how-to-bet-block__sub-title">lay Your stake</span>
+                          <p class="how-to-bet-block__text">Select your desired bet by clicking on the odds buttons to a given betting market. To add more bets, simply repeat the process.</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="how-to-bet-block">
+                      <div class="how-to-bet-block__container"><span class="how-to-bet-block__title">Step 3</span>
+                        <div class="how-to-bet-block__image"><img class="lazy" data-src="img/howtobet/image3.jpg" alt=""></div>
+                        <div class="how-to-bet-block__text-container"><span class="how-to-bet-block__sub-title">Confirm On Your Bet Slip</span>
+                          <p class="how-to-bet-block__text">Select your desired bet by clicking on the odds buttons to a given betting market. To add more bets, simply repeat the process.</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="text-width-banner">
+                  <h4 class="title title_style1">Betway Mobile Review</h4>
+                  <p>Which online bookmaker is the best? Most people ask this question, especially when they find the many types of established bookmakers in the market. In this section, we show you the factors to consider if you want to find the best bookmaker to invest in.</p>
+                  <h4 class="title title_style2">IOS leading the way with the Bet 365 mobile app</h4>
+                  <p>Betting odds offered by the best online maker should in most cases exceed the 95 percent limit on particular matches. As such, when trying to get the right match to stake on, the odds should only experience minimum changes. Moreover, opinionated lines exist to prove there is a compiling service for every odd offered and it is not just copied from another online bookmaker or influenced by the market activity.</p>
+                </div>
+                <h4 class="title title_style2">Live Streaming On Mobile</h4>
+                <p>Betting odds offered by the best online maker should in most cases exceed the 95 percent limit on particular matches. As such, when trying to get the right match to stake on, the odds should only experience minimum changes. Moreover, opinionated lines exist to prove there is a compiling service for every odd offered and it is not just copied from another online bookmaker or influenced by the market activity.</p>
+              </div>
+            </div>
+            <aside class="aside">
+              <div class="aside__container">
+                <div class="overall-rating aside-block floating-block">
+                  <div class="overall-rating__container">
+                    <h4 class="title title_style3">Overall Rating</h4>
+                    <table class="overall-rating__table">
+                                      <tr class="overall-rating__row">
+                                        <td class="overall-rating__col"><a class="inline-link inline-link_style3 solid overall-rating__title" href="#">Odds Level</a></td>
+                                        <td class="overall-rating__col">
+                                          <ul class="overall-rating__list">
+                                            <li class="overall-rating__item overall-rating__item_active"></li>
+                                            <li class="overall-rating__item overall-rating__item_active"></li>
+                                            <li class="overall-rating__item overall-rating__item_active"></li>
+                                            <li class="overall-rating__item overall-rating__item_active"></li>
+                                            <li class="overall-rating__item overall-rating__item_active"></li>
+                                            <li class="overall-rating__item overall-rating__item_active"></li>
+                                            <li class="overall-rating__item overall-rating__item_active"></li>
+                                            <li class="overall-rating__item overall-rating__item_active"></li>
+                                            <li class="overall-rating__item"></li>
+                                            <li class="overall-rating__item"></li>
+                                          </ul>
+                                        </td>
+                                        <td class="overall-rating__col">
+                                          <div class="overall-rating__value">9/10</div>
+                                        </td>
+                                      </tr>
+                                      <tr class="overall-rating__row">
+                                        <td class="overall-rating__col"><a class="inline-link inline-link_style3 solid overall-rating__title" href="#">In-play Betting</a></td>
+                                        <td class="overall-rating__col">
+                                          <ul class="overall-rating__list">
+                                            <li class="overall-rating__item overall-rating__item_active"></li>
+                                            <li class="overall-rating__item overall-rating__item_active"></li>
+                                            <li class="overall-rating__item overall-rating__item_active"></li>
+                                            <li class="overall-rating__item overall-rating__item_active"></li>
+                                            <li class="overall-rating__item overall-rating__item_active"></li>
+                                            <li class="overall-rating__item overall-rating__item_active"></li>
+                                            <li class="overall-rating__item overall-rating__item_active"></li>
+                                            <li class="overall-rating__item overall-rating__item_active"></li>
+                                            <li class="overall-rating__item"></li>
+                                            <li class="overall-rating__item"></li>
+                                          </ul>
+                                        </td>
+                                        <td class="overall-rating__col">
+                                          <div class="overall-rating__value">10/10</div>
+                                        </td>
+                                      </tr>
+                                      <tr class="overall-rating__row">
+                                        <td class="overall-rating__col"><a class="inline-link inline-link_style3 solid overall-rating__title" href="#">Odds Level</a></td>
+                                        <td class="overall-rating__col">
+                                          <ul class="overall-rating__list">
+                                            <li class="overall-rating__item overall-rating__item_active"></li>
+                                            <li class="overall-rating__item overall-rating__item_active"></li>
+                                            <li class="overall-rating__item overall-rating__item_active"></li>
+                                            <li class="overall-rating__item overall-rating__item_active"></li>
+                                            <li class="overall-rating__item overall-rating__item_active"></li>
+                                            <li class="overall-rating__item overall-rating__item_active"></li>
+                                            <li class="overall-rating__item overall-rating__item_active"></li>
+                                            <li class="overall-rating__item overall-rating__item_active"></li>
+                                            <li class="overall-rating__item"></li>
+                                            <li class="overall-rating__item"></li>
+                                          </ul>
+                                        </td>
+                                        <td class="overall-rating__col">
+                                          <div class="overall-rating__value">9/10</div>
+                                        </td>
+                                      </tr>
+                                      <tr class="overall-rating__row">
+                                        <td class="overall-rating__col"><a class="inline-link inline-link_style3 solid overall-rating__title" href="#">Platform</a></td>
+                                        <td class="overall-rating__col">
+                                          <ul class="overall-rating__list">
+                                            <li class="overall-rating__item overall-rating__item_active"></li>
+                                            <li class="overall-rating__item overall-rating__item_active"></li>
+                                            <li class="overall-rating__item overall-rating__item_active"></li>
+                                            <li class="overall-rating__item overall-rating__item_active"></li>
+                                            <li class="overall-rating__item overall-rating__item_active"></li>
+                                            <li class="overall-rating__item overall-rating__item_active"></li>
+                                            <li class="overall-rating__item overall-rating__item_active"></li>
+                                            <li class="overall-rating__item overall-rating__item_active"></li>
+                                            <li class="overall-rating__item"></li>
+                                            <li class="overall-rating__item"></li>
+                                          </ul>
+                                        </td>
+                                        <td class="overall-rating__col">
+                                          <div class="overall-rating__value">9/10</div>
+                                        </td>
+                                      </tr>
+                                      <tr class="overall-rating__row">
+                                        <td class="overall-rating__col"><a class="inline-link inline-link_style3 solid overall-rating__title" href="#">Mobile App</a></td>
+                                        <td class="overall-rating__col">
+                                          <ul class="overall-rating__list">
+                                            <li class="overall-rating__item overall-rating__item_active"></li>
+                                            <li class="overall-rating__item overall-rating__item_active"></li>
+                                            <li class="overall-rating__item overall-rating__item_active"></li>
+                                            <li class="overall-rating__item overall-rating__item_active"></li>
+                                            <li class="overall-rating__item overall-rating__item_active"></li>
+                                            <li class="overall-rating__item overall-rating__item_active"></li>
+                                            <li class="overall-rating__item overall-rating__item_active"></li>
+                                            <li class="overall-rating__item overall-rating__item_active"></li>
+                                            <li class="overall-rating__item"></li>
+                                            <li class="overall-rating__item"></li>
+                                          </ul>
+                                        </td>
+                                        <td class="overall-rating__col">
+                                          <div class="overall-rating__value">9/10</div>
+                                        </td>
+                                      </tr>
+                                      <tr class="overall-rating__row">
+                                        <td class="overall-rating__col"><a class="inline-link inline-link_style3 solid overall-rating__title" href="#">Payment methods</a></td>
+                                        <td class="overall-rating__col">
+                                          <ul class="overall-rating__list">
+                                            <li class="overall-rating__item overall-rating__item_active"></li>
+                                            <li class="overall-rating__item overall-rating__item_active"></li>
+                                            <li class="overall-rating__item overall-rating__item_active"></li>
+                                            <li class="overall-rating__item overall-rating__item_active"></li>
+                                            <li class="overall-rating__item overall-rating__item_active"></li>
+                                            <li class="overall-rating__item overall-rating__item_active"></li>
+                                            <li class="overall-rating__item overall-rating__item_active"></li>
+                                            <li class="overall-rating__item overall-rating__item_active"></li>
+                                            <li class="overall-rating__item"></li>
+                                            <li class="overall-rating__item"></li>
+                                          </ul>
+                                        </td>
+                                        <td class="overall-rating__col">
+                                          <div class="overall-rating__value">9/10</div>
+                                        </td>
+                                      </tr>
+                                      <tr class="overall-rating__row">
+                                        <td class="overall-rating__col"><a class="inline-link inline-link_style3 solid overall-rating__title" href="#">Security</a></td>
+                                        <td class="overall-rating__col">
+                                          <ul class="overall-rating__list">
+                                            <li class="overall-rating__item overall-rating__item_active"></li>
+                                            <li class="overall-rating__item overall-rating__item_active"></li>
+                                            <li class="overall-rating__item overall-rating__item_active"></li>
+                                            <li class="overall-rating__item overall-rating__item_active"></li>
+                                            <li class="overall-rating__item overall-rating__item_active"></li>
+                                            <li class="overall-rating__item overall-rating__item_active"></li>
+                                            <li class="overall-rating__item overall-rating__item_active"></li>
+                                            <li class="overall-rating__item overall-rating__item_active"></li>
+                                            <li class="overall-rating__item"></li>
+                                            <li class="overall-rating__item"></li>
+                                          </ul>
+                                        </td>
+                                        <td class="overall-rating__col">
+                                          <div class="overall-rating__value">9/10</div>
+                                        </td>
+                                      </tr>
+                                      <tr class="overall-rating__row">
+                                        <td class="overall-rating__col"><a class="inline-link inline-link_style3 solid overall-rating__title" href="#">Customer Support</a></td>
+                                        <td class="overall-rating__col">
+                                          <ul class="overall-rating__list">
+                                            <li class="overall-rating__item overall-rating__item_active"></li>
+                                            <li class="overall-rating__item overall-rating__item_active"></li>
+                                            <li class="overall-rating__item overall-rating__item_active"></li>
+                                            <li class="overall-rating__item overall-rating__item_active"></li>
+                                            <li class="overall-rating__item overall-rating__item_active"></li>
+                                            <li class="overall-rating__item overall-rating__item_active"></li>
+                                            <li class="overall-rating__item overall-rating__item_active"></li>
+                                            <li class="overall-rating__item overall-rating__item_active"></li>
+                                            <li class="overall-rating__item"></li>
+                                            <li class="overall-rating__item"></li>
+                                          </ul>
+                                        </td>
+                                        <td class="overall-rating__col">
+                                          <div class="overall-rating__value">7/10</div>
+                                        </td>
+                                      </tr>
+                                      <tr class="overall-rating__row">
+                                        <td class="overall-rating__col"><a class="inline-link inline-link_style3 solid overall-rating__title" href="#">Bonus Offer</a></td>
+                                        <td class="overall-rating__col">
+                                          <ul class="overall-rating__list">
+                                            <li class="overall-rating__item overall-rating__item_active"></li>
+                                            <li class="overall-rating__item overall-rating__item_active"></li>
+                                            <li class="overall-rating__item overall-rating__item_active"></li>
+                                            <li class="overall-rating__item overall-rating__item_active"></li>
+                                            <li class="overall-rating__item overall-rating__item_active"></li>
+                                            <li class="overall-rating__item overall-rating__item_active"></li>
+                                            <li class="overall-rating__item overall-rating__item_active"></li>
+                                            <li class="overall-rating__item overall-rating__item_active"></li>
+                                            <li class="overall-rating__item"></li>
+                                            <li class="overall-rating__item"></li>
+                                          </ul>
+                                        </td>
+                                        <td class="overall-rating__col">
+                                          <div class="overall-rating__value">9/10</div>
+                                        </td>
+                                      </tr>
+                                      <tr class="overall-rating__row">
+                                        <td class="overall-rating__col"><a class="inline-link inline-link_style3 solid overall-rating__title" href="#">User Rating</a></td>
+                                        <td class="overall-rating__col">
+                                          <ul class="overall-rating__list">
+                                            <li class="overall-rating__item overall-rating__item_active"></li>
+                                            <li class="overall-rating__item overall-rating__item_active"></li>
+                                            <li class="overall-rating__item overall-rating__item_active"></li>
+                                            <li class="overall-rating__item overall-rating__item_active"></li>
+                                            <li class="overall-rating__item overall-rating__item_active"></li>
+                                            <li class="overall-rating__item overall-rating__item_active"></li>
+                                            <li class="overall-rating__item overall-rating__item_active"></li>
+                                            <li class="overall-rating__item overall-rating__item_active"></li>
+                                            <li class="overall-rating__item"></li>
+                                            <li class="overall-rating__item"></li>
+                                          </ul>
+                                        </td>
+                                        <td class="overall-rating__col">
+                                          <div class="overall-rating__value">6/10</div>
+                                        </td>
+                                      </tr>
+                    </table>
+                    <h4 class="title title_style3">Reasons to Bet with bet365</h4>
+                    <ul class="overall-rating__reasons-list">
+                      <li class="overall-rating__reasons-item">
+                        <svg class="icon"><use xlink:href="img/icons/icon-sprite.svg#ico46"></use></svg>Bookmaker Special Bonus List
+                      </li>
+                      <li class="overall-rating__reasons-item">
+                        <svg class="icon"><use xlink:href="img/icons/icon-sprite.svg#ico46"></use></svg>Bookies Without Betting Limits
+                      </li>
+                      <li class="overall-rating__reasons-item">
+                        <svg class="icon"><use xlink:href="img/icons/icon-sprite.svg#ico46"></use></svg>Best Free Bets Offers
+                      </li>
+                    </ul>
+                    <div class="overall-rating__banner">
+                      <div class="banner banner_style5">
+                        <div class="banner__container">
+                          <div class="banner__title"><span class="banner__title-text">Welcome Bonus</span><span class="banner__title-value">£100</span></div><a class="button button_style1 banner__button" href="#">Bet Now</a><a class="tooltip inline-link inline-link_style2 dashed banner__link" href="#" data-tooltip-content="#tooltip-block_advertiser">T&Cs Apply</a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </aside>
+          </div>
+        </div>
+        <div class="join">
+          <div class="container">
+            <div class="join__container"><span class="join__title">Join today to claim our <a href="#">exclusive bonuses!</a></span><span class="join__sub-title">Be the first to receive the latest welcome offers, free bets and tips</span>
+              <form class="join-form" action="">
+                <div class="join-form__group">
+                  <input class="join-form__input" type="email" placeholder="Enter you email here" required>
+                  <button class="button button_style1 join-form__button" type="submit">Subscribe</button>
+                </div>
+                <div class="join-form__group">
+                  <input class="checkbox join-form__checkbox" type="checkbox" id="mail">
+                  <label class="join-form__label" for="mail">Yes, i agee to receiving emails from Online-Bookmaker.com</label>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </main>
+      <footer class="footer">
+        <div class="footer__container">
+          <div class="footer__content">
+            <div class="container">
+              <div class="footer__section">
+                <div class="logo"><a class="logo__link" href="#"><img class="logo__image" src="img/logos/logo.svg" alt=""></a></div>
+                <div class="socials">
+                  <div class="socials__content">
+                    <div class="socials__label">Follow Us</div>
+                    <ul class="socials__list">
+                      <li class="socials__item"><a class="socials__link" href="#">
+                          <svg class="icon"><use xlink:href="img/icons/icon-sprite.svg#ico6"></use></svg></a></li>
+                      <li class="socials__item"><a class="socials__link" href="#">
+                          <svg class="icon"><use xlink:href="img/icons/icon-sprite.svg#ico5"></use></svg></a></li>
+                      <li class="socials__item"><a class="socials__link" href="#">
+                          <svg class="icon"><use xlink:href="img/icons/icon-sprite.svg#ico4"></use></svg></a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <nav class="nav">
+                <ul class="nav__list">
+                  <li class="nav__item"><a class="nav__link" href="#">TERMS & CONDITIONS</a></li>
+                  <li class="nav__item"><a class="nav__link" href="#">PRIVACY & COOKIE POLICY</a></li>
+                  <li class="nav__item"><a class="nav__link" href="#">CONTACTS</a></li>
+                </ul>
+              </nav>
+            </div>
+          </div>
+          <div class="footer__content">
+            <div class="container">
+              <p class="footer__disclaimer">DISCLAIMER: All free bets, promotions and bonuses listed are subject to the terms and the individual staking requirements of their respective operators. Freebets.co.uk does not fulfill or provide any form of customer support for any incentives that may appear on this site. This site and the offers we list involve gambling and are only suitable for users of legal age in jurisdictions where online gambling is permitted. All third party trademarks, logos and images are the property of their respective owners. Trademarks and references to trademarks are made under the intention of fair use in the business of promoting the services of betting operators.<br> Online Wagering is illegal in some Jurisdictions. It is your responsibility to check your local regulations before playing online. Online-Bookmaker.com takes no responsibility for your actions.</p>
+            </div>
+          </div>
+          <div class="footer__content">
+            <div class="container"><span class="copy">&copy 2019 Online-Bookmaker.com. All rights reserved</span>
+              <div class="footer-label">
+                <ul class="footer-label__list">
+                  <li class="footer-label__item"></li>
+                  <li class="footer-label__item"></li>
+                  <li class="footer-label__item"></li>
+                  <li class="footer-label__item"></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </footer>
+      <!--tooltips-->
+      <div class="tooltip-container">
+        <div class="tooltip-block" id="tooltip-block_1">
+          <button class="tooltip-block__close"></button>
+          <div class="tooltip-block__container">
+            <div class="tooltip-block__text-container"><span class="tooltip-block__title"> </span>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="tooltip-container">
+        <div class="tooltip-block" id="tooltip-block_expert">
+          <button class="tooltip-block__close"></button>
+          <div class="tooltip-block__container tooltip-block__container_type2">
+            <div class="tooltip-block__photo"><img src="img/photo1.png" alt=""></div>
+            <div class="tooltip-block__text-container"><span class="tooltip-block__title">Brandon Moore</span>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="tooltip-container">
+        <div class="tooltip-block" id="tooltip-block_advertiser">
+          <button class="tooltip-block__close"></button>
+          <div class="tooltip-block__container">
+            <div class="tooltip-block__text-container">
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--cookies-->
+      <div class="cookies-message">
+        <div class="cookies-message__container"><span class="cookies-message__text">This website uses cookies to ensure you get the best experience on  our website. <a class="inline-link inline-link_style3 solid" href="#">Learn More</a></span><a class="button button_style3 cookies-message__button" href="#">Got It!</a></div>
+      </div>
+      <!--up-button-->
+      <button class="up">
+        <div class="up__container">
+          <svg class="icon"><use xlink:href="img/icons/icon-sprite.svg#ico39"></use></svg><span>Back<br>to the Top</span>
+        </div>
+      </button>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="js/libs.min.js">                 </script>
+    <script src="js/common.min.js"></script>
+    <script src="js/bookmaker.min.js"></script>
+  </body>
+</html>
