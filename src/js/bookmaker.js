@@ -3,6 +3,10 @@ $(document).ready(function () {
   Scroll();
   rate();
   qa();
+  navPos();
+});
+$(window).resize(function () {
+  navPos();
 });
 
 //шкала
@@ -98,5 +102,14 @@ function qa() {
         $(this).find('.qa-block__dropdown').slideUp(300);
       }
     })
+  }
+}
+
+//navpos
+function navPos() {
+  if(innerWidth < 993) {
+    $('.betway-reviews-block').appendTo('.main__container_article');
+  } else {
+    $('.betway-reviews-block').appendTo('.aside__container');
   }
 }
