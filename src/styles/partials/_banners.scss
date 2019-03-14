@@ -185,6 +185,192 @@
     }
   }
   &_style6 {
-    
+    background-color: #fff;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.35);
+    .banner {
+      &__container {
+        border-radius: 5px;
+        padding: 17px 24px 30px 24px;
+      }
+      &__title {
+        font-weight: bold;
+        font-size: 18px;
+        display: block;
+        padding-bottom: 14px;
+        color: #2A2A2A;
+        text-align: center;
+      }
+      &__list {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+      }
+      &__item {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        &:not(:last-child) {
+          margin-bottom: 12px;
+        }
+      }
+      &__rating {
+        display: flex;
+        align-items: flex-start;
+        .icon {
+          width: 24px;
+          height: 24px;
+          margin-right: 4px;
+        }
+        &-value {
+          font-family: 'Roboto Condensed';
+          font-weight: bold;
+          font-size: 14px;
+          color: #9c9c9c;
+          span {
+            font-size: 20px;
+            color: #2A2A2A;
+          }
+        }
+      }
+      &__link {
+        width: 145px;
+        position: relative;
+        display: block;
+        transition: 0.3s;
+        &:before {
+          content: '';
+          display: block;
+          padding-top: 28%;
+          background: url('../img/icons/os-links.png') no-repeat;
+          background-size: 100% auto;
+        }
+        &:hover {
+          opacity: 0.8;
+        }
+        &_ios {
+          &:before {
+            background-position: 0 0;
+          }
+        }
+        &_android {
+          &:before {
+            background-position: 0 50%;
+          }
+        }
+        &_microsoft {
+          &:before {
+             background-position: 0 100%;
+          }
+        }
+      }
+    }
+  }
+  &_style7 {
+    color: #fff;
+    margin: 25px 0;
+    .banner {
+      &__title {
+        font-size: 42px;
+        font-weight: bold;
+        line-height: 1.15em;
+      }
+      &__container {
+        padding: 35px 35px 45px 35px;
+      }
+    }
+  }
+  &_style8 {
+    margin: 25px 0;
+    .banner {
+      &__container {
+        padding: 0;
+        display: flex;
+        justify-content: space-between;
+      }
+      &__content {
+        display: flex;
+        align-items: center;
+        padding: 30px 40px;
+      }
+      &__title {
+        color: #fff;
+        display: block;
+        padding: 0 40px 0 0;
+        font-size: 22px;
+        line-height: 1.3em;
+      }
+      &__image {
+        position: relative;
+        width: 240px;
+        overflow: hidden;
+        flex-shrink: 0;
+        &:before {
+          content: '';
+          display: block;
+          padding-top: 51%;
+        }
+        img {
+          display: block;
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          width: 100%;
+          height: auto;
+        }
+      }
+      &__button {
+        display: block;
+        flex-shrink: 0;
+        padding-left: 32px;
+        padding-right: 32px;
+      }
+    }
+  }
+  &_style9 {
+    text-align: center;
+    background-color: #fff;
+    font-family: 'Roboto Condensed';
+    color: #2A2A2A;
+    box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.15);
+    .banner {
+      &__image {
+        width: 100%;
+        position: relative;
+        overflow: hidden;
+        &:before {
+          content: '';
+          display: block;
+          padding-top: 38%;
+        }
+        img {
+          display: block;
+          position: absolute;
+          width: 100%;
+          height: auto;
+          left: 50%;
+          top: 50%;
+          transform: translate(-50%, -50%);
+        }
+      }
+      &__text {
+        font-size: 18px;
+      }
+      &__value {
+        font-family: 'Roboto Condensed';
+        font-weight: bold;
+        font-size: 36px;
+        display: block;
+        text-align: center;
+        padding: 10px 0;
+      }
+      &__button {
+        padding-right: 32px;
+        padding-left: 32px;
+      }
+      &__content {
+        padding: 13px 20px 20px 20px;
+      }
+    }
   }
 }

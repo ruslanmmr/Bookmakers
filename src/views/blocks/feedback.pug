@@ -1,0 +1,90 @@
+mixin star()
+  li.feedback__rating-item
+    svg.icon <use xlink:href="img/icons/icon-sprite.svg#starRating"></use>
+mixin review()
+  .feedback-block
+    .feedback-block__container
+      .feedback-block__head
+        .feedback-block__section
+          .feedback-block__image
+            span a
+          .feedback-block__section-content 
+            .feedback-block__title Alex
+            .feedback-block__rating
+              span.feedback-block__rating-value 1.0
+              ul.feedback__rating-list
+                li.feedback__rating-item.feedback__rating-item_active
+                  svg.icon <use xlink:href="img/icons/icon-sprite.svg#starRating"></use>
+                li.feedback__rating-item.feedback__rating-item_active
+                  svg.icon <use xlink:href="img/icons/icon-sprite.svg#starRating"></use>
+                +star()
+                +star()
+                +star()
+                +star()
+                +star()
+                +star()
+                +star()
+                +star()
+                +star()
+                +star()
+                +star()
+                +star()
+                +star()
+                +star()
+                +star()
+                +star()
+                +star()
+                +star()
+.feedback
+  .feedback__container
+    .feedback-rating
+      .feedback-rating__section
+        svg.icon <use xlink:href="img/icons/icon-sprite.svg#ico27"></use>
+        span.feedback-rating__value
+          span 7.5
+          | /10
+      .feedback-rating__section
+        h5.title.title_style1.feedback-rating__title Betway User Rating
+    form(action="").feedback-form
+      .feedback-form__container
+        .feedback-form-rating
+          span.feedback-form-rating__title Уour feedback
+          .feedback-form-rating__section
+            .feedback-form-rating__container
+              input(type="text" required).feedback-form-rating__input
+              ul.feedback__rating-list
+                +star()
+                +star()
+                +star()
+                +star()
+                +star()
+                +star()
+                +star()
+                +star()
+                +star()
+                +star()
+                +star()
+                +star()
+                +star()
+                +star()
+                +star()
+                +star()
+                +star()
+                +star()
+                +star()
+                +star()
+            span.feedback-form-rating__value 0.0
+        .feedback-form__group
+          .feedback-form__group-title
+            svg.icon <use xlink:href="img/icons/icon-sprite.svg#ico11"></use>
+            span Pros
+          textarea(type="text" required).feedback-form__textarea
+        .feedback-form__group
+          .feedback-form__group-title
+            svg.icon <use xlink:href="img/icons/icon-sprite.svg#ico12"></use>
+            span Cons
+          textarea(type="text" required).feedback-form__textarea
+        .feedback-form__group
+          button(type='submit').button.button_style2.feedback-form__button Leave Feedback
+    +review()
+        

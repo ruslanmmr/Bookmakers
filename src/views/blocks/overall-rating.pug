@@ -1,7 +1,7 @@
 mixin row(title, value)
   tr.overall-rating__row
     td.overall-rating__col
-      a(href="#").inline-link.inline-link_style3.solid.overall-rating__title=title
+      a.scroll-link.inline-link.inline-link_style3.solid.overall-rating__title&attributes(attributes)=title
     td.overall-rating__col
       ul.overall-rating__list
         li.overall-rating__item.overall-rating__item_active
@@ -20,16 +20,16 @@ mixin row(title, value)
   .overall-rating__container
     h4.title.title_style3 Overall Rating
     table.overall-rating__table
-      +row('Odds Level', '9/10')
-      +row('In-play Betting', '10/10')
-      +row('Odds Level', '9/10')
-      +row('Platform', '9/10')
-      +row('Mobile App', '9/10')
-      +row('Payment methods', '9/10')
-      +row('Security', '9/10')
-      +row('Customer Support', '7/10')
-      +row('Bonus Offer', '9/10')
-      +row('User Rating', '6/10')
+      +row('Markets', '9/10')(href='#item1')
+      +row('In-play Betting', '10/10')(href='#item2')
+      +row('Odds Level', '9/10')(href='#item3')
+      +row('Platform', '9/10')(href='#item4')
+      +row('Mobile App', '9/10')(href='#item5')
+      +row('Payment methods', '9/10')(href='#item6')
+      +row('Security', '9/10')(href='#item7')
+      +row('Customer Support', '7/10')(href='#item8')
+      +row('Bonus Offer', '9/10')(href='#item9')
+      +row('User Rating', '6/10')(href='#item10')
     h4.title.title_style3 Reasons to Bet with bet365
     ul.overall-rating__reasons-list
       li.overall-rating__reasons-item

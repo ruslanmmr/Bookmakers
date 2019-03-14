@@ -1,10 +1,20 @@
 .aside {
   width: 270px;
   flex-shrink: 0;
+  .float-stop {
+    height: auto;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+  }
   &__container {
     margin: -15px;
     display: flex;
     flex-wrap: wrap;
+    position: relative;
+    height: calc(100% + 30px);
+    align-content: flex-start;
+    align-items: flex-start;
   }
   .row {
     margin: -10px;
@@ -28,7 +38,7 @@
   &_bottom {
     position: absolute;
     top: auto;
-    bottom: 15px;
+    bottom: 300px;
   }
 }
 .best-bookie {
@@ -466,6 +476,55 @@
     &_active {
       background: #587DD8;
     }
+  }
+}
+.betway-revievs {
+  align-self: flex-end;
+  &__container {
+    background: #FFFFFF;
+    box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.15);
+    border-radius: 5px;
+    padding: 20px;
+  }
+  &__list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  &__item {
+    &:not(:last-child) {
+      margin-bottom: 10px;
+    }
+  }
+  &__link {
+    text-decoration: none;
+    transition: 0.3s;
+    padding-left: 26px;
+    position: relative;
+    color: #494949;
+    display: block;
+    .icon {
+      width: 18px;
+      height: 18px;
+      fill: #BCBCBC;
+      position: absolute;
+      left: 0;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+    &:hover {
+      color: #00247D;
+      .icon {
+        fill: #CF142B;
+      }
+    }
+  }
+  &__link-title {
+    font-weight: bold;
+    display: block;
+  }
+  &__link-text {
+    font-size: 12px;
   }
 }
 

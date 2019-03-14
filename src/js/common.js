@@ -237,16 +237,20 @@ function floating() {
     $(window).scroll(function () {
       if (innerWidth > 992) {
         var top = $(document).scrollTop(),
-          pip = $('.join').offset().top,
-          height = floatingBlock.height();
-        if (top > topPos && top < (pip - 15) - height) {
+          pip = $('.float-stop').offset().top,
+          height = floatingBlock.height(),
+          pipHeight = $('.float-stop').height();
+        if (top > topPos && top < (pip - 30) - height) {
           floatingBlock.removeClass('floating-block_bottom');
           floatingBlock.addClass('floating-block_fixed').fadeIn();
-        } else if (top > (pip - 15) - height) {
+          floatingBlock.css('bottom', 'auto')
+        } else if (top > ((pip - 30) - height)) {
           floatingBlock.addClass('floating-block_bottom');
+          floatingBlock.css('bottom', pipHeight + 'px')
         } else {
           floatingBlock.removeClass('floating-block_fixed');
           floatingBlock.removeClass('floating-block_bottom');
+          floatingBlock.css('bottom', 'auto')
         }
       } else {
         floatingBlock.removeClass('floating-block_fixed').fadeIn();
