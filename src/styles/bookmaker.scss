@@ -93,8 +93,11 @@
   }
   .main__content {
     background-color: #fff;
-    padding: 20px;
+    padding: 20px 20px 30px 20px;
     border-radius: 5px;
+    &:not(:last-child) {
+      margin-bottom: 30px;
+    }
   } 
 }
 .sport-markets {
@@ -369,6 +372,9 @@
     .main__container-widhout-aside {
       padding-right: 0;
     }
+    .betway-revievs {
+      margin-bottom: 30px;
+    }
     .main__container {
       &:first-child {
         .aside {
@@ -505,6 +511,9 @@
     text-align: center;
     display: block;
   }
+  .aside .float-stop {
+    width: 100%;
+  }
 }
 @media screen and(max-width: 420px) {
   .totals-block__row {
@@ -524,3 +533,5 @@
 
 @import "./partials/info-table";
 @import "./partials/feedback";
+@import "./partials/qa";
+@import "./partials/other-reviews";

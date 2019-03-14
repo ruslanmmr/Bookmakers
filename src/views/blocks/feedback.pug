@@ -35,6 +35,28 @@ mixin review()
                 +star()
                 +star()
                 +star()
+        span.feedback-block__head-date 19/02/2019
+      .feedback-block__content
+        .feedback-block__content-title
+          svg.icon <use xlink:href="img/icons/icon-sprite.svg#ico11"></use>
+          span Pros
+        p Betting odds offered by the best online maker should in most cases exceed the 95 percent limit on particular matches. As such, when trying to get the right match to stake on, the odds should only experience minimum changes. Moreover, opinionated lines exist to prove there is a compiling service for every odd offered and it is not just copied from another online bookmaker or influenced by the market activity.
+        .feedback-block__content-title
+          svg.icon <use xlink:href="img/icons/icon-sprite.svg#ico12"></use>
+          span Cons
+        p Betting odds offered by the best online maker should in most cases exceed the 95 percent limit on particular matches. As such, when trying to get the right match to stake on, the odds should only experience minimum changes. Moreover, opinionated lines exist to prove there is a compiling service for every odd offered and it is not just copied from another online bookmaker or influenced by the market activity.
+      ul.feedback-block__button-list
+        li.feedback-block__button-item
+          a(href="#").feedback-block__button-link
+            svg.icon <use xlink:href="img/icons/icon-sprite.svg#ico13"></use>
+            span.feedback-block__button-link-value 5
+        li.feedback-block__button-item
+          a(href="#").feedback-block__button-link
+            svg.icon <use xlink:href="img/icons/icon-sprite.svg#ico50"></use>
+            span.feedback-block__button-link-value 0
+    .feedback-block__container.feedback-block__container_admin
+      span.feedback-block__admin-title Admin
+      p Betting odds offered by the best online maker should in most cases exceed the 95 percent limit on particular matches. As such, when trying to get the right match to stake on, the odds should only experience minimum changes. Moreover, opinionated lines exist to prove there is a compiling service for every odd offered and it is not just copied from another online bookmaker or influenced by the market activity.
 .feedback
   .feedback__container
     .feedback-rating
@@ -86,5 +108,12 @@ mixin review()
           textarea(type="text" required).feedback-form__textarea
         .feedback-form__group
           button(type='submit').button.button_style2.feedback-form__button Leave Feedback
-    +review()
+    .feedback__container
+      +review()
+      +review()
+      +review()
+      +review()
+      +review()
+    .feedback__button-section
+      a(href="#").button.button_style2.feedback__button Other Reviews
         

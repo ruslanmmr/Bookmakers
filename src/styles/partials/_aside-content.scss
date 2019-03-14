@@ -434,7 +434,6 @@
   }
   &__table {
     width: 100%;
-    margin-bottom: 15px;
   }
   &__value {
     font-weight: bold;
@@ -533,6 +532,11 @@
     width: 100%;
     .col {
       width: 33.33%;
+    }
+    .float-stop {
+      position: relative;
+      bottom: auto;
+      width: auto;
     }
     &-block {
       width: 100%;

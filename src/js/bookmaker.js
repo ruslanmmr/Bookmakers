@@ -2,6 +2,7 @@ $(document).ready(function () {
   scaleBlock();
   Scroll();
   rate();
+  qa();
 });
 
 //шкала
@@ -34,19 +35,18 @@ function Scroll() {
 //rate
 function rate() {
   var star = $('.feedback-form .feedback__rating-item'),
-      starsCount = $('.feedback__rating-item_active').length,
-      starsCountLatest = $('.feedback__rating-item_active').length,
+      starsCount = $('.feedback-form .feedback__rating-item_active').length,
+      starsCountLatest = $('.feedback-form .feedback__rating-item_active').length,
       rating,
       ratingValue,
       ratingInput = $('.feedback-form-rating__input'),
       valueInd = $('.feedback-form-rating__value'),
       ratingValueLatest = '0.0';
-  
   var cStars = function(nowPos) {
     star.removeClass('feedback__rating-item_active');
     for (var i = 0; nowPos + 1 > i; i++) {
       star.eq(i).toggleClass('feedback__rating-item_active');
-      starsCount = $('.feedback__rating-item_active').length;
+      starsCount = $('.feedback-form .feedback__rating-item_active').length;
       rating = starsCount * 0.5;
       ratingValue = parseFloat(rating).toFixed(1);
       valueInd.text(ratingValue);
@@ -78,4 +78,25 @@ function rate() {
     }
   });
 
+}
+
+//questions
+function qa() {
+  var button = $('.qa-block__title'),
+      dropdown = $('.qa-block__dropdown');
+
+  button.on('click', function() {
+    $(this).parents('.qa-block').toggleClass('qa-block_active');
+    state();
+  })
+
+  function state() {
+    $('.qa-block').each(function() {
+      if($(this).hasClass('qa-block_active')) {
+        $(this).find('.qa-block__dropdown').slideDown(300);
+      } else {
+        $(this).find('.qa-block__dropdown').slideUp(300);
+      }
+    })
+  }
 }
