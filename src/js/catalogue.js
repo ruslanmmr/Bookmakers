@@ -5,6 +5,7 @@ $(document).ready(function () {
 $(window).resize(function () {
   filterPos();
 });
+
 var checkbox = $('.filter-block__checkbox'),
       label = $('.filter-block__label'),
       buttonDropdown = $('.filter-block__dropdown-button'),

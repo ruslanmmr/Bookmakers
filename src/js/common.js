@@ -10,6 +10,7 @@ $(document).ready(function () {
   floating();
   readmore();
   sort();
+  copy();
 });
 window.addEventListener('load',
   function () {
@@ -127,17 +128,17 @@ function signIn() {
 //tooltips
 function tooltips() {
   var tooltip = $('.tooltip'),
-    closeButton = $('.tooltip-block__close'),
-    button = $('.tooltip');
+      tooltipHover = $('.tooltip-hover'),
+      closeButton = $('.tooltip-block__close'),
+      button = $('.tooltip, .tooltip-hover');
 
   closeButton.click(function (event) {
     event.preventDefault();
-    tooltip.tooltipster('close');
+    button.tooltipster('close');
   });
   button.on('click', function (e) {
     e.preventDefault();
   })
-
   tooltip.tooltipster({
     animation: 'fade',
     delay: 200,
@@ -146,7 +147,34 @@ function tooltips() {
     interactive: true,
     contentCloning: true
   });
+  tooltipHover.tooltipster({
+    animation: 'fade',
+    delay: 200,
+    trigger: 'custom',
+    triggerOpen: {
+        mouseenter: true
+    },
+    triggerClose: {
+      mouseleave: true
+    },
+    side: ['right', 'left', 'bottom', 'top'],
+    interactive: true,
+    contentCloning: true
+  });
 }
+
+//copy-to-clipboard
+function copy() {
+  var clipboard = new ClipboardJS('.col-bonuses__promo-button');
+  var button = $('.col-bonuses__promo-button');
+
+  clipboard.on('success', function(e) {
+    button.removeClass('col-bonuses__promo-button_active').text('Yourbet');
+    $(e.trigger).addClass('col-bonuses__promo-button_active').text('copied to clipboard');
+    e.clearSelection();
+  });
+}
+
 //nav
 function nav() {
   var navButton = $('.mobile-button, .mobile-nav__close'),

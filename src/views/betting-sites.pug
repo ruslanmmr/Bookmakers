@@ -1,0 +1,40 @@
+doctype html
+html(lang="ru")
+  head
+    include blocks/head
+    link(rel="stylesheet" href="styles/betting-sites.min.css")
+  body.body
+    .wrapper
+      header.header.header_style2
+        include blocks/header
+      include blocks/mobile-nav
+      main.main
+        include blocks/hot-offers-block
+        include blocks/breadcrumbs
+        .main.main_width-aside
+          .container
+            .main__container
+              include blocks/bonuses-text
+              .catalogue.catalogue_betting
+                include blocks/catalogue-head
+                include blocks/catalogue_betting
+              include blocks/guide
+            aside.aside
+              .aside__container
+                include blocks/filter
+                include blocks/also-recommend
+                include blocks/sign-up-offers
+                include blocks/existing-offers-banner
+                include blocks/aside-nav
+        include blocks/join
+      include blocks/footer
+      //tooltips
+      include blocks/tooltips
+      //cookies
+      include blocks/cookies
+      //up-button
+      include blocks/up
+    script(src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js")
+    script(src="js/libs.min.js")                  
+    script(src="js/common.min.js")
+    script(src="js/catalogue.min.js")
