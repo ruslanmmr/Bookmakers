@@ -111,7 +111,6 @@
   }
 }
 .catalogue {
-  padding: 30px 0;
   .col-rank__container {
     flex-direction: column;
     align-items: center;
@@ -200,15 +199,15 @@
     .col-betting-sites {
       flex: 1 1 100%;
     }
+    .col-rank__order {
+      padding-right: 8px;
+    }
     .col-rank {
-      flex: 1 1 100%;
+      flex: 1 1 100% !important;
       &__container {
         flex-direction: row;
         justify-content: flex-start;
       }
-    }
-    .col-rank__order {
-      padding-right: 8px;
     }
   }
   .catalogue_betting {
@@ -246,5 +245,8 @@
       flex: 1 1 100%;
       order: 4;
     }
-  } 
+  }
+  .catalogue .col-betting-sites__image {
+    width: 100%;
+  }
 }

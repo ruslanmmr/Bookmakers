@@ -1,6 +1,5 @@
 .bookmaker-head {
   color: #fff;
-  padding-bottom: 30px;
   &__banner {
     width: 225px;
     flex-shrink: 0;
@@ -84,20 +83,10 @@
   }
 }
 .bookmaker {
-  .main__container {
-    &:not(:last-child) {
-    }
-  }
-  .main__container-widhout-aside {
-    padding: 30px 300px 0 0;
-  }
   .main__content {
     background-color: #fff;
     padding: 20px 20px 30px 20px;
     border-radius: 5px;
-    &:not(:last-child) {
-      margin-bottom: 30px;
-    }
   } 
 }
 .sport-markets {
@@ -369,11 +358,16 @@
 }
 @media screen and(max-width: 992px) {
   .bookmaker {
+    .aside {
+      margin-bottom: 30px;
+      margin-top: 0;
+    }
     .main__container-widhout-aside {
       padding-right: 0;
     }
     .betway-revievs {
       padding: 0;
+      margin-top: 30px;
     }
     .main__container {
       &:first-child {

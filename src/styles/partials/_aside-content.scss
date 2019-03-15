@@ -569,6 +569,11 @@
   .row {
     margin: -5px;
   }
+  &__button {
+    display: block;
+    margin-top: 20px;
+    width: 100%;
+  }
 }
 .top-sports-book-block {
   &__container {
@@ -578,7 +583,7 @@
     border-radius: 5px;
     overflow: hidden;
     position: relative;
-    align-items: center;
+    align-items: stretch;
   }
   &__overlay {
     position: absolute;
@@ -601,10 +606,10 @@
   }
   &__image {
     z-index: 1;
-    flex: 1 1 100%;
-    height: 100%;
+    width: 170px;
     overflow: hidden;
     position: relative;
+    flex-shrink: 0;
     &:before {
       content: '';
       display: block;
@@ -614,21 +619,24 @@
       height: 100%;
       position: absolute;
       top: 0;
-      left: 0;
+      left: 50%;
+      transform: translateX(-50%);
     }
   }
   &__bonus {
     padding: 10px;
     text-align: center;
     color: #494949;
-    flex-shrink: 0;
     position: relative;
     z-index: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex: 1 1 100%;
     &-label {
       display: block;
       text-align: center;
       font-size: 12px;
-      white-space: nowrap;
     }
     &-value {
       font-family: Roboto Condensed;
@@ -768,6 +776,11 @@
   }
   .also-recommend {
     order: 103;
+  }
+  .aside-news-nav-block {
+    &:not(:last-child):after {
+      display: none;
+    }
   }
 }
 @media screen and(max-width: 768px) {

@@ -12,14 +12,16 @@ html(lang="ru")
         include blocks/home
         include blocks/about
         include blocks/best-bookmakers
-        .main.main_width-aside
+        .main.main_width-aside.block-page
           .container
             .main__container
               include blocks/about-rating
-              .title.title_style1 New Online Bookmakers
-              include blocks/bookmakers
-              .title.title_style1 Other Reliable Online Bookmakers
-              include blocks/bookmakers 
+              .block-page
+                .title.title_style1 New Online Bookmakers
+                include blocks/bookmakers
+              .block-page
+                .title.title_style1 Other Reliable Online Bookmakers
+                include blocks/bookmakers 
               include blocks/guide
             aside.aside
               .aside__container

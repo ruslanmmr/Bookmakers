@@ -165,14 +165,15 @@ function tooltips() {
 
 //copy-to-clipboard
 function copy() {
-  var clipboard = new ClipboardJS('.col-bonuses__promo-button');
   var button = $('.col-bonuses__promo-button');
-
-  clipboard.on('success', function(e) {
-    button.removeClass('col-bonuses__promo-button_active').text('Yourbet');
-    $(e.trigger).addClass('col-bonuses__promo-button_active').text('copied to clipboard');
-    e.clearSelection();
-  });
+  if($("*").is(button)) {
+    var clipboard = new ClipboardJS('.col-bonuses__promo-button');
+    clipboard.on('success', function(e) {
+      button.removeClass('col-bonuses__promo-button_active').text('Yourbet');
+      $(e.trigger).addClass('col-bonuses__promo-button_active').text('copied to clipboard');
+      e.clearSelection();
+    });
+  }
 }
 
 //nav

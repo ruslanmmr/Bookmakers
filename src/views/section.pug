@@ -15,60 +15,60 @@ html(lang="ru")
         .main.main_width-aside
           .container
             .main__container
-              include blocks/bonuses-text
-              +text('Blog')
               .news.block-page
                 .news__head
-                  h4.title.title_style1 Betting News & Analytics
-                  a(href="#").inline-link.inline-link_style3.news__head-link.solid View all
+                  h4.title.title_style4 Betting News & Analytics
                 .news__container
                   include blocks/news
                   +article('Webis Holdings granted California betting license extension')(data-src='img/news/news2.jpg')
                   +article('Golden Nugget launches online sportsbook in New Jersey')(data-src='img/news/news3.jpg')
                   +article('GambleAware launches new Bet Regret campaign.')(data-src='img/news/news4.jpg')
-              .news.block-page
-                .news__head
-                  h4.title.title_style1 Betting Strategy
-                  a(href="#").inline-link.inline-link_style3.news__head-link.solid View all
-                .news__container
-                  include blocks/news
                   +article('Webis Holdings granted California betting license extension')(data-src='img/news/news2.jpg')
                   +article('Golden Nugget launches online sportsbook in New Jersey')(data-src='img/news/news3.jpg')
                   +article('GambleAware launches new Bet Regret campaign.')(data-src='img/news/news4.jpg')
-              .news.block-page
-                .news__head
-                  h4.title.title_style1 Betting School
-                  a(href="#").inline-link.inline-link_style3.news__head-link.solid View all
-                .news__container
-                  include blocks/news
                   +article('Webis Holdings granted California betting license extension')(data-src='img/news/news2.jpg')
                   +article('Golden Nugget launches online sportsbook in New Jersey')(data-src='img/news/news3.jpg')
                   +article('GambleAware launches new Bet Regret campaign.')(data-src='img/news/news4.jpg')
-              .news.block-page
-                .news__head
-                  h4.title.title_style1 Betting Events 
-                  a(href="#").inline-link.inline-link_style3.news__head-link.solid View all
-                .news__container
-                  include blocks/news
                   +article('Webis Holdings granted California betting license extension')(data-src='img/news/news2.jpg')
                   +article('Golden Nugget launches online sportsbook in New Jersey')(data-src='img/news/news3.jpg')
                   +article('GambleAware launches new Bet Regret campaign.')(data-src='img/news/news4.jpg')
-              .news.block-page
-                .news__head
-                  h4.title.title_style1 Betting Events 
-                  a(href="#").inline-link.inline-link_style3.news__head-link.solid View all
-                .news__container
-                  include blocks/news
                   +article('Webis Holdings granted California betting license extension')(data-src='img/news/news2.jpg')
                   +article('Golden Nugget launches online sportsbook in New Jersey')(data-src='img/news/news3.jpg')
                   +article('GambleAware launches new Bet Regret campaign.')(data-src='img/news/news4.jpg')
-              include blocks/guide
+                  +article('Webis Holdings granted California betting license extension')(data-src='img/news/news2.jpg')
+                  +article('Golden Nugget launches online sportsbook in New Jersey')(data-src='img/news/news3.jpg')
+                  +article('GambleAware launches new Bet Regret campaign.')(data-src='img/news/news4.jpg')
+                  +article('Webis Holdings granted California betting license extension')(data-src='img/news/news2.jpg')
+                  +article('Golden Nugget launches online sportsbook in New Jersey')(data-src='img/news/news3.jpg')
+                  +article('GambleAware launches new Bet Regret campaign.')(data-src='img/news/news4.jpg')
+                  +article('Webis Holdings granted California betting license extension')(data-src='img/news/news2.jpg')
+                  +article('Golden Nugget launches online sportsbook in New Jersey')(data-src='img/news/news3.jpg')
+                  +article('GambleAware launches new Bet Regret campaign.')(data-src='img/news/news4.jpg')
+                .news__nav
+                  ul.news__nav-list
+                    li.news__nav-item
+                      a(href="#").news__nav-link
+                        svg.icon <use xlink:href="img/icons/icon-sprite.svg#ico40"></use>
+                    li.news__nav-item
+                      a(href="#").news__nav-link 1
+                    li.news__nav-item
+                      a(href="#").news__nav-link 2
+                    li.news__nav-item
+                      a(href="#").news__nav-link.news__nav-link_active 3
+                    li.news__nav-item
+                      a(href="#").news__nav-link ...
+                    li.news__nav-item
+                      a(href="#").news__nav-link 10
+                    li.news__nav-item
+                      a(href="#").news__nav-link
+                        svg.icon <use xlink:href="img/icons/icon-sprite.svg#ico40"></use>
             aside.aside
               .aside__container
                 include blocks/aside-news-nav
                 include blocks/top-sports-book
                 include blocks/newest-reviews
                 include blocks/sign-up-offers
+                include blocks/aside-news
         include blocks/join
       include blocks/footer
       //tooltips
