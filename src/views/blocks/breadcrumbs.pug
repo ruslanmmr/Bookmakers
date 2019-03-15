@@ -1,7 +1,8 @@
-.breadcrumbs
-  .container
-    .breadcrumbs__container
-      ul.breadcrumbs__list
-        li.breadcrumbs__item
-          a(href="#").breadcrumbs__link.inline-link.inline-link_style3 Bookmakers.com
-        li.breadcrumbs__item Betting-sites
+mixin breadcrumb(text)
+  .breadcrumbs
+    .container
+      .breadcrumbs__container
+        ul.breadcrumbs__list
+          li.breadcrumbs__item
+            a(href="#").breadcrumbs__link.inline-link.inline-link_style3 Bookmakers.com
+          li.breadcrumbs__item=text

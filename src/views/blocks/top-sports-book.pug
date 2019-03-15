@@ -1,0 +1,20 @@
+mixin block()
+  .top-sports-book-block.col
+    .top-sports-book-block__container
+      .top-sports-book-block__image
+        img(data-src="img/Bookies/ff5e94874f1e99b3d906f04bfcaa8bb4.png", alt="").lazy
+      .top-sports-book-block__bonus
+        span.top-sports-book-block__bonus-label Get Up to
+        span.top-sports-book-block__bonus-value £100
+        span.top-sports-book-block__bonus-label in Bet Credits
+      .top-sports-book-block__overlay
+        a(href="#").button.button_style1.top-sports-book-block__button Claim
+.top-sports-book.aside-block
+  h4.title.title_style1 Top Sportsbook
+  .top-sports-book__container.row
+    +block
+    +block
+    +block
+    +block
+    +block
+

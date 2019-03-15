@@ -1,0 +1,22 @@
+mixin block(title)
+  .newest-reviews-block.col
+    a(href="#").newest-reviews-block__container
+      .newest-reviews-block__image
+        img(data-src="img/Bookies/6ee7a1393eecd738d8928632c776aa30.jpg", alt="").lazy
+      .newest-reviews-block__content
+        .newest-reviews-block__section
+          span.newest-reviews-block__date 20 Feb
+          span.newest-reviews-block__title=title
+        .newest-reviews-block__section
+          .newest-reviews-block__rating
+            svg.icon <use xlink:href="img/icons/icon-sprite.svg#ico27"></use>
+            span.newest-reviews-block__rating-value 9.8
+.newest-reviews.aside-block
+  h4.title.title_style1 Newest Reviews
+  .newest-reviews__container.row
+    +block('William Hill')
+    +block('Fansbet')
+    +block('William Hill')
+    +block('Bet365')
+    +block('William Hill')
+    +block('Fansbet')

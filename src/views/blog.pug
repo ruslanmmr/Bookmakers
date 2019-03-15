@@ -2,7 +2,6 @@ doctype html
 html(lang="ru")
   head
     include blocks/head
-    link(rel="stylesheet" href="styles/betting-sites.min.css")
   body.body
     .wrapper
       header.header.header_style2
@@ -11,23 +10,19 @@ html(lang="ru")
       main.main
         include blocks/hot-offers-block
         include blocks/breadcrumbs
-        +breadcrumb('Bonuses')
+        +breadcrumb('Blog')
         .main.main_width-aside
           .container
             .main__container
               include blocks/bonuses-text
-              +text('Bonuses')
-              .catalogue.catalogue_bonuses
-                include blocks/catalogue-head
-                include blocks/catalogue_bonuses
+              +text('Blog')
               include blocks/guide
             aside.aside
               .aside__container
-                include blocks/filter
-                include blocks/also-recommend
+                include blocks/aside-news-nav
+                include blocks/top-sports-book
+                include blocks/newest-reviews
                 include blocks/sign-up-offers
-                include blocks/existing-offers-banner
-                include blocks/aside-nav
         include blocks/join
       include blocks/footer
       //tooltips
@@ -37,7 +32,5 @@ html(lang="ru")
       //up-button
       include blocks/up
     script(src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js")
-    script(src="js/libs.min.js")
-    script(src="https://cdn.jsdelivr.net/npm/clipboard@2/dist/clipboard.min.js")            
+    script(src="js/libs.min.js")            
     script(src="js/common.min.js")
-    script(src="js/catalogue.min.js")

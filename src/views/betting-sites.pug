@@ -11,10 +11,12 @@ html(lang="ru")
       main.main
         include blocks/hot-offers-block
         include blocks/breadcrumbs
+        +breadcrumb('Betting sites')
         .main.main_width-aside
           .container
             .main__container
               include blocks/bonuses-text
+              +text('Betting sites')
               .catalogue.catalogue_betting
                 include blocks/catalogue-head
                 include blocks/catalogue_betting
